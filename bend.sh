@@ -25,6 +25,7 @@ cd ../
 
 ffmpeg -f concat -i video/list.txt -c copy results/output.mp4
 
+rm video/*.mp4 -f
 rm video/list.txt -f
 
 cd ../
