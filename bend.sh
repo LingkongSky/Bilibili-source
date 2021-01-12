@@ -1,5 +1,5 @@
 cd /root/lingkong/
-rm /video/list.txt -f
+rm video/list.txt -f
 
 prefix="file '"
 perfix1="'"
@@ -23,6 +23,8 @@ cd ../
 
 
 
-ffmpeg -f concat -i video/list.txt -c copy output.mp4
+ffmpeg -f concat -i video/list.txt -c copy results/output.mp4
+
+rm video/list.txt -f
 
 cd ../

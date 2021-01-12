@@ -4,7 +4,6 @@ A="Done"
 
 cd /root/lingkong/
 
-
 touch live.m3u8
 
 #下载主文件
@@ -27,11 +26,6 @@ list_name=`ls video/*.ts`
 for file in video/*.ts; do F="$(echo $file |sed 's/ts$/mp4/g')"; ffmpeg -i $file $F; done
 
 
-if [ -f "video/*.ts" ];then 
-mv video/*.ts ts/;
-fi
-
-
 
 cd ../
 #node lookfor.js
@@ -42,5 +36,5 @@ echo "$A"
 echo "$list_name"
 #echo "$extract"
 
-rm /root/lingkong/ts/*.1 -f
-rm /root/lingkong/live.m3u8 -f
+rm /root/lingkong/live.m3u8 -f 
+rm /root/lingkong/video/*.ts -f 
