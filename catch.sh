@@ -8,7 +8,7 @@ cd /root/lingkong/
 touch live.m3u8
 
 #下载主文件
-wget  --wait=6 -O live.m3u8 --tries=2 "$dURL"
+wget  --wait=5 -O live.m3u8 --tries=24 "$dURL"
 
 #提取下载文件内容输入主文件
 
