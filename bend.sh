@@ -3,6 +3,7 @@ rm video/list.txt -f
 
 prefix="file '"
 perfix1="'"
+timenow=`date +%m%d%H%M`
 #输出文件列表
 
 cd /root/lingkong/video/
@@ -23,7 +24,7 @@ cd ../
 
 
 
-ffmpeg -f concat -i video/list.txt -c copy results/output.mp4
+ffmpeg -f concat -i video/list.txt -c copy results/"$timenow".mp4
 
 rm video/*.mp4 -f
 rm video/list.txt -f
