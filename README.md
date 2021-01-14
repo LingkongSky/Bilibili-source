@@ -1,5 +1,5 @@
 # Bilibili-source
-BillBill live source catch 哔哩哔哩直播源抓取
+BillBill live source catch (以下简称bch)哔哩哔哩直播源抓取
 第一个Demo历时三天完成
 预计在2020.2前完成正式版的第一个版本
 
