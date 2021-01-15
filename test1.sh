@@ -1,36 +1,23 @@
 #!/bin/bash
 
 bmode="true"
-
-dURL='https://cn-jxnc-cmcc-live-01.bilivideo.com/live-bvc/730840/live_1590370_4064847_1500.m3u8'
-
+dURL='www.nijigaku.club'
 #extTIME=6
 
-result=$(echo $dURL | grep "200")
+results=`wget --spider "$dURL"  2>&1|grep 200`
 
-echo "$result"
+result=$(echo "$results" | grep "200")
+bmode="true"
 
+while [ "$bmode" = "true" ]
+   do 
 
-: <<EO
-if [[ "$result" != "" ]]
-then
-  echo "found link"
+echo "catching.."
 
-wget -O live.m3u8 "$dURL" 
+if [ "$bmode" = "false" ] then break fi
 
-extTIME=`awk 'NR==5 {print $k}' /root/lingkong/live.m3u8`;let extTIME=`echo "$extTIME" | tr -cd "[0-9]"`/1000
+    sleep 3
 
-extCOUNTS=`grep -o ts live.m3u8 | sort |uniq -c | tr -cd "[0-9]"`
+bmode="false"
 
-let extTIMES=extTIME * extCOUNTS
-
-echo "extTIMES"
-
-else
-  echo "invalid URL"
-  kill $$
-fi
-
-EO
-
-echo "start"
+done 
