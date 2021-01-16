@@ -20,11 +20,17 @@ awk '{print "https://cn-jxnc-cmcc-live-01.bilivideo.com"$0 > "live1.m3u8"}' live
 wget -i live1.m3u8  --unlink -P video/
 
 
+if [ ! -f /video/*.ts ];then
+put_path=$(cd `dirname $0`; pwd)
+echo -e "\033[31mWithout found the target ts in $put_path/video\033[0m"
+exit 0
+fi
 
 list_name=`ls video/*.ts`
 
 
 for file in video/*.ts; do F="$(echo $file |sed 's/ts$/mp4/g')"; ffmpeg -i $file $F; done
+
 rm /root/lingkong/video/*.ts -f 
 
 

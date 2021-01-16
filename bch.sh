@@ -6,9 +6,8 @@ case "$1" in
  
 "-v")
  
-echo "Bilibili-Catch Version 0.01 @Lingkongsky"
  
-
+echo -e "\033[32mBilibili-Catch Version 0.1.0 @Lingkongsky\033[0m"
 
 ;;
  
@@ -26,7 +25,7 @@ echo "服务重启中..."
  
 *)
  
-echo "$0 脚本的使用方式： $0 [ start | stop | restart ]"
+echo "use it by [ -v ]"
  
 ;;
  

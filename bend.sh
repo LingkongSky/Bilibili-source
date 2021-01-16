@@ -23,9 +23,17 @@ awk '{print $0"'"$perfix1"'"}' list.txt
 cd ../
 
 
-
 ffmpeg -f concat -i video/list.txt -c copy results/"$timenow".mp4
 
 rm video/*.* -f
 
+
+put_path=$(cd `dirname $0`; pwd)
+
+echo -e "\033[32mResult already put into the $put_path/results/\033[0m"
+
+
 cd ../
+
+
+echo -e "\033[32mCatching Finished \033[0m"

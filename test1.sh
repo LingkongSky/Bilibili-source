@@ -9,15 +9,11 @@ results=`wget --spider "$dURL"  2>&1|grep 200`
 result=$(echo "$results" | grep "200")
 bmode="true"
 
-while [ "$bmode" = "true" ]
-   do 
+if [ ! -f /video/*.ts ];then
+put_path=$(cd `dirname $0`; pwd)
+echo -e "\033[31mWithout found the target ts in $put_path/video\033[0m"
+exit 0
+fi
 
-echo "catching.."
-
-if [ "$bmode" = "false" ] then break fi
-
-    sleep 3
-
-bmode="false"
-
-done 
+echo "over"
+#kill $$ &
