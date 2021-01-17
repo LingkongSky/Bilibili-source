@@ -4,7 +4,17 @@ rm video/list.txt -f
 prefix="file '"
 perfix1="'"
 timenow=`date +%m%d%H%M`
+declare -x bend_id="$$"
 #输出文件列表
+
+
+list_name=`ls video/*.mp4`
+
+if [[ ! "$list_name" =~ "mp4" ]];then
+put_path=$(cd `dirname $0`; pwd)
+echo -e "\033[31mWithout found the target mp4 ts in $put_path/video\033[0m"
+exit 0
+fi
 
 cd /root/lingkong/video/
 ls  *.mp4 > list.txt
@@ -35,5 +45,5 @@ echo -e "\033[32mResult already put into the $put_path/results/\033[0m"
 
 cd ../
 
-
+unset bend_id
 echo -e "\033[32mCatching Finished \033[0m"
