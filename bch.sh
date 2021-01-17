@@ -6,7 +6,7 @@ case "$1" in
 ##########
 "-v")
  
-echo -e "\033[32mBilibili-Catch Version 0.2.0 @Lingkongsky\033[0m"
+echo -e "\033[32mBilibili-Catch Version 0.2.1 @Lingkongsky\033[0m"
 
 ;;
  
@@ -38,6 +38,12 @@ echo "${bchPATH}"
  
 ;;
 
+########
+"-url")
+
+"please input right URL"
+ 
+;;
 
 
 ########
@@ -47,9 +53,32 @@ echo "服务重启中..."
  
 ;;
  
+
+########
+"stop")
+
+shid=`ps -ef | grep ${bchPATH}/bstart.sh`
+
+if [ ! -n "$shid" ]; then
+#参数2为空
+echo "process not found"
+
+exit 0
+else
+
+rm -f ${bchPATH}/run.txt
+kill "$shid"
+
+echo -e "\033[32malready killed\033[0m"
+exit 0
+fi 
+ ;;
+
+
+
 *)
  
-echo "use it by [ -v | -t | -path]"
+echo "use it by [ -v | -t | -path | url |stop ]"
  
 ;;
  

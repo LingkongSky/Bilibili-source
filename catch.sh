@@ -1,6 +1,5 @@
 #!/bin/bash
 
-dURL='https://cn-jxnc-cmcc-live-01.bilivideo.com/live-bvc/730840/live_1590370_4064847_1500.m3u8'
 declare -x catch_id="$$"
 cd ${bchPATH}/
 
