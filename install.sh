@@ -17,7 +17,7 @@ echo -e "\n${comm}" >> /root/.bashrc
 
 source ~/.bashrc
 
-echo "install finished"
+echo "update finished"
 
 fi
 
@@ -31,13 +31,13 @@ cp profile1 profile
 cd ../
 EOF
 
-
 axx="export bchPATH='/root/lingkong'"
 
 echo -e "\n${axx}" >> /etc/profile
 
 source /etc/profile
 
+echo "install finished"
 fi
 
 cp ${bchPATH}/bch.sh /bin/bch
