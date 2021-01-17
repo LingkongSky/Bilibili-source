@@ -2,7 +2,7 @@
 
 dURL='https://cn-jxnc-cmcc-live-01.bilivideo.com/live-bvc/730840/live_1590370_4064847_1500.m3u8'
 declare -x catch_id="$$"
-cd /root/lingkong/
+cd ${bchPATH}/
 
 touch live.m3u8
 
@@ -28,18 +28,17 @@ exit 0
 fi
 
 
-for file in video/*.ts; do F="$(echo $file |sed 's/ts$/mp4/g')"; ffmpeg -i $file $F; done >> /root/lingkong/log.txt 2>&1
+for file in video/*.ts; do F="$(echo $file |sed 's/ts$/mp4/g')"; ffmpeg -i $file $F; done >> log.txt 2>&1
 
-rm /root/lingkong/video/*.ts -f 
+rm video/*.ts -f 
 
-
-cd ../
 #node lookfor.js
 
 #文件移除
-rm /root/lingkong/live1.m3u8  -f 
-rm /root/lingkong/live.m3u8 -f 
+rm live1.m3u8 -f 
+rm live.m3u8 -f 
 
+cd ../
 
 echo -e "\033[32mnew ts: \n${list_name}\033[0m"
 

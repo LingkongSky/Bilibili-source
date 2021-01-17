@@ -1,4 +1,4 @@
-cd /root/lingkong/
+cd ${bchPATH}
 rm video/list.txt -f
 
 prefix="file '"
@@ -16,16 +16,13 @@ echo -e "\033[31mWithout found the target mp4 ts in $put_path/video\033[0m"
 exit 0
 fi
 
-cd /root/lingkong/video/
+cd video/
 ls  *.mp4 > list.txt
-cd ../
 
 #删除最后一行
-sed -i '$d' video/list.txt
+sed -i '$d' list.txt
 
 #添加前缀
-cd /root/lingkong/video/
-
 awk '{print "'"$prefix"'"$0 > "list.txt"}' list.txt
 
 awk '{print $0"'"$perfix1"'"}' list.txt

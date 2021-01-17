@@ -5172,3 +5172,1241 @@ Output #0, mp4, to 'video/1610883881262.mp4':
 frame=    7 fps=0.0 q=2.0 size=       0kB time=00:00:00.20 bitrate=   1.8kbits/s dup=6 drop=0 speed=9.25x    frame=  109 fps=0.0 q=24.8 size=     256kB time=00:00:03.60 bitrate= 582.6kbits/s dup=6 drop=0 speed=6.87x    frame=  186 fps=0.0 q=31.0 Lsize=     718kB time=00:00:06.16 bitrate= 953.7kbits/s dup=6 drop=0 speed=7.03x    
 video:614kB audio:98kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 0.911290%
 [aac @ 0x2c1f600] Qavg: 514.066
+--2021-01-17 20:38:54--  https://cn-jxnc-cmcc-live-01.bilivideo.com/live-bvc/730840/live_1590370_4064847_1500.m3u8
+Resolving cn-jxnc-cmcc-live-01.bilivideo.com (cn-jxnc-cmcc-live-01.bilivideo.com)... 117.169.96.238
+Connecting to cn-jxnc-cmcc-live-01.bilivideo.com (cn-jxnc-cmcc-live-01.bilivideo.com)|117.169.96.238|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 280 [application/vnd.apple.mpegurl]
+Saving to: ‘live.m3u8’
+
+     0K                                                       100% 60.8M=0s
+
+2021-01-17 20:38:56 (60.8 MB/s) - ‘live.m3u8’ saved [280/280]
+
+WARNING: timestamping does nothing in combination with -O. See the manual
+for details.
+
+--2021-01-17 20:38:56--  https://cn-jxnc-cmcc-live-01.bilivideo.com/live-bvc/730840/live_1590370_4064847_1500.m3u8
+Resolving cn-jxnc-cmcc-live-01.bilivideo.com (cn-jxnc-cmcc-live-01.bilivideo.com)... 117.169.96.238
+Connecting to cn-jxnc-cmcc-live-01.bilivideo.com (cn-jxnc-cmcc-live-01.bilivideo.com)|117.169.96.238|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 280 [application/vnd.apple.mpegurl]
+Saving to: ‘live.m3u8’
+
+     0K                                                       100% 72.3M=0s
+
+2021-01-17 20:38:56 (72.3 MB/s) - ‘live.m3u8’ saved [280/280]
+
+--2021-01-17 20:38:56--  https://cn-jxnc-cmcc-live-01.bilivideo.com/live-bvc/live_1590370_4064847_1500/1610887115289.ts
+Resolving cn-jxnc-cmcc-live-01.bilivideo.com (cn-jxnc-cmcc-live-01.bilivideo.com)... 117.169.96.238
+Connecting to cn-jxnc-cmcc-live-01.bilivideo.com (cn-jxnc-cmcc-live-01.bilivideo.com)|117.169.96.238|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 1193048 (1.1M) [video/mp2t]
+Saving to: ‘video/1610887115289.ts’
+
+     0K .......... .......... .......... .......... ..........  4% 58.2K 19s
+    50K .......... .......... .......... .......... ..........  8% 89.4M 9s
+   100K .......... .......... .......... .......... .......... 12% 1.51M 6s
+   150K .......... .......... .......... .......... .......... 17% 73.4M 4s
+   200K .......... .......... .......... .......... .......... 21%  192M 3s
+   250K .......... .......... .......... .......... .......... 25%  199M 3s
+   300K .......... .......... .......... .......... .......... 30%  778K 2s
+   350K .......... .......... .......... .......... .......... 34%  137M 2s
+   400K .......... .......... .......... .......... .......... 38%  193M 2s
+   450K .......... .......... .......... .......... .......... 42%  205M 1s
+   500K .......... .......... .......... .......... .......... 47%  187M 1s
+   550K .......... .......... .......... .......... .......... 51%  174M 1s
+   600K .......... .......... .......... .......... .......... 55% 78.4K 1s
+   650K .......... .......... .......... .......... .......... 60%  169M 1s
+   700K .......... .......... .......... .......... .......... 64%  176M 1s
+   750K .......... .......... .......... .......... .......... 68%  173M 1s
+   800K .......... .......... .......... .......... .......... 72%  208M 1s
+   850K .......... .......... .......... .......... .......... 77%  187M 0s
+   900K .......... .......... .......... .......... .......... 81%  234M 0s
+   950K .......... .......... .......... .......... .......... 85%  206M 0s
+  1000K .......... .......... .......... .......... .......... 90%  218M 0s
+  1050K .......... .......... .......... .......... .......... 94%  208M 0s
+  1100K .......... .......... .......... .......... .......... 98%  233M 0s
+  1150K .......... .....                                      100%  197M=1.6s
+
+2021-01-17 20:38:57 (729 KB/s) - ‘video/1610887115289.ts’ saved [1193048/1193048]
+
+--2021-01-17 20:38:57--  https://cn-jxnc-cmcc-live-01.bilivideo.com/live-bvc/live_1590370_4064847_1500/1610887121281.ts
+Reusing existing connection to cn-jxnc-cmcc-live-01.bilivideo.com:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 1200944 (1.1M) [video/mp2t]
+Saving to: ‘video/1610887121281.ts’
+
+     0K .......... .......... .......... .......... ..........  4% 3.17M 0s
+    50K .......... .......... .......... .......... ..........  8% 3.22M 0s
+   100K .......... .......... .......... .......... .......... 12% 3.22M 0s
+   150K .......... .......... .......... .......... .......... 17% 82.5M 0s
+   200K .......... .......... .......... .......... .......... 21% 3.21M 0s
+   250K .......... .......... .......... .......... .......... 25% 3.22M 0s
+   300K .......... .......... .......... .......... .......... 29% 3.21M 0s
+   350K .......... .......... .......... .......... .......... 34% 3.20M 0s
+   400K .......... .......... .......... .......... .......... 38% 57.0M 0s
+   450K .......... .......... .......... .......... .......... 42% 3.19M 0s
+   500K .......... .......... .......... .......... .......... 46% 3.23M 0s
+   550K .......... .......... .......... .......... .......... 51% 3.09M 0s
+   600K .......... .......... .......... .......... .......... 55%  192M 0s
+   650K .......... .......... .......... .......... .......... 59% 3.19M 0s
+   700K .......... .......... .......... .......... .......... 63% 3.19M 0s
+   750K .......... .......... .......... .......... .......... 68% 3.21M 0s
+   800K .......... .......... .......... .......... .......... 72% 3.19M 0s
+   850K .......... .......... .......... .......... .......... 76%  118M 0s
+   900K .......... .......... .......... .......... .......... 81% 3.18M 0s
+   950K .......... .......... .......... .......... .......... 85% 3.20M 0s
+  1000K .......... .......... .......... .......... .......... 89% 3.20M 0s
+  1050K .......... .......... .......... .......... .......... 93% 3.51M 0s
+  1100K .......... .......... .......... .......... .......... 98% 28.4M 0s
+  1150K .......... .......... ..                              100% 1.60M=0.3s
+
+2021-01-17 20:38:58 (3.93 MB/s) - ‘video/1610887121281.ts’ saved [1200944/1200944]
+
+--2021-01-17 20:38:58--  https://cn-jxnc-cmcc-live-01.bilivideo.com/live-bvc/live_1590370_4064847_1500/1610887127265.ts
+Reusing existing connection to cn-jxnc-cmcc-live-01.bilivideo.com:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 1201132 (1.1M) [video/mp2t]
+Saving to: ‘video/1610887127265.ts’
+
+     0K .......... .......... .......... .......... ..........  4% 3.27M 0s
+    50K .......... .......... .......... .......... ..........  8% 51.5M 0s
+   100K .......... .......... .......... .......... .......... 12% 3.33M 0s
+   150K .......... .......... .......... .......... .......... 17% 3.19M 0s
+   200K .......... .......... .......... .......... .......... 21% 3.17M 0s
+   250K .......... .......... .......... .......... .......... 25% 98.5M 0s
+   300K .......... .......... .......... .......... .......... 29% 3.20M 0s
+   350K .......... .......... .......... .......... .......... 34% 3.17M 0s
+   400K .......... .......... .......... .......... .......... 38% 3.19M 0s
+   450K .......... .......... .......... .......... .......... 42% 3.24M 0s
+   500K .......... .......... .......... .......... .......... 46%  118M 0s
+   550K .......... .......... .......... .......... .......... 51% 3.19M 0s
+   600K .......... .......... .......... .......... .......... 55% 3.20M 0s
+   650K .......... .......... .......... .......... .......... 59% 3.17M 0s
+   700K .......... .......... .......... .......... .......... 63% 3.21M 0s
+   750K .......... .......... .......... .......... .......... 68% 3.17M 0s
+   800K .......... .......... .......... .......... .......... 72%  130M 0s
+   850K .......... .......... .......... .......... .......... 76% 3.16M 0s
+   900K .......... .......... .......... .......... .......... 80% 3.18M 0s
+   950K .......... .......... .......... .......... .......... 85% 3.19M 0s
+  1000K .......... .......... .......... .......... .......... 89%  182M 0s
+  1050K .......... .......... .......... .......... .......... 93% 3.21M 0s
+  1100K .......... .......... .......... .......... .......... 98% 3.17M 0s
+  1150K .......... .......... ..                              100%  140M=0.3s
+
+2021-01-17 20:38:58 (4.13 MB/s) - ‘video/1610887127265.ts’ saved [1201132/1201132]
+
+FINISHED --2021-01-17 20:38:58--
+Total wall clock time: 2.5s
+Downloaded: 3 files, 3.4M in 2.2s (1.58 MB/s)
+ffmpeg version N-100564-gf4bdedd Copyright (c) 2000-2021 the FFmpeg developers
+  built with gcc 4.8.5 (GCC) 20150623 (Red Hat 4.8.5-44)
+  configuration: 
+  libavutil      56. 63.100 / 56. 63.100
+  libavcodec     58.115.102 / 58.115.102
+  libavformat    58. 65.101 / 58. 65.101
+  libavdevice    58. 11.103 / 58. 11.103
+  libavfilter     7. 95.100 /  7. 95.100
+  libswscale      5.  8.100 /  5.  8.100
+  libswresample   3.  8.100 /  3.  8.100
+Input #0, mpegts, from 'video/1610887115289.ts':
+  Duration: 00:00:06.21, start: 24408.562078, bitrate: 1538 kb/s
+  Program 1 
+    Stream #0:0[0x100]: Video: h264 (High) ([27][0][0][0] / 0x001B), yuv420p(tv, bt470bg/unknown/unknown, progressive), 1280x720 [SAR 1:1 DAR 16:9], 30 fps, 30 tbr, 90k tbn, 60 tbc
+    Stream #0:1[0x101]: Audio: aac (LC) ([15][0][0][0] / 0x000F), 44100 Hz, stereo, fltp, 130 kb/s
+Stream mapping:
+  Stream #0:0 -> #0:0 (h264 (native) -> mpeg4 (native))
+  Stream #0:1 -> #0:1 (aac (native) -> aac (native))
+Press [q] to stop, [?] for help
+Output #0, mp4, to 'video/1610887115289.mp4':
+  Metadata:
+    encoder         : Lavf58.65.101
+    Stream #0:0: Video: mpeg4 (mp4v / 0x7634706D), yuv420p(tv, bt470bg/unknown/unknown, progressive), 1280x720 [SAR 1:1 DAR 16:9], q=2-31, 200 kb/s, 30 fps, 15360 tbn
+    Metadata:
+      encoder         : Lavc58.115.102 mpeg4
+    Side data:
+      cpb: bitrate max/min/avg: 0/0/200000 buffer size: 0 vbv_delay: N/A
+    Stream #0:1: Audio: aac (LC) (mp4a / 0x6134706D), 44100 Hz, stereo, fltp, 128 kb/s
+    Metadata:
+      encoder         : Lavc58.115.102 aac
+frame=    7 fps=0.0 q=2.0 size=       0kB time=00:00:00.23 bitrate=   1.5kbits/s dup=6 drop=0 speed=8.25x    frame=  111 fps=0.0 q=31.0 size=     256kB time=00:00:03.66 bitrate= 572.0kbits/s dup=6 drop=0 speed= 6.9x    frame=  186 fps=0.0 q=31.0 Lsize=     842kB time=00:00:06.16 bitrate=1118.1kbits/s dup=6 drop=0 speed=6.98x    
+video:737kB audio:98kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 0.833803%
+[aac @ 0x31224c0] Qavg: 918.419
+ffmpeg version N-100564-gf4bdedd Copyright (c) 2000-2021 the FFmpeg developers
+  built with gcc 4.8.5 (GCC) 20150623 (Red Hat 4.8.5-44)
+  configuration: 
+  libavutil      56. 63.100 / 56. 63.100
+  libavcodec     58.115.102 / 58.115.102
+  libavformat    58. 65.101 / 58. 65.101
+  libavdevice    58. 11.103 / 58. 11.103
+  libavfilter     7. 95.100 /  7. 95.100
+  libswscale      5.  8.100 /  5.  8.100
+  libswresample   3.  8.100 /  3.  8.100
+Input #0, mpegts, from 'video/1610887121281.ts':
+  Duration: 00:00:06.21, start: 24414.552833, bitrate: 1545 kb/s
+  Program 1 
+    Stream #0:0[0x100]: Video: h264 (High) ([27][0][0][0] / 0x001B), yuv420p(tv, bt470bg/unknown/unknown, progressive), 1280x720 [SAR 1:1 DAR 16:9], 30 fps, 30 tbr, 90k tbn, 60 tbc
+    Stream #0:1[0x101]: Audio: aac (LC) ([15][0][0][0] / 0x000F), 44100 Hz, stereo, fltp, 130 kb/s
+Stream mapping:
+  Stream #0:0 -> #0:0 (h264 (native) -> mpeg4 (native))
+  Stream #0:1 -> #0:1 (aac (native) -> aac (native))
+Press [q] to stop, [?] for help
+Output #0, mp4, to 'video/1610887121281.mp4':
+  Metadata:
+    encoder         : Lavf58.65.101
+    Stream #0:0: Video: mpeg4 (mp4v / 0x7634706D), yuv420p(tv, bt470bg/unknown/unknown, progressive), 1280x720 [SAR 1:1 DAR 16:9], q=2-31, 200 kb/s, 30 fps, 15360 tbn
+    Metadata:
+      encoder         : Lavc58.115.102 mpeg4
+    Side data:
+      cpb: bitrate max/min/avg: 0/0/200000 buffer size: 0 vbv_delay: N/A
+    Stream #0:1: Audio: aac (LC) (mp4a / 0x6134706D), 44100 Hz, stereo, fltp, 128 kb/s
+    Metadata:
+      encoder         : Lavc58.115.102 aac
+frame=    7 fps=0.0 q=2.0 size=       0kB time=00:00:00.20 bitrate=   1.8kbits/s dup=6 drop=0 speed=8.14x    frame=  104 fps=0.0 q=31.0 size=     256kB time=00:00:03.43 bitrate= 610.9kbits/s dup=6 drop=0 speed=6.49x    frame=  186 fps=0.0 q=31.0 Lsize=     858kB time=00:00:06.16 bitrate=1140.2kbits/s dup=6 drop=0 speed=6.71x    
+video:752kB audio:99kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 0.799050%
+[aac @ 0x255e2c0] Qavg: 616.616
+ffmpeg version N-100564-gf4bdedd Copyright (c) 2000-2021 the FFmpeg developers
+  built with gcc 4.8.5 (GCC) 20150623 (Red Hat 4.8.5-44)
+  configuration: 
+  libavutil      56. 63.100 / 56. 63.100
+  libavcodec     58.115.102 / 58.115.102
+  libavformat    58. 65.101 / 58. 65.101
+  libavdevice    58. 11.103 / 58. 11.103
+  libavfilter     7. 95.100 /  7. 95.100
+  libswscale      5.  8.100 /  5.  8.100
+  libswresample   3.  8.100 /  3.  8.100
+Input #0, mpegts, from 'video/1610887127265.ts':
+  Duration: 00:00:06.20, start: 24420.566800, bitrate: 1549 kb/s
+  Program 1 
+    Stream #0:0[0x100]: Video: h264 (High) ([27][0][0][0] / 0x001B), yuv420p(tv, bt470bg/unknown/unknown, progressive), 1280x720 [SAR 1:1 DAR 16:9], 30 fps, 30 tbr, 90k tbn, 60 tbc
+    Stream #0:1[0x101]: Audio: aac (LC) ([15][0][0][0] / 0x000F), 44100 Hz, stereo, fltp, 130 kb/s
+Stream mapping:
+  Stream #0:0 -> #0:0 (h264 (native) -> mpeg4 (native))
+  Stream #0:1 -> #0:1 (aac (native) -> aac (native))
+Press [q] to stop, [?] for help
+Output #0, mp4, to 'video/1610887127265.mp4':
+  Metadata:
+    encoder         : Lavf58.65.101
+    Stream #0:0: Video: mpeg4 (mp4v / 0x7634706D), yuv420p(tv, bt470bg/unknown/unknown, progressive), 1280x720 [SAR 1:1 DAR 16:9], q=2-31, 200 kb/s, 30 fps, 15360 tbn
+    Metadata:
+      encoder         : Lavc58.115.102 mpeg4
+    Side data:
+      cpb: bitrate max/min/avg: 0/0/200000 buffer size: 0 vbv_delay: N/A
+    Stream #0:1: Audio: aac (LC) (mp4a / 0x6134706D), 44100 Hz, stereo, fltp, 128 kb/s
+    Metadata:
+      encoder         : Lavc58.115.102 aac
+frame=    7 fps=0.0 q=2.0 size=       0kB time=00:00:00.20 bitrate=   1.8kbits/s dup=6 drop=0 speed= 8.9x    frame=  104 fps=0.0 q=31.0 size=     256kB time=00:00:03.43 bitrate= 610.9kbits/s dup=6 drop=0 speed=6.53x    frame=  186 fps=0.0 q=31.0 Lsize=     860kB time=00:00:06.16 bitrate=1142.0kbits/s dup=6 drop=0 speed= 6.7x    
+video:755kB audio:98kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 0.790385%
+[aac @ 0x2dc8180] Qavg: 589.508
+WARNING: timestamping does nothing in combination with -O. See the manual
+for details.
+
+--2021-01-17 20:39:01--  https://cn-jxnc-cmcc-live-01.bilivideo.com/live-bvc/730840/live_1590370_4064847_1500.m3u8
+Resolving cn-jxnc-cmcc-live-01.bilivideo.com (cn-jxnc-cmcc-live-01.bilivideo.com)... 117.169.96.238
+Connecting to cn-jxnc-cmcc-live-01.bilivideo.com (cn-jxnc-cmcc-live-01.bilivideo.com)|117.169.96.238|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 280 [application/vnd.apple.mpegurl]
+Saving to: ‘live.m3u8’
+
+     0K                                                       100% 80.6M=0s
+
+2021-01-17 20:39:01 (80.6 MB/s) - ‘live.m3u8’ saved [280/280]
+
+--2021-01-17 20:39:01--  https://cn-jxnc-cmcc-live-01.bilivideo.com/live-bvc/live_1590370_4064847_1500/1610887121281.ts
+Resolving cn-jxnc-cmcc-live-01.bilivideo.com (cn-jxnc-cmcc-live-01.bilivideo.com)... 117.169.96.238
+Connecting to cn-jxnc-cmcc-live-01.bilivideo.com (cn-jxnc-cmcc-live-01.bilivideo.com)|117.169.96.238|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 1200944 (1.1M) [video/mp2t]
+Saving to: ‘video/1610887121281.ts’
+
+     0K .......... .......... .......... .......... ..........  4%  359K 3s
+    50K .......... .......... .......... .......... ..........  8%  314K 3s
+   100K .......... .......... .......... .......... .......... 12% 93.7M 2s
+   150K .......... .......... .......... .......... .......... 17% 1.58M 2s
+   200K .......... .......... .......... .......... .......... 21% 78.7M 1s
+   250K .......... .......... .......... .......... .......... 25%  201M 1s
+   300K .......... .......... .......... .......... .......... 29% 1.59M 1s
+   350K .......... .......... .......... .......... .......... 34% 60.0M 1s
+   400K .......... .......... .......... .......... .......... 38%  196M 1s
+   450K .......... .......... .......... .......... .......... 42%  201M 0s
+   500K .......... .......... .......... .......... .......... 46%  232M 0s
+   550K .......... .......... .......... .......... .......... 51% 1.61M 0s
+   600K .......... .......... .......... .......... .......... 55%  145M 0s
+   650K .......... .......... .......... .......... .......... 59%  202M 0s
+   700K .......... .......... .......... .......... .......... 63%  199M 0s
+   750K .......... .......... .......... .......... .......... 68%  177M 0s
+   800K .......... .......... .......... .......... .......... 72%  198M 0s
+   850K .......... .......... .......... .......... .......... 76%  185M 0s
+   900K .......... .......... .......... .......... .......... 81% 1.65M 0s
+   950K .......... .......... .......... .......... .......... 85%  169M 0s
+  1000K .......... .......... .......... .......... .......... 89%  187M 0s
+  1050K .......... .......... .......... .......... .......... 93%  235M 0s
+  1100K .......... .......... .......... .......... .......... 98%  238M 0s
+  1150K .......... .......... ..                              100%  172M=0.4s
+
+2021-01-17 20:39:02 (2.69 MB/s) - ‘video/1610887121281.ts’ saved [1200944/1200944]
+
+--2021-01-17 20:39:02--  https://cn-jxnc-cmcc-live-01.bilivideo.com/live-bvc/live_1590370_4064847_1500/1610887127265.ts
+Reusing existing connection to cn-jxnc-cmcc-live-01.bilivideo.com:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 1201132 (1.1M) [video/mp2t]
+Saving to: ‘video/1610887127265.ts’
+
+     0K .......... .......... .......... .......... ..........  4%  139M 0s
+    50K .......... .......... .......... .......... ..........  8%  156M 0s
+   100K .......... .......... .......... .......... .......... 12%  189M 0s
+   150K .......... .......... .......... .......... .......... 17%  188M 0s
+   200K .......... .......... .......... .......... .......... 21%  142M 0s
+   250K .......... .......... .......... .......... .......... 25%  136M 0s
+   300K .......... .......... .......... .......... .......... 29%  197M 0s
+   350K .......... .......... .......... .......... .......... 34%  181M 0s
+   400K .......... .......... .......... .......... .......... 38%  195M 0s
+   450K .......... .......... .......... .......... .......... 42%  181M 0s
+   500K .......... .......... .......... .......... .......... 46%  222M 0s
+   550K .......... .......... .......... .......... .......... 51%  206M 0s
+   600K .......... .......... .......... .......... .......... 55%  228M 0s
+   650K .......... .......... .......... .......... .......... 59%  193M 0s
+   700K .......... .......... .......... .......... .......... 63%  216M 0s
+   750K .......... .......... .......... .......... .......... 68%  191M 0s
+   800K .......... .......... .......... .......... .......... 72%  228M 0s
+   850K .......... .......... .......... .......... .......... 76%  217M 0s
+   900K .......... .......... .......... .......... .......... 80% 1.80M 0s
+   950K .......... .......... .......... .......... .......... 85%  155M 0s
+  1000K .......... .......... .......... .......... .......... 89% 93.1M 0s
+  1050K .......... .......... .......... .......... .......... 93%  186M 0s
+  1100K .......... .......... .......... .......... .......... 98% 37.8M 0s
+  1150K .......... .......... ..                              100%  186M=0.03s
+
+2021-01-17 20:39:02 (33.3 MB/s) - ‘video/1610887127265.ts’ saved [1201132/1201132]
+
+--2021-01-17 20:39:02--  https://cn-jxnc-cmcc-live-01.bilivideo.com/live-bvc/live_1590370_4064847_1500/1610887133245.ts
+Reusing existing connection to cn-jxnc-cmcc-live-01.bilivideo.com:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 1197184 (1.1M) [video/mp2t]
+Saving to: ‘video/1610887133245.ts’
+
+     0K .......... .......... .......... .......... ..........  4% 3.00M 0s
+    50K .......... .......... .......... .......... ..........  8% 3.03M 0s
+   100K .......... .......... .......... .......... .......... 12% 3.03M 0s
+   150K .......... .......... .......... .......... .......... 17% 99.5M 0s
+   200K .......... .......... .......... .......... .......... 21% 3.04M 0s
+   250K .......... .......... .......... .......... .......... 25% 3.05M 0s
+   300K .......... .......... .......... .......... .......... 29% 3.03M 0s
+   350K .......... .......... .......... .......... .......... 34% 3.02M 0s
+   400K .......... .......... .......... .......... .......... 38%  115M 0s
+   450K .......... .......... .......... .......... .......... 42% 3.01M 0s
+   500K .......... .......... .......... .......... .......... 47% 3.05M 0s
+   550K .......... .......... .......... .......... .......... 51% 3.02M 0s
+   600K .......... .......... .......... .......... .......... 55%  157M 0s
+   650K .......... .......... .......... .......... .......... 59% 2.99M 0s
+   700K .......... .......... .......... .......... .......... 64% 3.02M 0s
+   750K .......... .......... .......... .......... .......... 68% 3.00M 0s
+   800K .......... .......... .......... .......... .......... 72% 3.07M 0s
+   850K .......... .......... .......... .......... .......... 76% 3.07M 0s
+   900K .......... .......... .......... .......... .......... 81% 66.2M 0s
+   950K .......... .......... .......... .......... .......... 85% 3.02M 0s
+  1000K .......... .......... .......... .......... .......... 89% 3.05M 0s
+  1050K .......... .......... .......... .......... .......... 94% 3.09M 0s
+  1100K .......... .......... .......... .......... .......... 98% 62.9M 0s
+  1150K .......... .........                                  100% 1.21M=0.3s
+
+2021-01-17 20:39:02 (3.71 MB/s) - ‘video/1610887133245.ts’ saved [1197184/1197184]
+
+FINISHED --2021-01-17 20:39:02--
+Total wall clock time: 1.2s
+Downloaded: 3 files, 3.4M in 0.8s (4.47 MB/s)
+ffmpeg version N-100564-gf4bdedd Copyright (c) 2000-2021 the FFmpeg developers
+  built with gcc 4.8.5 (GCC) 20150623 (Red Hat 4.8.5-44)
+  configuration: 
+  libavutil      56. 63.100 / 56. 63.100
+  libavcodec     58.115.102 / 58.115.102
+  libavformat    58. 65.101 / 58. 65.101
+  libavdevice    58. 11.103 / 58. 11.103
+  libavfilter     7. 95.100 /  7. 95.100
+  libswscale      5.  8.100 /  5.  8.100
+  libswresample   3.  8.100 /  3.  8.100
+Input #0, mpegts, from 'video/1610887121281.ts':
+  Duration: 00:00:06.21, start: 24414.552833, bitrate: 1545 kb/s
+  Program 1 
+    Stream #0:0[0x100]: Video: h264 (High) ([27][0][0][0] / 0x001B), yuv420p(tv, bt470bg/unknown/unknown, progressive), 1280x720 [SAR 1:1 DAR 16:9], 30 fps, 30 tbr, 90k tbn, 60 tbc
+    Stream #0:1[0x101]: Audio: aac (LC) ([15][0][0][0] / 0x000F), 44100 Hz, stereo, fltp, 130 kb/s
+File 'video/1610887121281.mp4' already exists. Overwrite? [y/N] Not overwriting - exiting
+ffmpeg version N-100564-gf4bdedd Copyright (c) 2000-2021 the FFmpeg developers
+  built with gcc 4.8.5 (GCC) 20150623 (Red Hat 4.8.5-44)
+  configuration: 
+  libavutil      56. 63.100 / 56. 63.100
+  libavcodec     58.115.102 / 58.115.102
+  libavformat    58. 65.101 / 58. 65.101
+  libavdevice    58. 11.103 / 58. 11.103
+  libavfilter     7. 95.100 /  7. 95.100
+  libswscale      5.  8.100 /  5.  8.100
+  libswresample   3.  8.100 /  3.  8.100
+Input #0, mpegts, from 'video/1610887127265.ts':
+  Duration: 00:00:06.20, start: 24420.566800, bitrate: 1549 kb/s
+  Program 1 
+    Stream #0:0[0x100]: Video: h264 (High) ([27][0][0][0] / 0x001B), yuv420p(tv, bt470bg/unknown/unknown, progressive), 1280x720 [SAR 1:1 DAR 16:9], 30 fps, 30 tbr, 90k tbn, 60 tbc
+    Stream #0:1[0x101]: Audio: aac (LC) ([15][0][0][0] / 0x000F), 44100 Hz, stereo, fltp, 130 kb/s
+File 'video/1610887127265.mp4' already exists. Overwrite? [y/N] Not overwriting - exiting
+ffmpeg version N-100564-gf4bdedd Copyright (c) 2000-2021 the FFmpeg developers
+  built with gcc 4.8.5 (GCC) 20150623 (Red Hat 4.8.5-44)
+  configuration: 
+  libavutil      56. 63.100 / 56. 63.100
+  libavcodec     58.115.102 / 58.115.102
+  libavformat    58. 65.101 / 58. 65.101
+  libavdevice    58. 11.103 / 58. 11.103
+  libavfilter     7. 95.100 /  7. 95.100
+  libswscale      5.  8.100 /  5.  8.100
+  libswresample   3.  8.100 /  3.  8.100
+Input #0, mpegts, from 'video/1610887133245.ts':
+  Duration: 00:00:06.21, start: 24426.557544, bitrate: 1542 kb/s
+  Program 1 
+    Stream #0:0[0x100]: Video: h264 (High) ([27][0][0][0] / 0x001B), yuv420p(tv, bt470bg/unknown/unknown, progressive), 1280x720 [SAR 1:1 DAR 16:9], 30 fps, 30 tbr, 90k tbn, 60 tbc
+    Stream #0:1[0x101]: Audio: aac (LC) ([15][0][0][0] / 0x000F), 44100 Hz, stereo, fltp, 130 kb/s
+Stream mapping:
+  Stream #0:0 -> #0:0 (h264 (native) -> mpeg4 (native))
+  Stream #0:1 -> #0:1 (aac (native) -> aac (native))
+Press [q] to stop, [?] for help
+Output #0, mp4, to 'video/1610887133245.mp4':
+  Metadata:
+    encoder         : Lavf58.65.101
+    Stream #0:0: Video: mpeg4 (mp4v / 0x7634706D), yuv420p(tv, bt470bg/unknown/unknown, progressive), 1280x720 [SAR 1:1 DAR 16:9], q=2-31, 200 kb/s, 30 fps, 15360 tbn
+    Metadata:
+      encoder         : Lavc58.115.102 mpeg4
+    Side data:
+      cpb: bitrate max/min/avg: 0/0/200000 buffer size: 0 vbv_delay: N/A
+    Stream #0:1: Audio: aac (LC) (mp4a / 0x6134706D), 44100 Hz, stereo, fltp, 128 kb/s
+    Metadata:
+      encoder         : Lavc58.115.102 aac
+frame=    7 fps=0.0 q=2.0 size=       0kB time=00:00:00.20 bitrate=   1.8kbits/s dup=6 drop=0 speed=10.9x    frame=  100 fps=0.0 q=31.0 size=     256kB time=00:00:03.30 bitrate= 635.6kbits/s dup=6 drop=0 speed=6.36x    frame=  186 fps=0.0 q=31.0 Lsize=     862kB time=00:00:06.16 bitrate=1144.8kbits/s dup=6 drop=0 speed=6.53x    
+video:757kB audio:99kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 0.758048%
+[aac @ 0x273f100] Qavg: 844.088
+WARNING: timestamping does nothing in combination with -O. See the manual
+for details.
+
+--2021-01-17 20:39:03--  https://cn-jxnc-cmcc-live-01.bilivideo.com/live-bvc/730840/live_1590370_4064847_1500.m3u8
+Resolving cn-jxnc-cmcc-live-01.bilivideo.com (cn-jxnc-cmcc-live-01.bilivideo.com)... 117.169.96.238
+Connecting to cn-jxnc-cmcc-live-01.bilivideo.com (cn-jxnc-cmcc-live-01.bilivideo.com)|117.169.96.238|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 280 [application/vnd.apple.mpegurl]
+Saving to: ‘live.m3u8’
+
+     0K                                                       100% 64.2M=0s
+
+2021-01-17 20:39:04 (64.2 MB/s) - ‘live.m3u8’ saved [280/280]
+
+--2021-01-17 20:39:04--  https://cn-jxnc-cmcc-live-01.bilivideo.com/live-bvc/live_1590370_4064847_1500/1610887121281.ts
+Resolving cn-jxnc-cmcc-live-01.bilivideo.com (cn-jxnc-cmcc-live-01.bilivideo.com)... 117.169.96.238
+Connecting to cn-jxnc-cmcc-live-01.bilivideo.com (cn-jxnc-cmcc-live-01.bilivideo.com)|117.169.96.238|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 1200944 (1.1M) [video/mp2t]
+Saving to: ‘video/1610887121281.ts’
+
+     0K .......... .......... .......... .......... ..........  4%  803K 1s
+    50K .......... .......... .......... .......... ..........  8%  140M 1s
+   100K .......... .......... .......... .......... .......... 12% 1.57M 1s
+   150K .......... .......... .......... .......... .......... 17%  125M 0s
+   200K .......... .......... .......... .......... .......... 21% 1.58M 0s
+   250K .......... .......... .......... .......... .......... 25%  103M 0s
+   300K .......... .......... .......... .......... .......... 29%  153M 0s
+   350K .......... .......... .......... .......... .......... 34%  138M 0s
+   400K .......... .......... .......... .......... .......... 38%  162M 0s
+   450K .......... .......... .......... .......... .......... 42% 1.63M 0s
+   500K .......... .......... .......... .......... .......... 46%  140M 0s
+   550K .......... .......... .......... .......... .......... 51%  168M 0s
+   600K .......... .......... .......... .......... .......... 55% 86.1M 0s
+   650K .......... .......... .......... .......... .......... 59%  110M 0s
+   700K .......... .......... .......... .......... .......... 63%  150M 0s
+   750K .......... .......... .......... .......... .......... 68% 1.67M 0s
+   800K .......... .......... .......... .......... .......... 72% 77.8M 0s
+   850K .......... .......... .......... .......... .......... 76%  193M 0s
+   900K .......... .......... .......... .......... .......... 81%  140M 0s
+   950K .......... .......... .......... .......... .......... 85%  150M 0s
+  1000K .......... .......... .......... .......... .......... 89%  209M 0s
+  1050K .......... .......... .......... .......... .......... 93%  204M 0s
+  1100K .......... .......... .......... .......... .......... 98%  183M 0s
+  1150K .......... .......... ..                              100%  174M=0.2s
+
+2021-01-17 20:39:05 (6.03 MB/s) - ‘video/1610887121281.ts’ saved [1200944/1200944]
+
+--2021-01-17 20:39:05--  https://cn-jxnc-cmcc-live-01.bilivideo.com/live-bvc/live_1590370_4064847_1500/1610887127265.ts
+Reusing existing connection to cn-jxnc-cmcc-live-01.bilivideo.com:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 1201132 (1.1M) [video/mp2t]
+Saving to: ‘video/1610887127265.ts’
+
+     0K .......... .......... .......... .......... ..........  4% 80.8M 0s
+    50K .......... .......... .......... .......... ..........  8% 81.6M 0s
+   100K .......... .......... .......... .......... .......... 12%  122M 0s
+   150K .......... .......... .......... .......... .......... 17%  151M 0s
+   200K .......... .......... .......... .......... .......... 21%  163M 0s
+   250K .......... .......... .......... .......... .......... 25%  150M 0s
+   300K .......... .......... .......... .......... .......... 29%  158M 0s
+   350K .......... .......... .......... .......... .......... 34%  127M 0s
+   400K .......... .......... .......... .......... .......... 38%  148M 0s
+   450K .......... .......... .......... .......... .......... 42%  163M 0s
+   500K .......... .......... .......... .......... .......... 46%  167M 0s
+   550K .......... .......... .......... .......... .......... 51%  133M 0s
+   600K .......... .......... .......... .......... .......... 55%  150M 0s
+   650K .......... .......... .......... .......... .......... 59%  201M 0s
+   700K .......... .......... .......... .......... .......... 63%  209M 0s
+   750K .......... .......... .......... .......... .......... 68%  161M 0s
+   800K .......... .......... .......... .......... .......... 72%  830K 0s
+   850K .......... .......... .......... .......... .......... 76%  202M 0s
+   900K .......... .......... .......... .......... .......... 80%  194M 0s
+   950K .......... .......... .......... .......... .......... 85%  171M 0s
+  1000K .......... .......... .......... .......... .......... 89%  217M 0s
+  1050K .......... .......... .......... .......... .......... 93%  216M 0s
+  1100K .......... .......... .......... .......... .......... 98%  203M 0s
+  1150K .......... .......... ..                              100%  186M=0.07s
+
+2021-01-17 20:39:05 (17.0 MB/s) - ‘video/1610887127265.ts’ saved [1201132/1201132]
+
+--2021-01-17 20:39:05--  https://cn-jxnc-cmcc-live-01.bilivideo.com/live-bvc/live_1590370_4064847_1500/1610887133245.ts
+Reusing existing connection to cn-jxnc-cmcc-live-01.bilivideo.com:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 1197184 (1.1M) [video/mp2t]
+Saving to: ‘video/1610887133245.ts’
+
+     0K .......... .......... .......... .......... ..........  4%  145M 0s
+    50K .......... .......... .......... .......... ..........  8%  181M 0s
+   100K .......... .......... .......... .......... .......... 12%  205M 0s
+   150K .......... .......... .......... .......... .......... 17%  162M 0s
+   200K .......... .......... .......... .......... .......... 21%  205M 0s
+   250K .......... .......... .......... .......... .......... 25%  208M 0s
+   300K .......... .......... .......... .......... .......... 29%  212M 0s
+   350K .......... .......... .......... .......... .......... 34% 1.66M 0s
+   400K .......... .......... .......... .......... .......... 38% 1.57M 0s
+   450K .......... .......... .......... .......... .......... 42%  142M 0s
+   500K .......... .......... .......... .......... .......... 47%  136M 0s
+   550K .......... .......... .......... .......... .......... 51%  166M 0s
+   600K .......... .......... .......... .......... .......... 55%  179M 0s
+   650K .......... .......... .......... .......... .......... 59%  199M 0s
+   700K .......... .......... .......... .......... .......... 64%  152M 0s
+   750K .......... .......... .......... .......... .......... 68%  134M 0s
+   800K .......... .......... .......... .......... .......... 72%  235M 0s
+   850K .......... .......... .......... .......... .......... 76%  199M 0s
+   900K .......... .......... .......... .......... .......... 81%  206M 0s
+   950K .......... .......... .......... .......... .......... 85%  201M 0s
+  1000K .......... .......... .......... .......... .......... 89%  225M 0s
+  1050K .......... .......... .......... .......... .......... 94%  186M 0s
+  1100K .......... .......... .......... .......... .......... 98%  200M 0s
+  1150K .......... .........                                  100%  167M=0.07s
+
+2021-01-17 20:39:05 (17.2 MB/s) - ‘video/1610887133245.ts’ saved [1197184/1197184]
+
+FINISHED --2021-01-17 20:39:05--
+Total wall clock time: 1.2s
+Downloaded: 3 files, 3.4M in 0.3s (10.6 MB/s)
+ffmpeg version N-100564-gf4bdedd Copyright (c) 2000-2021 the FFmpeg developers
+  built with gcc 4.8.5 (GCC) 20150623 (Red Hat 4.8.5-44)
+  configuration: 
+  libavutil      56. 63.100 / 56. 63.100
+  libavcodec     58.115.102 / 58.115.102
+  libavformat    58. 65.101 / 58. 65.101
+  libavdevice    58. 11.103 / 58. 11.103
+  libavfilter     7. 95.100 /  7. 95.100
+  libswscale      5.  8.100 /  5.  8.100
+  libswresample   3.  8.100 /  3.  8.100
+Input #0, mpegts, from 'video/1610887121281.ts':
+  Duration: 00:00:06.21, start: 24414.552833, bitrate: 1545 kb/s
+  Program 1 
+    Stream #0:0[0x100]: Video: h264 (High) ([27][0][0][0] / 0x001B), yuv420p(tv, bt470bg/unknown/unknown, progressive), 1280x720 [SAR 1:1 DAR 16:9], 30 fps, 30 tbr, 90k tbn, 60 tbc
+    Stream #0:1[0x101]: Audio: aac (LC) ([15][0][0][0] / 0x000F), 44100 Hz, stereo, fltp, 130 kb/s
+File 'video/1610887121281.mp4' already exists. Overwrite? [y/N] Not overwriting - exiting
+ffmpeg version N-100564-gf4bdedd Copyright (c) 2000-2021 the FFmpeg developers
+  built with gcc 4.8.5 (GCC) 20150623 (Red Hat 4.8.5-44)
+  configuration: 
+  libavutil      56. 63.100 / 56. 63.100
+  libavcodec     58.115.102 / 58.115.102
+  libavformat    58. 65.101 / 58. 65.101
+  libavdevice    58. 11.103 / 58. 11.103
+  libavfilter     7. 95.100 /  7. 95.100
+  libswscale      5.  8.100 /  5.  8.100
+  libswresample   3.  8.100 /  3.  8.100
+Input #0, mpegts, from 'video/1610887127265.ts':
+  Duration: 00:00:06.20, start: 24420.566800, bitrate: 1549 kb/s
+  Program 1 
+    Stream #0:0[0x100]: Video: h264 (High) ([27][0][0][0] / 0x001B), yuv420p(tv, bt470bg/unknown/unknown, progressive), 1280x720 [SAR 1:1 DAR 16:9], 30 fps, 30 tbr, 90k tbn, 60 tbc
+    Stream #0:1[0x101]: Audio: aac (LC) ([15][0][0][0] / 0x000F), 44100 Hz, stereo, fltp, 130 kb/s
+File 'video/1610887127265.mp4' already exists. Overwrite? [y/N] Not overwriting - exiting
+ffmpeg version N-100564-gf4bdedd Copyright (c) 2000-2021 the FFmpeg developers
+  built with gcc 4.8.5 (GCC) 20150623 (Red Hat 4.8.5-44)
+  configuration: 
+  libavutil      56. 63.100 / 56. 63.100
+  libavcodec     58.115.102 / 58.115.102
+  libavformat    58. 65.101 / 58. 65.101
+  libavdevice    58. 11.103 / 58. 11.103
+  libavfilter     7. 95.100 /  7. 95.100
+  libswscale      5.  8.100 /  5.  8.100
+  libswresample   3.  8.100 /  3.  8.100
+Input #0, mpegts, from 'video/1610887133245.ts':
+  Duration: 00:00:06.21, start: 24426.557544, bitrate: 1542 kb/s
+  Program 1 
+    Stream #0:0[0x100]: Video: h264 (High) ([27][0][0][0] / 0x001B), yuv420p(tv, bt470bg/unknown/unknown, progressive), 1280x720 [SAR 1:1 DAR 16:9], 30 fps, 30 tbr, 90k tbn, 60 tbc
+    Stream #0:1[0x101]: Audio: aac (LC) ([15][0][0][0] / 0x000F), 44100 Hz, stereo, fltp, 130 kb/s
+File 'video/1610887133245.mp4' already exists. Overwrite? [y/N] Not overwriting - exiting
+WARNING: timestamping does nothing in combination with -O. See the manual
+for details.
+
+--2021-01-17 20:39:05--  https://cn-jxnc-cmcc-live-01.bilivideo.com/live-bvc/730840/live_1590370_4064847_1500.m3u8
+Resolving cn-jxnc-cmcc-live-01.bilivideo.com (cn-jxnc-cmcc-live-01.bilivideo.com)... 117.169.96.238
+Connecting to cn-jxnc-cmcc-live-01.bilivideo.com (cn-jxnc-cmcc-live-01.bilivideo.com)|117.169.96.238|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 280 [application/vnd.apple.mpegurl]
+Saving to: ‘live.m3u8’
+
+     0K                                                       100% 60.0M=0s
+
+2021-01-17 20:39:06 (60.0 MB/s) - ‘live.m3u8’ saved [280/280]
+
+--2021-01-17 20:39:06--  https://cn-jxnc-cmcc-live-01.bilivideo.com/live-bvc/live_1590370_4064847_1500/1610887121281.ts
+Resolving cn-jxnc-cmcc-live-01.bilivideo.com (cn-jxnc-cmcc-live-01.bilivideo.com)... 117.169.96.238
+Connecting to cn-jxnc-cmcc-live-01.bilivideo.com (cn-jxnc-cmcc-live-01.bilivideo.com)|117.169.96.238|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 1200944 (1.1M) [video/mp2t]
+Saving to: ‘video/1610887121281.ts’
+
+     0K .......... .......... .......... .......... ..........  4%  307K 4s
+    50K .......... .......... .......... .......... ..........  8% 1.53M 2s
+   100K .......... .......... .......... .......... .......... 12% 1.57M 2s
+   150K .......... .......... .......... .......... .......... 17% 93.7M 1s
+   200K .......... .......... .......... .......... .......... 21%  125M 1s
+   250K .......... .......... .......... .......... .......... 25%  178M 1s
+   300K .......... .......... .......... .......... .......... 29% 1.59M 1s
+   350K .......... .......... .......... .......... .......... 34%  158M 0s
+   400K .......... .......... .......... .......... .......... 38%  178M 0s
+   450K .......... .......... .......... .......... .......... 42%  192M 0s
+   500K .......... .......... .......... .......... .......... 46%  169M 0s
+   550K .......... .......... .......... .......... .......... 51%  176M 0s
+   600K .......... .......... .......... .......... .......... 55%  188M 0s
+   650K .......... .......... .......... .......... .......... 59%  504K 0s
+   700K .......... .......... .......... .......... .......... 63%  160M 0s
+   750K .......... .......... .......... .......... .......... 68%  163M 0s
+   800K .......... .......... .......... .......... .......... 72%  192M 0s
+   850K .......... .......... .......... .......... .......... 76%  181M 0s
+   900K .......... .......... .......... .......... .......... 81%  187M 0s
+   950K .......... .......... .......... .......... .......... 85%  183M 0s
+  1000K .......... .......... .......... .......... .......... 89%  239M 0s
+  1050K .......... .......... .......... .......... .......... 93%  180M 0s
+  1100K .......... .......... .......... .......... .......... 98%  197M 0s
+  1150K .......... .......... ..                              100%  169M=0.4s
+
+2021-01-17 20:39:07 (3.17 MB/s) - ‘video/1610887121281.ts’ saved [1200944/1200944]
+
+--2021-01-17 20:39:07--  https://cn-jxnc-cmcc-live-01.bilivideo.com/live-bvc/live_1590370_4064847_1500/1610887127265.ts
+Reusing existing connection to cn-jxnc-cmcc-live-01.bilivideo.com:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 1201132 (1.1M) [video/mp2t]
+Saving to: ‘video/1610887127265.ts’
+
+     0K .......... .......... .......... .......... ..........  4%  168M 0s
+    50K .......... .......... .......... .......... ..........  8%  205M 0s
+   100K .......... .......... .......... .......... .......... 12%  191M 0s
+   150K .......... .......... .......... .......... .......... 17%  176M 0s
+   200K .......... .......... .......... .......... .......... 21%  197M 0s
+   250K .......... .......... .......... .......... .......... 25%  217M 0s
+   300K .......... .......... .......... .......... .......... 29%  219M 0s
+   350K .......... .......... .......... .......... .......... 34%  161M 0s
+   400K .......... .......... .......... .......... .......... 38%  208M 0s
+   450K .......... .......... .......... .......... .......... 42%  232M 0s
+   500K .......... .......... .......... .......... .......... 46%  234M 0s
+   550K .......... .......... .......... .......... .......... 51%  177M 0s
+   600K .......... .......... .......... .......... .......... 55%  230M 0s
+   650K .......... .......... .......... .......... .......... 59%  181M 0s
+   700K .......... .......... .......... .......... .......... 63%  234M 0s
+   750K .......... .......... .......... .......... .......... 68%  161M 0s
+   800K .......... .......... .......... .......... .......... 72%  210M 0s
+   850K .......... .......... .......... .......... .......... 76%  208M 0s
+   900K .......... .......... .......... .......... .......... 80%  235M 0s
+   950K .......... .......... .......... .......... .......... 85% 1.82M 0s
+  1000K .......... .......... .......... .......... .......... 89%  167M 0s
+  1050K .......... .......... .......... .......... .......... 93%  205M 0s
+  1100K .......... .......... .......... .......... .......... 98%  177M 0s
+  1150K .......... .......... ..                              100%  202M=0.03s
+
+2021-01-17 20:39:07 (35.4 MB/s) - ‘video/1610887127265.ts’ saved [1201132/1201132]
+
+--2021-01-17 20:39:07--  https://cn-jxnc-cmcc-live-01.bilivideo.com/live-bvc/live_1590370_4064847_1500/1610887133245.ts
+Reusing existing connection to cn-jxnc-cmcc-live-01.bilivideo.com:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 1197184 (1.1M) [video/mp2t]
+Saving to: ‘video/1610887133245.ts’
+
+     0K .......... .......... .......... .......... ..........  4%  149M 0s
+    50K .......... .......... .......... .......... ..........  8%  169M 0s
+   100K .......... .......... .......... .......... .......... 12%  179M 0s
+   150K .......... .......... .......... .......... .......... 17%  148M 0s
+   200K .......... .......... .......... .......... .......... 21%  190M 0s
+   250K .......... .......... .......... .......... .......... 25%  157M 0s
+   300K .......... .......... .......... .......... .......... 29%  144M 0s
+   350K .......... .......... .......... .......... .......... 34%  146M 0s
+   400K .......... .......... .......... .......... .......... 38%  183M 0s
+   450K .......... .......... .......... .......... .......... 42%  208M 0s
+   500K .......... .......... .......... .......... .......... 47%  213M 0s
+   550K .......... .......... .......... .......... .......... 51%  200M 0s
+   600K .......... .......... .......... .......... .......... 55%  201M 0s
+   650K .......... .......... .......... .......... .......... 59%  232M 0s
+   700K .......... .......... .......... .......... .......... 64%  233M 0s
+   750K .......... .......... .......... .......... .......... 68%  190M 0s
+   800K .......... .......... .......... .......... .......... 72%  197M 0s
+   850K .......... .......... .......... .......... .......... 76%  240M 0s
+   900K .......... .......... .......... .......... .......... 81%  227M 0s
+   950K .......... .......... .......... .......... .......... 85%  200M 0s
+  1000K .......... .......... .......... .......... .......... 89%  217M 0s
+  1050K .......... .......... .......... .......... .......... 94%  223M 0s
+  1100K .......... .......... .......... .......... .......... 98%  222M 0s
+  1150K .......... .........                                  100%  167M=0.006s
+
+2021-01-17 20:39:08 (189 MB/s) - ‘video/1610887133245.ts’ saved [1197184/1197184]
+
+FINISHED --2021-01-17 20:39:08--
+Total wall clock time: 1.8s
+Downloaded: 3 files, 3.4M in 0.4s (8.59 MB/s)
+ffmpeg version N-100564-gf4bdedd Copyright (c) 2000-2021 the FFmpeg developers
+  built with gcc 4.8.5 (GCC) 20150623 (Red Hat 4.8.5-44)
+  configuration: 
+  libavutil      56. 63.100 / 56. 63.100
+  libavcodec     58.115.102 / 58.115.102
+  libavformat    58. 65.101 / 58. 65.101
+  libavdevice    58. 11.103 / 58. 11.103
+  libavfilter     7. 95.100 /  7. 95.100
+  libswscale      5.  8.100 /  5.  8.100
+  libswresample   3.  8.100 /  3.  8.100
+Input #0, mpegts, from 'video/1610887121281.ts':
+  Duration: 00:00:06.21, start: 24414.552833, bitrate: 1545 kb/s
+  Program 1 
+    Stream #0:0[0x100]: Video: h264 (High) ([27][0][0][0] / 0x001B), yuv420p(tv, bt470bg/unknown/unknown, progressive), 1280x720 [SAR 1:1 DAR 16:9], 30 fps, 30 tbr, 90k tbn, 60 tbc
+    Stream #0:1[0x101]: Audio: aac (LC) ([15][0][0][0] / 0x000F), 44100 Hz, stereo, fltp, 130 kb/s
+Stream mapping:
+  Stream #0:0 -> #0:0 (h264 (native) -> mpeg4 (native))
+  Stream #0:1 -> #0:1 (aac (native) -> aac (native))
+Press [q] to stop, [?] for help
+Output #0, mp4, to 'video/1610887121281.mp4':
+  Metadata:
+    encoder         : Lavf58.65.101
+    Stream #0:0: Video: mpeg4 (mp4v / 0x7634706D), yuv420p(tv, bt470bg/unknown/unknown, progressive), 1280x720 [SAR 1:1 DAR 16:9], q=2-31, 200 kb/s, 30 fps, 15360 tbn
+    Metadata:
+      encoder         : Lavc58.115.102 mpeg4
+    Side data:
+      cpb: bitrate max/min/avg: 0/0/200000 buffer size: 0 vbv_delay: N/A
+    Stream #0:1: Audio: aac (LC) (mp4a / 0x6134706D), 44100 Hz, stereo, fltp, 128 kb/s
+    Metadata:
+      encoder         : Lavc58.115.102 aac
+frame=    7 fps=0.0 q=2.0 size=       0kB time=00:00:00.20 bitrate=   1.8kbits/s dup=6 drop=0 speed=8.08x    frame=  104 fps=0.0 q=31.0 size=     256kB time=00:00:03.48 bitrate= 602.2kbits/s dup=6 drop=0 speed=6.64x    frame=  186 fps=0.0 q=31.0 Lsize=     858kB time=00:00:06.16 bitrate=1140.2kbits/s dup=6 drop=0 speed=6.75x    
+video:752kB audio:99kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 0.799050%
+[aac @ 0x417f2c0] Qavg: 616.616
+ffmpeg version N-100564-gf4bdedd Copyright (c) 2000-2021 the FFmpeg developers
+  built with gcc 4.8.5 (GCC) 20150623 (Red Hat 4.8.5-44)
+  configuration: 
+  libavutil      56. 63.100 / 56. 63.100
+  libavcodec     58.115.102 / 58.115.102
+  libavformat    58. 65.101 / 58. 65.101
+  libavdevice    58. 11.103 / 58. 11.103
+  libavfilter     7. 95.100 /  7. 95.100
+  libswscale      5.  8.100 /  5.  8.100
+  libswresample   3.  8.100 /  3.  8.100
+Input #0, mpegts, from 'video/1610887127265.ts':
+  Duration: 00:00:06.20, start: 24420.566800, bitrate: 1549 kb/s
+  Program 1 
+    Stream #0:0[0x100]: Video: h264 (High) ([27][0][0][0] / 0x001B), yuv420p(tv, bt470bg/unknown/unknown, progressive), 1280x720 [SAR 1:1 DAR 16:9], 30 fps, 30 tbr, 90k tbn, 60 tbc
+    Stream #0:1[0x101]: Audio: aac (LC) ([15][0][0][0] / 0x000F), 44100 Hz, stereo, fltp, 130 kb/s
+Stream mapping:
+  Stream #0:0 -> #0:0 (h264 (native) -> mpeg4 (native))
+  Stream #0:1 -> #0:1 (aac (native) -> aac (native))
+Press [q] to stop, [?] for help
+Output #0, mp4, to 'video/1610887127265.mp4':
+  Metadata:
+    encoder         : Lavf58.65.101
+    Stream #0:0: Video: mpeg4 (mp4v / 0x7634706D), yuv420p(tv, bt470bg/unknown/unknown, progressive), 1280x720 [SAR 1:1 DAR 16:9], q=2-31, 200 kb/s, 30 fps, 15360 tbn
+    Metadata:
+      encoder         : Lavc58.115.102 mpeg4
+    Side data:
+      cpb: bitrate max/min/avg: 0/0/200000 buffer size: 0 vbv_delay: N/A
+    Stream #0:1: Audio: aac (LC) (mp4a / 0x6134706D), 44100 Hz, stereo, fltp, 128 kb/s
+    Metadata:
+      encoder         : Lavc58.115.102 aac
+frame=    7 fps=0.0 q=2.0 size=       0kB time=00:00:00.20 bitrate=   1.8kbits/s dup=6 drop=0 speed=9.42x    frame=  104 fps=0.0 q=31.0 size=     256kB time=00:00:03.43 bitrate= 610.9kbits/s dup=6 drop=0 speed=6.59x    frame=  186 fps=0.0 q=31.0 Lsize=     860kB time=00:00:06.16 bitrate=1142.0kbits/s dup=6 drop=0 speed=6.66x    
+video:755kB audio:98kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 0.790385%
+[aac @ 0x2bc1180] Qavg: 589.508
+ffmpeg version N-100564-gf4bdedd Copyright (c) 2000-2021 the FFmpeg developers
+  built with gcc 4.8.5 (GCC) 20150623 (Red Hat 4.8.5-44)
+  configuration: 
+  libavutil      56. 63.100 / 56. 63.100
+  libavcodec     58.115.102 / 58.115.102
+  libavformat    58. 65.101 / 58. 65.101
+  libavdevice    58. 11.103 / 58. 11.103
+  libavfilter     7. 95.100 /  7. 95.100
+  libswscale      5.  8.100 /  5.  8.100
+  libswresample   3.  8.100 /  3.  8.100
+Input #0, mpegts, from 'video/1610887133245.ts':
+  Duration: 00:00:06.21, start: 24426.557544, bitrate: 1542 kb/s
+  Program 1 
+    Stream #0:0[0x100]: Video: h264 (High) ([27][0][0][0] / 0x001B), yuv420p(tv, bt470bg/unknown/unknown, progressive), 1280x720 [SAR 1:1 DAR 16:9], 30 fps, 30 tbr, 90k tbn, 60 tbc
+    Stream #0:1[0x101]: Audio: aac (LC) ([15][0][0][0] / 0x000F), 44100 Hz, stereo, fltp, 130 kb/s
+Stream mapping:
+  Stream #0:0 -> #0:0 (h264 (native) -> mpeg4 (native))
+  Stream #0:1 -> #0:1 (aac (native) -> aac (native))
+Press [q] to stop, [?] for help
+Output #0, mp4, to 'video/1610887133245.mp4':
+  Metadata:
+    encoder         : Lavf58.65.101
+    Stream #0:0: Video: mpeg4 (mp4v / 0x7634706D), yuv420p(tv, bt470bg/unknown/unknown, progressive), 1280x720 [SAR 1:1 DAR 16:9], q=2-31, 200 kb/s, 30 fps, 15360 tbn
+    Metadata:
+      encoder         : Lavc58.115.102 mpeg4
+    Side data:
+      cpb: bitrate max/min/avg: 0/0/200000 buffer size: 0 vbv_delay: N/A
+    Stream #0:1: Audio: aac (LC) (mp4a / 0x6134706D), 44100 Hz, stereo, fltp, 128 kb/s
+    Metadata:
+      encoder         : Lavc58.115.102 aac
+frame=    7 fps=0.0 q=2.0 size=       0kB time=00:00:00.20 bitrate=   1.8kbits/s dup=6 drop=0 speed=8.57x    frame=   94 fps=0.0 q=31.0 size=     256kB time=00:00:03.10 bitrate= 676.6kbits/s dup=6 drop=0 speed=5.88x    frame=  186 fps=0.0 q=31.0 Lsize=     862kB time=00:00:06.16 bitrate=1144.8kbits/s dup=6 drop=0 speed=6.32x    
+video:757kB audio:99kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 0.758048%
+[aac @ 0x2626100] Qavg: 844.088
+--2021-01-17 20:48:52--  https://cn-jxnc-cmcc-live-01.bilivideo.com/live-bvc/730840/live_1590370_4064847_1500.m3u8
+Resolving cn-jxnc-cmcc-live-01.bilivideo.com (cn-jxnc-cmcc-live-01.bilivideo.com)... 117.169.96.238
+Connecting to cn-jxnc-cmcc-live-01.bilivideo.com (cn-jxnc-cmcc-live-01.bilivideo.com)|117.169.96.238|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 280 [application/vnd.apple.mpegurl]
+Saving to: ‘live.m3u8’
+
+     0K                                                       100% 78.1M=0s
+
+2021-01-17 20:48:54 (78.1 MB/s) - ‘live.m3u8’ saved [280/280]
+
+WARNING: timestamping does nothing in combination with -O. See the manual
+for details.
+
+--2021-01-17 20:48:54--  https://cn-jxnc-cmcc-live-01.bilivideo.com/live-bvc/730840/live_1590370_4064847_1500.m3u8
+Resolving cn-jxnc-cmcc-live-01.bilivideo.com (cn-jxnc-cmcc-live-01.bilivideo.com)... 117.169.96.238
+Connecting to cn-jxnc-cmcc-live-01.bilivideo.com (cn-jxnc-cmcc-live-01.bilivideo.com)|117.169.96.238|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 280 [application/vnd.apple.mpegurl]
+Saving to: ‘live.m3u8’
+
+     0K                                                       100% 73.3M=0s
+
+2021-01-17 20:48:55 (73.3 MB/s) - ‘live.m3u8’ saved [280/280]
+
+--2021-01-17 20:48:55--  https://cn-jxnc-cmcc-live-01.bilivideo.com/live-bvc/live_1590370_4064847_1500/1610887709265.ts
+Resolving cn-jxnc-cmcc-live-01.bilivideo.com (cn-jxnc-cmcc-live-01.bilivideo.com)... 117.169.96.238
+Connecting to cn-jxnc-cmcc-live-01.bilivideo.com (cn-jxnc-cmcc-live-01.bilivideo.com)|117.169.96.238|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 1206584 (1.2M) [video/mp2t]
+Saving to: ‘video/1610887709265.ts’
+
+     0K .......... .......... .......... .......... ..........  4%  796K 1s
+    50K .......... .......... .......... .......... ..........  8%  139M 1s
+   100K .......... .......... .......... .......... .......... 12% 1.55M 1s
+   150K .......... .......... .......... .......... .......... 16%  132M 0s
+   200K .......... .......... .......... .......... .......... 21%  180M 0s
+   250K .......... .......... .......... .......... .......... 25% 1.58M 0s
+   300K .......... .......... .......... .......... .......... 29%  166M 0s
+   350K .......... .......... .......... .......... .......... 33%  167M 0s
+   400K .......... .......... .......... .......... .......... 38%  195M 0s
+   450K .......... .......... .......... .......... .......... 42% 1.60M 0s
+   500K .......... .......... .......... .......... .......... 46% 18.6M 0s
+   550K .......... .......... .......... .......... .......... 50% 2.74M 0s
+   600K .......... .......... .......... .......... .......... 55% 60.9M 0s
+   650K .......... .......... .......... .......... .......... 59% 2.78M 0s
+   700K .......... .......... .......... .......... .......... 63% 2.81M 0s
+   750K .......... .......... .......... .......... .......... 67% 2.74M 0s
+   800K .......... .......... .......... .......... .......... 72% 2.76M 0s
+   850K .......... .......... .......... .......... .......... 76% 61.5M 0s
+   900K .......... .......... .......... .......... .......... 80% 2.75M 0s
+   950K .......... .......... .......... .......... .......... 84% 2.76M 0s
+  1000K .......... .......... .......... .......... .......... 89% 2.83M 0s
+  1050K .......... .......... .......... .......... .......... 93% 2.77M 0s
+  1100K .......... .......... .......... .......... .......... 97% 38.3M 0s
+  1150K .......... .......... ........                        100% 1.63M=0.3s
+
+2021-01-17 20:48:56 (3.40 MB/s) - ‘video/1610887709265.ts’ saved [1206584/1206584]
+
+--2021-01-17 20:48:56--  https://cn-jxnc-cmcc-live-01.bilivideo.com/live-bvc/live_1590370_4064847_1500/1610887715272.ts
+Reusing existing connection to cn-jxnc-cmcc-live-01.bilivideo.com:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 1182332 (1.1M) [video/mp2t]
+Saving to: ‘video/1610887715272.ts’
+
+     0K .......... .......... .......... .......... ..........  4% 2.79M 0s
+    50K .......... .......... .......... .......... ..........  8%  146M 0s
+   100K .......... .......... .......... .......... .......... 12% 2.68M 0s
+   150K .......... .......... .......... .......... .......... 17% 2.75M 0s
+   200K .......... .......... .......... .......... .......... 21% 2.82M 0s
+   250K .......... .......... .......... .......... .......... 25%  120M 0s
+   300K .......... .......... .......... .......... .......... 30% 2.77M 0s
+   350K .......... .......... .......... .......... .......... 34% 2.74M 0s
+   400K .......... .......... .......... .......... .......... 38% 2.75M 0s
+   450K .......... .......... .......... .......... .......... 43% 2.76M 0s
+   500K .......... .......... .......... .......... .......... 47%  125M 0s
+   550K .......... .......... .......... .......... .......... 51% 2.73M 0s
+   600K .......... .......... .......... .......... .......... 56% 2.77M 0s
+   650K .......... .......... .......... .......... .......... 60% 2.77M 0s
+   700K .......... .......... .......... .......... .......... 64% 2.85M 0s
+   750K .......... .......... .......... .......... .......... 69% 2.76M 0s
+   800K .......... .......... .......... .......... .......... 73% 38.8M 0s
+   850K .......... .......... .......... .......... .......... 77% 2.73M 0s
+   900K .......... .......... .......... .......... .......... 82% 2.79M 0s
+   950K .......... .......... .......... .......... .......... 86% 2.82M 0s
+  1000K .......... .......... .......... .......... .......... 90% 39.6M 0s
+  1050K .......... .......... .......... .......... .......... 95% 2.81M 0s
+  1100K .......... .......... .......... .......... .......... 99% 2.78M 0s
+  1150K ....                                                  100% 86.0M=0.3s
+
+2021-01-17 20:48:56 (3.51 MB/s) - ‘video/1610887715272.ts’ saved [1182332/1182332]
+
+--2021-01-17 20:48:56--  https://cn-jxnc-cmcc-live-01.bilivideo.com/live-bvc/live_1590370_4064847_1500/1610887721267.ts
+Reusing existing connection to cn-jxnc-cmcc-live-01.bilivideo.com:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 1216360 (1.2M) [video/mp2t]
+Saving to: ‘video/1610887721267.ts’
+
+     0K .......... .......... .......... .......... ..........  4% 1.54M 1s
+    50K .......... .......... .......... .......... ..........  8% 2.83M 1s
+   100K .......... .......... .......... .......... .......... 12% 3.39M 0s
+   150K .......... .......... .......... .......... .......... 16% 15.1M 0s
+   200K .......... .......... .......... .......... .......... 21% 3.51M 0s
+   250K .......... .......... .......... .......... .......... 25% 3.43M 0s
+   300K .......... .......... .......... .......... .......... 29% 4.16M 0s
+   350K .......... .......... .......... .......... .......... 33% 2.75M 0s
+   400K .......... .......... .......... .......... .......... 37% 47.3M 0s
+   450K .......... .......... .......... .......... .......... 42% 2.76M 0s
+   500K .......... .......... .......... .......... .......... 46% 2.74M 0s
+   550K .......... .......... .......... .......... .......... 50% 2.89M 0s
+   600K .......... .......... .......... .......... .......... 54% 2.76M 0s
+   650K .......... .......... .......... .......... .......... 58% 39.5M 0s
+   700K .......... .......... .......... .......... .......... 63% 2.75M 0s
+   750K .......... .......... .......... .......... .......... 67% 2.74M 0s
+   800K .......... .......... .......... .......... .......... 71% 2.88M 0s
+   850K .......... .......... .......... .......... .......... 75% 2.75M 0s
+   900K .......... .......... .......... .......... .......... 79% 42.7M 0s
+   950K .......... .......... .......... .......... .......... 84% 2.75M 0s
+  1000K .......... .......... .......... .......... .......... 88% 2.78M 0s
+  1050K .......... .......... .......... .......... .......... 92% 2.86M 0s
+  1100K .......... .......... .......... .......... .......... 96% 40.3M 0s
+  1150K .......... .......... .......... .......              100% 2.13M=0.3s
+
+2021-01-17 20:48:58 (3.42 MB/s) - ‘video/1610887721267.ts’ saved [1216360/1216360]
+
+FINISHED --2021-01-17 20:48:58--
+Total wall clock time: 2.7s
+Downloaded: 3 files, 3.4M in 1.0s (3.44 MB/s)
+ffmpeg version N-100564-gf4bdedd Copyright (c) 2000-2021 the FFmpeg developers
+  built with gcc 4.8.5 (GCC) 20150623 (Red Hat 4.8.5-44)
+  configuration: 
+  libavutil      56. 63.100 / 56. 63.100
+  libavcodec     58.115.102 / 58.115.102
+  libavformat    58. 65.101 / 58. 65.101
+  libavdevice    58. 11.103 / 58. 11.103
+  libavfilter     7. 95.100 /  7. 95.100
+  libswscale      5.  8.100 /  5.  8.100
+  libswresample   3.  8.100 /  3.  8.100
+Input #0, mpegts, from 'video/1610887709265.ts':
+  Duration: 00:00:06.22, start: 25002.551744, bitrate: 1552 kb/s
+  Program 1 
+    Stream #0:0[0x100]: Video: h264 (High) ([27][0][0][0] / 0x001B), yuv420p(tv, bt470bg/unknown/unknown, progressive), 1280x720 [SAR 1:1 DAR 16:9], 30 fps, 30 tbr, 90k tbn, 60 tbc
+    Stream #0:1[0x101]: Audio: aac (LC) ([15][0][0][0] / 0x000F), 44100 Hz, stereo, fltp, 130 kb/s
+Stream mapping:
+  Stream #0:0 -> #0:0 (h264 (native) -> mpeg4 (native))
+  Stream #0:1 -> #0:1 (aac (native) -> aac (native))
+Press [q] to stop, [?] for help
+Output #0, mp4, to 'video/1610887709265.mp4':
+  Metadata:
+    encoder         : Lavf58.65.101
+    Stream #0:0: Video: mpeg4 (mp4v / 0x7634706D), yuv420p(tv, bt470bg/unknown/unknown, progressive), 1280x720 [SAR 1:1 DAR 16:9], q=2-31, 200 kb/s, 30 fps, 15360 tbn
+    Metadata:
+      encoder         : Lavc58.115.102 mpeg4
+    Side data:
+      cpb: bitrate max/min/avg: 0/0/200000 buffer size: 0 vbv_delay: N/A
+    Stream #0:1: Audio: aac (LC) (mp4a / 0x6134706D), 44100 Hz, stereo, fltp, 128 kb/s
+    Metadata:
+      encoder         : Lavc58.115.102 aac
+frame=    7 fps=0.0 q=2.0 size=       0kB time=00:00:00.20 bitrate=   1.8kbits/s dup=6 drop=0 speed=8.93x    frame=  109 fps=0.0 q=24.8 size=     256kB time=00:00:03.60 bitrate= 582.6kbits/s dup=6 drop=0 speed=6.88x    frame=  186 fps=0.0 q=31.0 Lsize=     856kB time=00:00:06.16 bitrate=1136.5kbits/s dup=6 drop=0 speed=6.46x    
+video:752kB audio:97kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 0.801633%
+[aac @ 0x2f65940] Qavg: 2681.454
+ffmpeg version N-100564-gf4bdedd Copyright (c) 2000-2021 the FFmpeg developers
+  built with gcc 4.8.5 (GCC) 20150623 (Red Hat 4.8.5-44)
+  configuration: 
+  libavutil      56. 63.100 / 56. 63.100
+  libavcodec     58.115.102 / 58.115.102
+  libavformat    58. 65.101 / 58. 65.101
+  libavdevice    58. 11.103 / 58. 11.103
+  libavfilter     7. 95.100 /  7. 95.100
+  libswscale      5.  8.100 /  5.  8.100
+  libswresample   3.  8.100 /  3.  8.100
+Input #0, mpegts, from 'video/1610887715272.ts':
+  Duration: 00:00:06.20, start: 25008.565711, bitrate: 1525 kb/s
+  Program 1 
+    Stream #0:0[0x100]: Video: h264 (High) ([27][0][0][0] / 0x001B), yuv420p(tv, bt470bg/unknown/unknown, progressive), 1280x720 [SAR 1:1 DAR 16:9], 30 fps, 30 tbr, 90k tbn, 60 tbc
+    Stream #0:1[0x101]: Audio: aac (LC) ([15][0][0][0] / 0x000F), 44100 Hz, stereo, fltp, 130 kb/s
+Stream mapping:
+  Stream #0:0 -> #0:0 (h264 (native) -> mpeg4 (native))
+  Stream #0:1 -> #0:1 (aac (native) -> aac (native))
+Press [q] to stop, [?] for help
+Output #0, mp4, to 'video/1610887715272.mp4':
+  Metadata:
+    encoder         : Lavf58.65.101
+    Stream #0:0: Video: mpeg4 (mp4v / 0x7634706D), yuv420p(tv, bt470bg/unknown/unknown, progressive), 1280x720 [SAR 1:1 DAR 16:9], q=2-31, 200 kb/s, 30 fps, 15360 tbn
+    Metadata:
+      encoder         : Lavc58.115.102 mpeg4
+    Side data:
+      cpb: bitrate max/min/avg: 0/0/200000 buffer size: 0 vbv_delay: N/A
+    Stream #0:1: Audio: aac (LC) (mp4a / 0x6134706D), 44100 Hz, stereo, fltp, 128 kb/s
+    Metadata:
+      encoder         : Lavc58.115.102 aac
+frame=    7 fps=0.0 q=2.0 size=       0kB time=00:00:00.20 bitrate=   1.8kbits/s dup=6 drop=0 speed=8.85x    frame=  103 fps=0.0 q=31.0 size=     256kB time=00:00:03.40 bitrate= 616.9kbits/s dup=6 drop=0 speed=6.46x    frame=  186 fps=0.0 q=31.0 Lsize=     837kB time=00:00:06.16 bitrate=1112.3kbits/s dup=6 drop=0 speed=6.69x    
+video:733kB audio:97kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 0.844822%
+[aac @ 0x3d9e080] Qavg: 587.947
+ffmpeg version N-100564-gf4bdedd Copyright (c) 2000-2021 the FFmpeg developers
+  built with gcc 4.8.5 (GCC) 20150623 (Red Hat 4.8.5-44)
+  configuration: 
+  libavutil      56. 63.100 / 56. 63.100
+  libavcodec     58.115.102 / 58.115.102
+  libavformat    58. 65.101 / 58. 65.101
+  libavdevice    58. 11.103 / 58. 11.103
+  libavfilter     7. 95.100 /  7. 95.100
+  libswscale      5.  8.100 /  5.  8.100
+  libswresample   3.  8.100 /  3.  8.100
+Input #0, mpegts, from 'video/1610887721267.ts':
+  Duration: 00:00:06.21, start: 25014.556456, bitrate: 1566 kb/s
+  Program 1 
+    Stream #0:0[0x100]: Video: h264 (High) ([27][0][0][0] / 0x001B), yuv420p(tv, bt470bg/unknown/unknown, progressive), 1280x720 [SAR 1:1 DAR 16:9], 30 fps, 30 tbr, 90k tbn, 60 tbc
+    Stream #0:1[0x101]: Audio: aac (LC) ([15][0][0][0] / 0x000F), 44100 Hz, stereo, fltp, 130 kb/s
+Stream mapping:
+  Stream #0:0 -> #0:0 (h264 (native) -> mpeg4 (native))
+  Stream #0:1 -> #0:1 (aac (native) -> aac (native))
+Press [q] to stop, [?] for help
+Output #0, mp4, to 'video/1610887721267.mp4':
+  Metadata:
+    encoder         : Lavf58.65.101
+    Stream #0:0: Video: mpeg4 (mp4v / 0x7634706D), yuv420p(tv, bt470bg/unknown/unknown, progressive), 1280x720 [SAR 1:1 DAR 16:9], q=2-31, 200 kb/s, 30 fps, 15360 tbn
+    Metadata:
+      encoder         : Lavc58.115.102 mpeg4
+    Side data:
+      cpb: bitrate max/min/avg: 0/0/200000 buffer size: 0 vbv_delay: N/A
+    Stream #0:1: Audio: aac (LC) (mp4a / 0x6134706D), 44100 Hz, stereo, fltp, 128 kb/s
+    Metadata:
+      encoder         : Lavc58.115.102 aac
+frame=    7 fps=0.0 q=2.0 size=       0kB time=00:00:00.20 bitrate=   1.8kbits/s dup=6 drop=0 speed=10.4x    frame=   98 fps=0.0 q=31.0 size=     256kB time=00:00:03.23 bitrate= 648.7kbits/s dup=6 drop=0 speed=6.22x    frame=  186 fps=0.0 q=31.0 Lsize=     865kB time=00:00:06.16 bitrate=1148.9kbits/s dup=6 drop=0 speed=6.39x    
+video:761kB audio:97kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 0.755309%
+[aac @ 0x3bf2d80] Qavg: 735.667
+--2021-01-17 21:20:47--  https://cn-jxnc-cmcc-live-01.bilivideo.com/live-bvc/730840/live_1590370_4064847_1500.m3u8
+Resolving cn-jxnc-cmcc-live-01.bilivideo.com (cn-jxnc-cmcc-live-01.bilivideo.com)... 117.169.96.238
+Connecting to cn-jxnc-cmcc-live-01.bilivideo.com (cn-jxnc-cmcc-live-01.bilivideo.com)|117.169.96.238|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 280 [application/vnd.apple.mpegurl]
+Saving to: ‘live.m3u8’
+
+     0K                                                       100% 57.1M=0s
+
+2021-01-17 21:20:48 (57.1 MB/s) - ‘live.m3u8’ saved [280/280]
+
+WARNING: timestamping does nothing in combination with -O. See the manual
+for details.
+
+--2021-01-17 21:20:48--  https://cn-jxnc-cmcc-live-01.bilivideo.com/live-bvc/730840/live_1590370_4064847_1500.m3u8
+Resolving cn-jxnc-cmcc-live-01.bilivideo.com (cn-jxnc-cmcc-live-01.bilivideo.com)... 117.169.96.238
+Connecting to cn-jxnc-cmcc-live-01.bilivideo.com (cn-jxnc-cmcc-live-01.bilivideo.com)|117.169.96.238|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 280 [application/vnd.apple.mpegurl]
+Saving to: ‘live.m3u8’
+
+     0K                                                       100% 68.0M=0s
+
+2021-01-17 21:20:48 (68.0 MB/s) - ‘live.m3u8’ saved [280/280]
+
+--2021-01-17 21:20:48--  https://cn-jxnc-cmcc-live-01.bilivideo.com/live-bvc/live_1590370_4064847_1500/1610889629255.ts
+Resolving cn-jxnc-cmcc-live-01.bilivideo.com (cn-jxnc-cmcc-live-01.bilivideo.com)... 117.169.96.238
+Connecting to cn-jxnc-cmcc-live-01.bilivideo.com (cn-jxnc-cmcc-live-01.bilivideo.com)|117.169.96.238|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 1122360 (1.1M) [video/mp2t]
+Saving to: ‘video/1610889629255.ts’
+
+     0K .......... .......... .......... .......... ..........  4%  327K 3s
+    50K .......... .......... .......... .......... ..........  9% 95.4M 2s
+   100K .......... .......... .......... .......... .......... 13% 1.35M 1s
+   150K .......... .......... .......... .......... .......... 18%  142M 1s
+   200K .......... .......... .......... .......... .......... 22%  148M 1s
+   250K .......... .......... .......... .......... .......... 27% 1.37M 1s
+   300K .......... .......... .......... .......... .......... 31%  128M 0s
+   350K .......... .......... .......... .......... .......... 36%  180M 0s
+   400K .......... .......... .......... .......... .......... 41%  229M 0s
+   450K .......... .......... .......... .......... .......... 45%  208M 0s
+   500K .......... .......... .......... .......... .......... 50% 1.35M 0s
+   550K .......... .......... .......... .......... .......... 54%  119M 0s
+   600K .......... .......... .......... .......... .......... 59%  192M 0s
+   650K .......... .......... .......... .......... .......... 63%  215M 0s
+   700K .......... .......... .......... .......... .......... 68%  187M 0s
+   750K .......... .......... .......... .......... .......... 72%  160M 0s
+   800K .......... .......... .......... .......... .......... 77%  206M 0s
+   850K .......... .......... .......... .......... .......... 82%  186M 0s
+   900K .......... .......... .......... .......... .......... 86%  207M 0s
+   950K .......... .......... .......... .......... .......... 91% 1.19M 0s
+  1000K .......... .......... .......... .......... .......... 95%  193M 0s
+  1050K .......... .......... .......... .......... ......    100%  199M=0.3s
+
+2021-01-17 21:20:49 (3.49 MB/s) - ‘video/1610889629255.ts’ saved [1122360/1122360]
+
+--2021-01-17 21:20:49--  https://cn-jxnc-cmcc-live-01.bilivideo.com/live-bvc/live_1590370_4064847_1500/1610889635236.ts
+Reusing existing connection to cn-jxnc-cmcc-live-01.bilivideo.com:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 1080248 (1.0M) [video/mp2t]
+Saving to: ‘video/1610889635236.ts’
+
+     0K .......... .......... .......... .......... ..........  4% 3.01M 0s
+    50K .......... .......... .......... .......... ..........  9%  105M 0s
+   100K .......... .......... .......... .......... .......... 14% 2.92M 0s
+   150K .......... .......... .......... .......... .......... 18% 2.87M 0s
+   200K .......... .......... .......... .......... .......... 23% 2.97M 0s
+   250K .......... .......... .......... .......... .......... 28%  117M 0s
+   300K .......... .......... .......... .......... .......... 33% 2.88M 0s
+   350K .......... .......... .......... .......... .......... 37% 2.89M 0s
+   400K .......... .......... .......... .......... .......... 42% 2.93M 0s
+   450K .......... .......... .......... .......... .......... 47% 2.95M 0s
+   500K .......... .......... .......... .......... .......... 52% 73.6M 0s
+   550K .......... .......... .......... .......... .......... 56% 2.90M 0s
+   600K .......... .......... .......... .......... .......... 61% 2.91M 0s
+   650K .......... .......... .......... .......... .......... 66% 2.94M 0s
+   700K .......... .......... .......... .......... .......... 71% 2.98M 0s
+   750K .......... .......... .......... .......... .......... 75% 2.92M 0s
+   800K .......... .......... .......... .......... .......... 80% 46.7M 0s
+   850K .......... .......... .......... .......... .......... 85% 2.89M 0s
+   900K .......... .......... .......... .......... .......... 90% 2.97M 0s
+   950K .......... .......... .......... .......... .......... 94% 2.94M 0s
+  1000K .......... .......... .......... .......... .......... 99% 48.8M 0s
+  1050K ....                                                  100% 9403G=0.3s
+
+2021-01-17 21:20:49 (3.81 MB/s) - ‘video/1610889635236.ts’ saved [1080248/1080248]
+
+--2021-01-17 21:20:49--  https://cn-jxnc-cmcc-live-01.bilivideo.com/live-bvc/live_1590370_4064847_1500/1610889641200.ts
+Reusing existing connection to cn-jxnc-cmcc-live-01.bilivideo.com:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 1120668 (1.1M) [video/mp2t]
+Saving to: ‘video/1610889641200.ts’
+
+     0K .......... .......... .......... .......... ..........  4% 3.02M 0s
+    50K .......... .......... .......... .......... ..........  9%  104M 0s
+   100K .......... .......... .......... .......... .......... 13% 2.90M 0s
+   150K .......... .......... .......... .......... .......... 18% 2.93M 0s
+   200K .......... .......... .......... .......... .......... 22% 2.91M 0s
+   250K .......... .......... .......... .......... .......... 27%  136M 0s
+   300K .......... .......... .......... .......... .......... 31% 2.89M 0s
+   350K .......... .......... .......... .......... .......... 36% 2.91M 0s
+   400K .......... .......... .......... .......... .......... 41% 2.89M 0s
+   450K .......... .......... .......... .......... .......... 45% 2.94M 0s
+   500K .......... .......... .......... .......... .......... 50% 84.6M 0s
+   550K .......... .......... .......... .......... .......... 54% 2.91M 0s
+   600K .......... .......... .......... .......... .......... 59% 2.87M 0s
+   650K .......... .......... .......... .......... .......... 63% 2.98M 0s
+   700K .......... .......... .......... .......... .......... 68% 3.02M 0s
+   750K .......... .......... .......... .......... .......... 73% 2.90M 0s
+   800K .......... .......... .......... .......... .......... 77% 35.8M 0s
+   850K .......... .......... .......... .......... .......... 82% 2.92M 0s
+   900K .......... .......... .......... .......... .......... 86% 2.97M 0s
+   950K .......... .......... .......... .......... .......... 91% 2.97M 0s
+  1000K .......... .......... .......... .......... .......... 95% 43.1M 0s
+  1050K .......... .......... .......... .......... ....      100% 2.67M=0.3s
+
+2021-01-17 21:20:50 (3.73 MB/s) - ‘video/1610889641200.ts’ saved [1120668/1120668]
+
+FINISHED --2021-01-17 21:20:50--
+Total wall clock time: 1.4s
+Downloaded: 3 files, 3.2M in 0.9s (3.67 MB/s)
+ffmpeg version N-100564-gf4bdedd Copyright (c) 2000-2021 the FFmpeg developers
+  built with gcc 4.8.5 (GCC) 20150623 (Red Hat 4.8.5-44)
+  configuration: 
+  libavutil      56. 63.100 / 56. 63.100
+  libavcodec     58.115.102 / 58.115.102
+  libavformat    58. 65.101 / 58. 65.101
+  libavdevice    58. 11.103 / 58. 11.103
+  libavfilter     7. 95.100 /  7. 95.100
+  libswscale      5.  8.100 /  5.  8.100
+  libswresample   3.  8.100 /  3.  8.100
+Input #0, mpegts, from 'video/1610889629255.ts':
+  Duration: 00:00:06.20, start: 26922.563356, bitrate: 1447 kb/s
+  Program 1 
+    Stream #0:0[0x100]: Video: h264 (High) ([27][0][0][0] / 0x001B), yuv420p(tv, bt470bg/unknown/unknown, progressive), 1280x720 [SAR 1:1 DAR 16:9], 30 fps, 30 tbr, 90k tbn, 60 tbc
+    Stream #0:1[0x101]: Audio: aac (LC) ([15][0][0][0] / 0x000F), 44100 Hz, stereo, fltp, 130 kb/s
+Stream mapping:
+  Stream #0:0 -> #0:0 (h264 (native) -> mpeg4 (native))
+  Stream #0:1 -> #0:1 (aac (native) -> aac (native))
+Press [q] to stop, [?] for help
+Output #0, mp4, to 'video/1610889629255.mp4':
+  Metadata:
+    encoder         : Lavf58.65.101
+    Stream #0:0: Video: mpeg4 (mp4v / 0x7634706D), yuv420p(tv, bt470bg/unknown/unknown, progressive), 1280x720 [SAR 1:1 DAR 16:9], q=2-31, 200 kb/s, 30 fps, 15360 tbn
+    Metadata:
+      encoder         : Lavc58.115.102 mpeg4
+    Side data:
+      cpb: bitrate max/min/avg: 0/0/200000 buffer size: 0 vbv_delay: N/A
+    Stream #0:1: Audio: aac (LC) (mp4a / 0x6134706D), 44100 Hz, stereo, fltp, 128 kb/s
+    Metadata:
+      encoder         : Lavc58.115.102 aac
+frame=    7 fps=0.0 q=2.0 size=       0kB time=00:00:00.23 bitrate=   1.5kbits/s dup=6 drop=0 speed=9.31x    frame=  108 fps=0.0 q=31.0 size=     256kB time=00:00:03.56 bitrate= 588.1kbits/s dup=6 drop=0 speed=6.78x    frame=  186 fps=0.0 q=31.0 Lsize=     872kB time=00:00:06.16 bitrate=1158.2kbits/s dup=6 drop=0 speed=6.84x    
+video:767kB audio:98kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 0.779243%
+[aac @ 0x3172980] Qavg: 610.903
+ffmpeg version N-100564-gf4bdedd Copyright (c) 2000-2021 the FFmpeg developers
+  built with gcc 4.8.5 (GCC) 20150623 (Red Hat 4.8.5-44)
+  configuration: 
+  libavutil      56. 63.100 / 56. 63.100
+  libavcodec     58.115.102 / 58.115.102
+  libavformat    58. 65.101 / 58. 65.101
+  libavdevice    58. 11.103 / 58. 11.103
+  libavfilter     7. 95.100 /  7. 95.100
+  libswscale      5.  8.100 /  5.  8.100
+  libswresample   3.  8.100 /  3.  8.100
+Input #0, mpegts, from 'video/1610889635236.ts':
+  Duration: 00:00:06.21, start: 26928.554100, bitrate: 1390 kb/s
+  Program 1 
+    Stream #0:0[0x100]: Video: h264 (High) ([27][0][0][0] / 0x001B), yuv420p(tv, bt470bg/unknown/unknown, progressive), 1280x720 [SAR 1:1 DAR 16:9], 30 fps, 30 tbr, 90k tbn, 60 tbc
+    Stream #0:1[0x101]: Audio: aac (LC) ([15][0][0][0] / 0x000F), 44100 Hz, stereo, fltp, 130 kb/s
+Stream mapping:
+  Stream #0:0 -> #0:0 (h264 (native) -> mpeg4 (native))
+  Stream #0:1 -> #0:1 (aac (native) -> aac (native))
+Press [q] to stop, [?] for help
+Output #0, mp4, to 'video/1610889635236.mp4':
+  Metadata:
+    encoder         : Lavf58.65.101
+    Stream #0:0: Video: mpeg4 (mp4v / 0x7634706D), yuv420p(tv, bt470bg/unknown/unknown, progressive), 1280x720 [SAR 1:1 DAR 16:9], q=2-31, 200 kb/s, 30 fps, 15360 tbn
+    Metadata:
+      encoder         : Lavc58.115.102 mpeg4
+    Side data:
+      cpb: bitrate max/min/avg: 0/0/200000 buffer size: 0 vbv_delay: N/A
+    Stream #0:1: Audio: aac (LC) (mp4a / 0x6134706D), 44100 Hz, stereo, fltp, 128 kb/s
+    Metadata:
+      encoder         : Lavc58.115.102 aac
+frame=    7 fps=0.0 q=2.0 size=       0kB time=00:00:00.20 bitrate=   1.8kbits/s dup=6 drop=0 speed=9.19x    frame=  109 fps=0.0 q=24.8 size=     256kB time=00:00:03.60 bitrate= 582.6kbits/s dup=6 drop=0 speed=6.85x    frame=  186 fps=0.0 q=31.0 Lsize=     846kB time=00:00:06.16 bitrate=1123.5kbits/s dup=6 drop=0 speed=6.89x    
+video:741kB audio:98kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 0.800633%
+[aac @ 0x2cbf680] Qavg: 560.542
+ffmpeg version N-100564-gf4bdedd Copyright (c) 2000-2021 the FFmpeg developers
+  built with gcc 4.8.5 (GCC) 20150623 (Red Hat 4.8.5-44)
+  configuration: 
+  libavutil      56. 63.100 / 56. 63.100
+  libavcodec     58.115.102 / 58.115.102
+  libavformat    58. 65.101 / 58. 65.101
+  libavdevice    58. 11.103 / 58. 11.103
+  libavfilter     7. 95.100 /  7. 95.100
+  libswscale      5.  8.100 /  5.  8.100
+  libswresample   3.  8.100 /  3.  8.100
+Input #0, mpegts, from 'video/1610889641200.ts':
+  Duration: 00:00:06.20, start: 26934.568067, bitrate: 1446 kb/s
+  Program 1 
+    Stream #0:0[0x100]: Video: h264 (High) ([27][0][0][0] / 0x001B), yuv420p(tv, bt470bg/unknown/unknown, progressive), 1280x720 [SAR 1:1 DAR 16:9], 30 fps, 30 tbr, 90k tbn, 60 tbc
+    Stream #0:1[0x101]: Audio: aac (LC) ([15][0][0][0] / 0x000F), 44100 Hz, stereo, fltp, 130 kb/s
+Stream mapping:
+  Stream #0:0 -> #0:0 (h264 (native) -> mpeg4 (native))
+  Stream #0:1 -> #0:1 (aac (native) -> aac (native))
+Press [q] to stop, [?] for help
+Output #0, mp4, to 'video/1610889641200.mp4':
+  Metadata:
+    encoder         : Lavf58.65.101
+    Stream #0:0: Video: mpeg4 (mp4v / 0x7634706D), yuv420p(tv, bt470bg/unknown/unknown, progressive), 1280x720 [SAR 1:1 DAR 16:9], q=2-31, 200 kb/s, 30 fps, 15360 tbn
+    Metadata:
+      encoder         : Lavc58.115.102 mpeg4
+    Side data:
+      cpb: bitrate max/min/avg: 0/0/200000 buffer size: 0 vbv_delay: N/A
+    Stream #0:1: Audio: aac (LC) (mp4a / 0x6134706D), 44100 Hz, stereo, fltp, 128 kb/s
+    Metadata:
+      encoder         : Lavc58.115.102 aac
+frame=    7 fps=0.0 q=2.0 size=       0kB time=00:00:00.20 bitrate=   1.8kbits/s dup=6 drop=0 speed=11.9x    frame=   99 fps=0.0 q=31.0 size=     256kB time=00:00:03.26 bitrate= 642.1kbits/s dup=6 drop=0 speed=6.29x    frame=  186 fps=0.0 q=31.0 Lsize=     860kB time=00:00:06.16 bitrate=1142.8kbits/s dup=6 drop=0 speed=6.59x    
+video:758kB audio:96kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 0.757532%
+[aac @ 0x2866540] Qavg: 735.278

@@ -1,14 +1,12 @@
 #!/bin/bash
  
 # case语句使用场景
- 
-declare -x bchPATH=`pwd`
 case "$1" in
  
 ##########
 "-v")
  
-echo -e "\033[32mBilibili-Catch Version 0.1.2 @Lingkongsky\033[0m"
+echo -e "\033[32mBilibili-Catch Version 0.2.0 @Lingkongsky\033[0m"
 
 ;;
  
@@ -27,7 +25,7 @@ declare -x catchTime="$2"
 
 #echo "$catchTime"
 
-sh ${bchPATH}/bstart.sh
+sh /root/lingkong/bstart.sh
 fi 
  
 ;;

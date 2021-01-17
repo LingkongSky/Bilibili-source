@@ -11,7 +11,7 @@ bmode="true"
 
 echo "3"
 
-declare -x bchPATH=`pwd`
+declare -x bchPATH=`cd \`dirname $0\`; pwd`
 
 echo "$bchPATH"
 

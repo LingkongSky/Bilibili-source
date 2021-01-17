@@ -1,29 +1,46 @@
 #!/bin/bash
 
-bashrcF=`cat /root/.bashrc`
 
 bashrcS=`grep "bch" /root/.bashrc`
+
+#profileF=`cat /etc/profile`
+profileS=`grep "bch" /etc/profile`
+
 
 if [ -n "$bashrcS" ]; then
 echo "bch already installed"
 else
 
-comm="alias bch='/root/lingkong/bch.sh'"
+comm="alias bch='${bchPATH}/bch.sh'"
 
 echo -e "\n${comm}" >> /root/.bashrc
 
 source ~/.bashrc
 
-cp /root/lingkong/bch.sh /bin/bch
-
-chmod 777 /bin/bch
-
 echo "install finished"
 
 fi
 
-cp /root/lingkong/bch.sh /bin/bch
+if [ ! -n "$profileS" ]; then
 
+:<<EOF
+cd /etc/
+sed '/bch/d' profile  > profile1
+rm -f profile
+cp profile1 profile
+cd ../
+EOF
+
+
+axx="export bchPATH='/root/lingkong'"
+
+echo -e "\n${axx}" >> /etc/profile
+
+source /etc/profile
+
+fi
+
+cp ${bchPATH}/bch.sh /bin/bch
 chmod 777 /bin/bch
 
 bch -v
