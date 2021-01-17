@@ -9,21 +9,11 @@ results=`wget --spider "$dURL"  2>&1|grep 200`
 result=$(echo "$results" | grep "200")
 bmode="true"
 
-cd /root/lingkong/video
+echo "3"
 
-while true
-   do 
-echo "catching.."
+declare -x bchPATH=`pwd`
 
-      
-      #休眠时间
-      sleep "5"
+echo "$bchPATH"
 
-   done &
+sh ${bchPATH}/test.sh
 
-cd ../
-
-echo "over"
-
-
-kill $$ &

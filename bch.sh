@@ -2,14 +2,17 @@
  
 # case语句使用场景
  
+declare -x bchPATH=`pwd`
 case "$1" in
  
+##########
 "-v")
  
-echo -e "\033[32mBilibili-Catch Version 0.1.0 @Lingkongsky\033[0m"
+echo -e "\033[32mBilibili-Catch Version 0.1.2 @Lingkongsky\033[0m"
 
 ;;
  
+#######
 "-t")
  
 if [ ! -n "$2" ]; then
@@ -22,14 +25,24 @@ else
 #参数2非空
 declare -x catchTime="$2"  
 
-echo "$catchTime"
+#echo "$catchTime"
 
-sh /root/lingkong/test1.sh
-
+sh ${bchPATH}/bstart.sh
 fi 
  
 ;;
  
+ 
+########
+"-path")
+
+echo "${bchPATH}"
+ 
+;;
+
+
+
+########
 "restart")
  
 echo "服务重启中..."
@@ -38,7 +51,7 @@ echo "服务重启中..."
  
 *)
  
-echo "use it by [ -v ]"
+echo "use it by [ -v | -t | -path]"
  
 ;;
  

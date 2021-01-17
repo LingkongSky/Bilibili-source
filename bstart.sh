@@ -2,6 +2,8 @@
 
 #目标链接
 dURL='https://cn-jxnc-cmcc-live-01.bilivideo.com/live-bvc/730840/live_1590370_4064847_1500.m3u8'
+
+declare -x bchPATH=`pwd`
 #extTIME=6
 
 results=`wget --spider "$dURL"  2>&1|grep 200`
@@ -13,7 +15,7 @@ if [[ "$result" != "" ]]
 then
 echo -e "\033[32mfound link \033[0m"
 
-wget -O live.m3u8 "$dURL" >> /root/lingkong/log.txt 2>&1
+wget -O live.m3u8 "$dURL" >> ${bchPATH}/log.txt 2>&1
 
 extTIMES=`awk 'NR==5 {print $k}' /root/lingkong/live.m3u8`;
 
@@ -26,9 +28,11 @@ extCOUNTS=`grep -o ts live.m3u8 | sort |uniq -c | tr -cd "[0-9]"`
 #设定循环获取请求周期
 let extTIME="$extTIMES"*"$extCOUNTS"
 
-echo -e "\033[32mcycle time:$extTIME}\033[0m"
+echo -e "\033[32mcycle time:${extTIME}\033[0m"
 
 rm -f /root/lingkong/live.m3u8
+
+touch /root/lingkong/run.txt
 
 else
 #url无效，结束程序
@@ -40,8 +44,11 @@ fi
 echo -e "\033[32mstart \033[0m"
 
 
+
+
+cd /root/lingkong/
 #循环获取m3u8源文件
-while true
+while [ -f "run.txt" ]
    do 
 echo "catching.."
 
@@ -52,7 +59,13 @@ echo "catching.."
    done &
 
 
-sleep 1 
+if [ -n "$catchTime" ]; then 
+sleep "$catchTime"
+else
+sleep 10
+fi
+
+rm -f run.txt
 
 if [ "$catch_id" ]; then
 wait "$catch_id"
@@ -65,6 +78,10 @@ if [ "$bend_id" ]; then
 wait "$bend_id"
 fi 
 
+
+cd ../
+
+unset catchTime
 exit 0
 
 
