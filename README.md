@@ -2,8 +2,10 @@
 BillBill live source catch (以下简称bch)哔哩哔哩直播源抓取
 第一个Demo历时三天完成
 预计在2020.2前完成正式版的第一个版本
+目前仅支持在m3u8层面上的抓包获取，暂不支持网站信息嗅探获取
 
-本项目尚处于开发中，脚本中所用路径均为绝对路径
-多想在本地服务器上调试，请将该项目放于/root/lingkong/路径下
-赋予权限后，输入sh /root/lingkong/bstart.sh启动
-
+使用方法:
+git clone本项目到工作目录后
+cd进该文件夹
+输入sh install.sh进行安装
+输入bch -v弹出版本信息即为安装成功
