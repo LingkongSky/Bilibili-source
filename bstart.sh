@@ -1,6 +1,7 @@
 #!/bin/bash
 
 cd ${bchPATH}
+mkdir video
 #目标链接
 dURL='https://cn-jxnc-cmcc-live-01.bilivideo.com/live-bvc/730840/live_1590370_4064847_1500.m3u8'
 #extTIME=6
@@ -76,7 +77,7 @@ if [ "$bend_id" ]; then
 wait "$bend_id"
 fi 
 
-
+rm -rf video
 cd ../
 
 unset catchTime
