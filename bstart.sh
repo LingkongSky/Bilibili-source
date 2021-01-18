@@ -51,6 +51,21 @@ while [ -f "run.txt" ]
    do 
 echo "catching.."
 
+
+results=`wget --spider "$dURL"  2>&1|grep 200`
+
+result=$(echo "$results" | grep "200")
+
+#链接检测
+if [[ "$result" == "" ]]
+then
+#url无效，结束程序
+echo "found stop"
+sh bend.sh
+wait
+echo "result saved"
+exit 0
+fi
       sh catch.sh 
       #休眠时间
       sleep "$extTIME"
