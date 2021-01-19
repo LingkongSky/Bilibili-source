@@ -1,0 +1,1 @@
+http://d1--cn-gotcha105.bilivideo.com/live-bvc/601993/live_1590370_4064847.m3u8?cdn=cn-gotcha05&expires=1611102206&len=0&oi=147989512&pt=h5&qn=10000&trid=b1e3c639cdea4480aa7e36f00a0f24cf&sigparams=cdn,expires,len,oi,pt,qn,trid&sign=ef5f3e528788c832b58ac8f44300b8aa&ptype=0&src=8&sl=1&order=2
