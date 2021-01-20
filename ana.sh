@@ -1,4 +1,5 @@
-cid='10112'
+#cid='10112'
+cid="$1"
 mainURL='https://cn-jxnc-cmcc-live-01.bilivideo.com/live-bvc/'
 cd ${bchPATH}
 
@@ -14,5 +15,5 @@ durl=`cat durl.txt`  >> log.txt
 durl=`echo ${durl%%.m3u8*}` >> log.txt
 
 durl=`echo ${durl##*bvc}` >> log.txt
-durl="$mainURL"+"$durl"
+declare -x durl="$mainURL"+"$durl"
 echo "$durl"
