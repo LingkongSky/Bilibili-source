@@ -29,13 +29,51 @@ result=$(echo "$results" | grep "200")
 if [[ "$result" == "" ]]
 then
 #url无效，结束程序
-echo "Link can't found"
+
+echo -e "\033[31mLink can't found\033[0m"
+
+exit 0
 fi
 
+####-
+results=`wget --spider "http://api.live.bilibili.com/room/v1/Room/room_init?id=${cid}"  2>&1|grep 200`
+
+result=$(echo "$results" | grep "200")
+
+#链接检测
+if [[ "$result" == "" ]]
+then
+#url无效，结束程序
+echo "invalid cid"
+exit 0
+fi
+
+curl -G 'http://api.live.bilibili.com/room/v1/Room/room_init' \
+--data-urlencode "id=${cid}"  > info
+
+uid=`jq -r .data.uid info`
+echo ${uid}
+
+curl -G 'http://api.bilibili.com/x/space/acc/info' \
+--data-urlencode "mid=${uid}"  > info
+
+name=`jq -r  .data.name info`
+title=`jq -r  .data.live_room.title info`
+roomid=`jq -r  .data.live_room.roomid info`
+roomurl=`jq -r  .data.live_room.url info`
+
+echo -e "\033[32mname: ${name} \nuid: ${uid}\nlive_title: ${title} \ncid: ${cid} \nroom_url: ${roomurl}\033[0m"
+
+rm -f info
 
 echo "$durl"
 echo -e "\033[32mUrl analysis sucssessed\033[0m"
 
-
 rm -f durl.txt
+
+
+
+
+
+
 cd ../
