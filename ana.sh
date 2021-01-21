@@ -24,6 +24,7 @@ results=`wget --spider "$durl"  2>&1|grep 200`
 
 result=$(echo "$results" | grep "200")
 
+
 #链接检测
 if [[ "$result" == "" ]]
 then
