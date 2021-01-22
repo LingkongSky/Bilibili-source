@@ -6,7 +6,7 @@ case "$1" in
 ##########
 "-v")
  
-echo -e "\033[32mBilibili-Catch Version 0.2.5 @Lingkongsky\033[0m"
+echo -e "\033[32mBilibili-Catch Version 0.2.6 @Lingkongsky\033[0m"
 
 ;;
  
@@ -72,19 +72,38 @@ sh ${bchPATH}/bstart.sh
 ;;
 
 ########
-"-an")
+"-anu")
 
+if [ -z "$(echo $2 | sed 's#[0-9]##g')" ] && [ "$2" != "" ]; then
 
-if [ ! -n "$2" ]; then
-#参数2为空
-echo "bch -an [cid]"
-exit 0
+declare -x uid="$2"
+sh ${bchPATH}/anu.sh
+
 else
-declare -x cid="$2"
-sh ${bchPATH}/ana.sh
-fi 
+echo "bch -anu [uid]"
+exit 0
+fi
+
 
 ;;
+
+
+########
+"-anc")
+
+
+if [ -z "$(echo $2 | sed 's#[0-9]##g')" ] && [ "$2" != "" ]; then
+
+declare -x cid="$2"
+sh ${bchPATH}/anc.sh
+
+else
+echo "bch -anc [cid]"
+exit 0
+fi
+
+;;
+
 
 ########
 "restart")
@@ -98,6 +117,7 @@ echo "服务重启中..."
 "-stop")
 
 shid=`ps -ef | grep ${bchPATH}/bstart.sh`
+
 
 if [ ! -n "$shid" ]; then
 #参数2为空
@@ -118,7 +138,7 @@ fi
 
 *)
  
-echo "use it by [ -v | -t | -path | -url | -stop | -an ]"
+echo "use it by [ -v | -t | -path | -url | -stop | -anu | anc ]"
  
 ;;
  

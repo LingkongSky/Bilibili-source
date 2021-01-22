@@ -3,9 +3,7 @@
 cd ${bchPATH}
 mkdir video
 #目标链接
-#declare -x dURL='https://cn-jxnc-cmcc-live-01.bilivideo.com/live-bvc/730840/live_1590370_4064847_1500.m3u8'
-
-declare -x dURL='https://cn-jxnc-cmcc-live-01.bilivideo.com/live-bvc/982755/live_289858994_36820661.m3u8'
+declare -x dURL='https://cn-jxnc-cmcc-live-01.bilivideo.com/live-bvc/730840/live_1590370_4064847_1500.m3u8'
 #extTIME=6
 
 results=`wget --spider "$dURL"  2>&1|grep 200`
