@@ -6,27 +6,22 @@ case "$1" in
 ##########
 "-v")
  
-echo -e "\033[32mBilibili-Catch Version 0.2.4 @Lingkongsky\033[0m"
+echo -e "\033[32mBilibili-Catch Version 0.2.5 @Lingkongsky\033[0m"
 
 ;;
  
 #######
 "-t")
  
-if [ ! -n "$2" ]; then
-#参数2为空
-echo "bch -t [time:s]"
+if [ -z "$(echo $2 | sed 's#[0-9]##g')" ] && [ "$2" != "" ]; then
 
-exit 0
-else
-
-#参数2非空
 declare -x catchTime="$2"  
+sh ${bchPATH}/bstart.sh
 
-#echo "$catchTime"
-
-sh ${bchPath}/bstart.sh
-fi 
+else
+echo "bch -t [time:s]"
+exit 0
+fi
  
 ;;
  
@@ -57,12 +52,22 @@ then
 #url无效，结束程序
 echo -e "can not link to the URL. \nPlease check your URL"
 exit 0
-else
-declare -x dURL="$2"
-sh ${bchPATH}/bstart.sh
 
 fi
 
+
+if [ "$3" == "-t" ] && [ -z "$(echo $4 | sed 's#[0-9]##g')" ] && [ "$4" != "" ]; then
+
+declare -x catchTime="$4"   
+sh ${bchPATH}/bstart.sh
+
+elif [[ "$3" == "-t" ]]; then
+echo "bch -t [time:s]"
+exit 0
+fi
+
+declare -x catchTime="20"   
+sh ${bchPATH}/bstart.sh
 
 ;;
 
