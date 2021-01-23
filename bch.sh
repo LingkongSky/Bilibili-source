@@ -6,7 +6,7 @@ case "$1" in
 ##########
 "-v")
  
-echo -e "\033[32mBilibili-Catch Version 0.2.6 @Lingkongsky\033[0m"
+echo -e "\033[32mBilibili-Catch Version 0.2.7 @Lingkongsky\033[0m"
 
 ;;
  
@@ -77,7 +77,8 @@ sh ${bchPATH}/bstart.sh
 if [ -z "$(echo $2 | sed 's#[0-9]##g')" ] && [ "$2" != "" ]; then
 
 declare -x uid="$2"
-sh ${bchPATH}/anu.sh
+declare -x anmode="uid"
+sh ${bchPATH}/ana.sh
 
 else
 echo "bch -anu [uid]"
@@ -95,7 +96,8 @@ fi
 if [ -z "$(echo $2 | sed 's#[0-9]##g')" ] && [ "$2" != "" ]; then
 
 declare -x cid="$2"
-sh ${bchPATH}/anc.sh
+declare -x anmode="cid"
+sh ${bchPATH}/ana.sh
 
 else
 echo "bch -anc [cid]"
@@ -138,7 +140,7 @@ fi
 
 *)
  
-echo "use it by [ -v | -t | -path | -url | -stop | -anu | anc ]"
+echo "use it by [ -v | -t | -path | -url | -stop | -anu | -anc | -help ]"
  
 ;;
  

@@ -17,13 +17,3 @@ else
   echo "不包含"
 fi
 EOF
-
-
-if [ -z "$(echo $1 | sed 's#[0-9]##g')" ] && [ "$1" != "" ]; then
-
-echo "yes"
-
-else
-echo "bch -t [time:s]"
-exit 0
-fi

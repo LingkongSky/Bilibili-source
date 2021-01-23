@@ -40,6 +40,10 @@ source /etc/profile
 echo "install finished"
 fi
 
+if [ ! -e test ]; then
+echo -e "{\n}" > test
+fi
+
 cp ${bchPATH}/bch.sh /bin/bch
 chmod 777 /bin/bch
 

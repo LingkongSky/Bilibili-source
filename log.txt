@@ -11383,3 +11383,20 @@ Output #0, mp4, to 'video/1611355148787.mp4':
 frame=    7 fps=0.0 q=2.3 size=       0kB time=00:00:00.20 bitrate=   1.8kbits/s dup=6 drop=0 speed= 9.2x    frame=  106 fps=0.0 q=31.0 size=     256kB time=00:00:03.50 bitrate= 598.2kbits/s dup=6 drop=0 speed=6.69x    frame=  186 fps=0.0 q=31.0 Lsize=     710kB time=00:00:06.16 bitrate= 942.9kbits/s dup=6 drop=0 speed=6.87x    
 video:604kB audio:99kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 0.994745%
 [aac @ 0x36ec200] Qavg: 1121.504
+Spider mode enabled. Check if remote file exists.
+--2021-01-23 19:07:17--  https://cn-jxnc-cmcc-live-01.bilivideo.com/live-bvc/224046/live_1590370_4064847.m3u8
+Resolving cn-jxnc-cmcc-live-01.bilivideo.com (cn-jxnc-cmcc-live-01.bilivideo.com)... 117.169.96.238
+Connecting to cn-jxnc-cmcc-live-01.bilivideo.com (cn-jxnc-cmcc-live-01.bilivideo.com)|117.169.96.238|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 266 [application/vnd.apple.mpegurl]
+Remote file exists.
+
+Spider mode enabled. Check if remote file exists.
+--2021-01-23 20:43:59--  https://cn-jxnc-cmcc-live-01.bilivideo.com/live-bvc/181040/live_1590370_4064847.m3u8
+Resolving cn-jxnc-cmcc-live-01.bilivideo.com (cn-jxnc-cmcc-live-01.bilivideo.com)... 117.169.96.238
+Connecting to cn-jxnc-cmcc-live-01.bilivideo.com (cn-jxnc-cmcc-live-01.bilivideo.com)|117.169.96.238|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 266 [application/vnd.apple.mpegurl]
+Remote file exists.
+
+{"code":-400,"message":"Key: 'PlayUrlReq.Cid' Error:Field validation for 'Cid' failed on the 'required' tag","ttl":1}
