@@ -6,7 +6,6 @@ bashrcS=`grep "bch" /root/.bashrc`
 #profileF=`cat /etc/profile`
 profileS=`grep "bch" /etc/profile`
 
-
 if [ -n "$bashrcS" ]; then
 echo "bch already installed"
 else
@@ -40,8 +39,8 @@ source /etc/profile
 echo "install finished"
 fi
 
-if [ ! -e test ]; then
-echo -e "{\n}" > test
+if [ ! -e user_data ]; then
+echo -e "{\n\n}" > user_data
 fi
 
 cp ${bchPATH}/bch.sh /bin/bch

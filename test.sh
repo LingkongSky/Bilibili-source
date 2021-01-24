@@ -17,3 +17,25 @@ else
   echo "不包含"
 fi
 EOF
+
+
+
+cid=8434843448
+uid=1
+name=1
+title=1
+roomurl=1
+durl=1
+
+results=`wget -q -O- "http://api.live.bilibili.com/room/v1/Room/room_init?id=${cid}" | grep "ok"`
+
+
+#链接检测
+if [[ "$results" == "" ]]
+then
+#url无效，结束程序
+echo "invalid cid"
+exit 0
+else
+echo "200"
+fi
