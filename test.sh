@@ -27,26 +27,7 @@ title=1
 roomurl=1
 durl=1
 
-curl -G -s 'http://api.bilibili.com/x/space/acc/info' \
---data-urlencode "mid=${uid}"  > info
+declare -x dURL='https://d1–cn-gotcha108.bilivideo.com/live-bvc/371036/live_8041389_7371643.m3u8?cdn=cn-gotcha08&expires=1611644040&len=0&oi=3748178516&pt=h5&qn=10000&trid=a17e09502546452490842bb7b033a676&sigparams=cdn,expires,len,oi,pt,qn,trid&sign=1915916992f59b99f97b496eb0d4a65c&ptype=0&src=8&sl=1&order=1'
+mainURL=`echo ${dURL%live_*}`
 
-name=`jq -r  .data.name info`
-title=`jq -r  .data.live_room.title info`
-roomid=`jq -r  .data.live_room.roomid info`
-cid=`jq -r  .data.live_room.roomid info`
-roomurl=`jq -r  .data.live_room.url info`
-
-liveStatus=`jq -r  .data.live_room.liveStatus info`
-
-#####主要下载链接获取
-curl -G -s 'http://api.live.bilibili.com/room/v1/Room/playUrl' \
---data-urlencode "cid=10112" \
---data-urlencode 'qn=10000' \
---data-urlencode 'platform=h5' > web.json 
-
-jq -r .data.durl[1].url web.json > durl.txt
-durl=`cat durl.txt`
-durl=`echo ${durl%%.m3u8*}`
-durl=`echo ${durl##*bvc}`
-
-declare -x durl="$mainURL""$durl"'.m3u8'
+awk mainURL="$mainURL" '{print mainURL$0 > "live1.m3u8"}' live1.m3u8

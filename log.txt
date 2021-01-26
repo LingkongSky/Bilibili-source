@@ -1,13 +1,14 @@
-cat: user_data: No such file or directory
-cat: user_data: No such file or directory
-cat: user_data: No such file or directory
-{
-  "u10112": {
-    "name": "蓝原延珠_",
-    "uid": "1590370",
-    "title": "BGM",
-    "cid": "10112",
-    "liveurl": "https://live.bilibili.com/10112",
-    "m3u8url": "https://cn-jxnc-cmcc-live-01.bilivideo.com/live-bvc/514207/live_1590370_4064847.m3u8"
-  }
-}
+WARNING: timestamping does nothing in combination with -O. See the manual
+for details.
+
+--2021-01-27 06:58:54--  http://d1--cn-gotcha105.bilivideo.com/live-bvc/208679/live_1590370_4064847.m3u8?cdn=cn-gotcha05&expires=1611705427&len=0&oi=147989512&pt=h5&qn=10000&trid=e94f53dddabc451a9f7f21452c982004&sigparams=cdn,expires,len,oi,pt,qn,trid&sign=e6dae3cd7bfb078eb4f459833a17f623&ptype=0&src=9&sl=1&order=1
+Resolving d1--cn-gotcha105.bilivideo.com (d1--cn-gotcha105.bilivideo.com)... 163.171.198.109, 163.171.193.126
+Connecting to d1--cn-gotcha105.bilivideo.com (d1--cn-gotcha105.bilivideo.com)|163.171.198.109|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 240 [application/x-mpegurl]
+Saving to: ‘live.m3u8’
+
+     0K                                                       100% 20.2M=0s
+
+2021-01-27 06:59:24 (20.2 MB/s) - ‘live.m3u8’ saved [240/240]
+

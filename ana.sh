@@ -12,7 +12,6 @@ rm -f web.json
 cd ../
 }
 
-
 if [[ "$anmode" == "cid" ]]
 then
 
@@ -47,6 +46,7 @@ echo "invalid uid"
 exit 0
 fi
 
+
 curl -G -s 'http://api.bilibili.com/x/space/acc/info' \
 --data-urlencode "mid=${uid}"  > info
 
@@ -64,52 +64,21 @@ curl -G -s 'http://api.live.bilibili.com/room/v1/Room/playUrl' \
 --data-urlencode 'qn=10000' \
 --data-urlencode 'platform=h5' > web.json 
 
-jq -r .data.durl[1].url web.json > durl.txt
-durl=`cat durl.txt`
-durl=`echo ${durl%%.m3u8*}`
-
-declare -x durl="${durl}"".m3u8"
-
-
+jq -r .data.durl[0].url web.json > durl.txt
+declare -x durl=`cat durl.txt`
 
 ####目标链接检测
 
-results=`wget --spider "$durl" 2>&1|grep 200`
-
-result=$(echo "$results" | grep "200")
+results=`curl "${durl}" 2>&1|grep EXTM3U`
 
 #链接检测
-if [[ "$result" == "" ]]
+if [[ "$results" == "" ]]
 then
 #url无效，结束程序
-
-durl=`cat durl.txt`
-durl=`echo ${durl%%.m3u8*}`
-durl=`echo ${durl##*bvc}`
-
-declare -x durl="$mainURL"${durl}".m3u8"
-
-results=`wget --spider "$durl" 2>&1|grep 200`
-
-result=$(echo "$results" | grep "200")
-
-#链接检测
-if [[ "$result" == "" ]]
-then
-
-#remove
+remove
 echo -e "\033[31mm3u8Link can't found\033[0m"
-#exit 0
-
+exit 0
 fi 
-fi
-
-
-
-
-
-
-
 
 if [[ "${liveStatus}" == "1" ]]; then
 living="on"
@@ -147,12 +116,12 @@ if [[ ! "$exist" == "" ]]; then
 
 echo "input new data"
 
-echo -e '"u'${cid}'": {' "\n"  '"name":' '"'${name}'",\n'  '"uid":' '"'${uid}'",\n'  '"title":' '"'${title}'",\n'  '"cid":' '"'${cid}'",\n'  '"liveurl":' '"'${roomurl}'",\n'  '"m3u8url":' '"'${durl}'"\n},\n' > user_json
+echo -e '"u'${cid}'": {' "\n"  '"name":' '"'${name}'",\n'  '"uid":' '"'${uid}'",\n'  '"title":' '"'${title}'",\n'  '"cid":' '"'${cid}'",\n'  '"liveurl":' '"'${roomurl}'"\n' '},\n' > user_json
 
 else
 
 echo "create new data"
-echo -e '"u'${cid}'": {' "\n"  '"name":' '"'${name}'",\n'  '"uid":' '"'${uid}'",\n'  '"title":' '"'${title}'",\n'  '"cid":' '"'${cid}'",\n'  '"liveurl":' '"'${roomurl}'",\n'  '"m3u8url":' '"'${durl}'"\n}\n' > user_json
+echo -e '"u'${cid}'": {' "\n"  '"name":' '"'${name}'",\n'  '"uid":' '"'${uid}'",\n'  '"title":' '"'${title}'",\n'  '"cid":' '"'${cid}'",\n'  '"liveurl":' '"'${roomurl}'"\n' '}\n' > user_json
 
 fi
 
