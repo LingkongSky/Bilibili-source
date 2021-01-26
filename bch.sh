@@ -16,7 +16,7 @@ echo -e "\033[32mBilibili-Catch Version 0.2.85 @Lingkongsky\033[0m"
 if [ -z "$(echo $2 | sed 's#[0-9]##g')" ] && [ "$2" != "" ]; then
 
 declare -x catchTime="$2"  
-sh ${bchPATH}/bstart.sh
+sh ${bchPATH}/bstart.sh &
 
 else
 echo "bch -t [time:s]"
@@ -106,6 +106,25 @@ fi
 
 ;;
 
+
+########
+"-data")
+
+sh ${bchPATH}/data.sh
+
+;;
+
+
+########
+"-help")
+echo -e "Welcome to use the BiliBili-Source-Catch "
+echo "make sure you have installed the bch and use it by the command:"
+
+echo "[ -v | -t | -path | -url | -stop | -anu | -data | -anc | -help ]"
+
+
+;;
+
 ########
 "-stop")
 
@@ -129,7 +148,7 @@ fi
 
 *)
  
-echo "use it by [ -v | -t | -path | -url | -stop | -anu | -anc | -help ]"
+echo "use it by [ -v | -t | -path | -url | -stop | -anu | -data | -anc | -help ]"
  
 ;;
  

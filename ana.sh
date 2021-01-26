@@ -67,9 +67,8 @@ curl -G -s 'http://api.live.bilibili.com/room/v1/Room/playUrl' \
 jq -r .data.durl[1].url web.json > durl.txt
 durl=`cat durl.txt`
 durl=`echo ${durl%%.m3u8*}`
-durl=`echo ${durl##*bvc}`
 
-declare -x durl="$mainURL"${durl}".m3u8"
+declare -x durl="${durl}"".m3u8"
 
 
 
@@ -83,9 +82,26 @@ result=$(echo "$results" | grep "200")
 if [[ "$result" == "" ]]
 then
 #url无效，结束程序
-remove
+
+durl=`cat durl.txt`
+durl=`echo ${durl%%.m3u8*}`
+durl=`echo ${durl##*bvc}`
+
+declare -x durl="$mainURL"${durl}".m3u8"
+
+results=`wget --spider "$durl" 2>&1|grep 200`
+
+result=$(echo "$results" | grep "200")
+
+#链接检测
+if [[ "$result" == "" ]]
+then
+
+#remove
 echo -e "\033[31mm3u8Link can't found\033[0m"
-exit 0
+#exit 0
+
+fi 
 fi
 
 
@@ -109,8 +125,6 @@ echo -e "\033[34mSource url: \n${durl}\033[0m"
 echo -e "\033[32mUrl analysis sucssessed\033[0m"
 
 
-#echo -e "}\n" '"u'${cid}'": {' "\n"  '"name":' '"'${name}'",\n'  '"uid":' '"'${uid}'",\n'  '"title":' '"'${title}'",\n'  '"cid":' '"'${cid}'",\n'  '"liveurl":' '"'${roomurl}'",\n'  '"m3u8url":' '"'${durl}'"\n}'
-
 
 retest=`cat user_data 2>>/dev/null | grep "}"`
 if [[ "$retest" == "" ]]; then
@@ -120,8 +134,6 @@ fi
 
 
 retest1=`jq ".u${cid}" user_data`
-
-#jq ".u5619844" user_data
 
 
 if [[ ! "$retest1" == "null" ]] && [[ ! "$retest1" == "" ]]; then
