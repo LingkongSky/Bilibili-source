@@ -40,6 +40,9 @@ put_path=$(cd `dirname $0`; pwd)
 echo -e "\033[32mResult already put into the $put_path/results/\033[0m"
 
 
+rm -f run.txt
+rm -f *.m3u8
+
 cd ../
 
 unset bend_id

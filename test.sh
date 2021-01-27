@@ -27,7 +27,10 @@ title=1
 roomurl=1
 durl=1
 
-declare -x dURL='https://d1–cn-gotcha108.bilivideo.com/live-bvc/371036/live_8041389_7371643.m3u8?cdn=cn-gotcha08&expires=1611644040&len=0&oi=3748178516&pt=h5&qn=10000&trid=a17e09502546452490842bb7b033a676&sigparams=cdn,expires,len,oi,pt,qn,trid&sign=1915916992f59b99f97b496eb0d4a65c&ptype=0&src=8&sl=1&order=1'
+declare -x dURL='http://d1–cn-gotcha105.bilivideo.com/live-bvc/620187/live_1590370_4064847.m3u8?cdn=cn-gotcha05&expires=1611756921&len=0&oi=147989512&pt=h5&qn=10000&trid=55a60985dd0e448590a7585f9f56cebe&sigparams=cdn,expires,len,oi,pt,qn,trid&sign=879d462fb114aea6d4e8d6971aae1e06&ptype=0&src=9&sl=1&order=1'
 mainURL=`echo ${dURL%live_*}`
 
-awk mainURL="$mainURL" '{print mainURL$0 > "live1.m3u8"}' live1.m3u8
+
+
+
+awk '{print "'"$mainURL"'"$0 > "live1.m3u8"}' live1.m3u8

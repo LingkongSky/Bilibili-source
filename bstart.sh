@@ -4,39 +4,43 @@ cd ${bchPATH}
 mkdir video
 #目标链接
 #declare -x dURL='https://cn-jxnc-cmcc-live-01.bilivideo.com/live-bvc/730840/live_1590370_4064847_1500.m3u8'
+curl -G -s 'http://api.live.bilibili.com/room/v1/Room/playUrl' \
+--data-urlencode "cid=10112" \
+--data-urlencode 'qn=10000' \
+--data-urlencode 'platform=h5' > web.json 
 
-declare -x dURL='http://d1--cn-gotcha105.bilivideo.com/live-bvc/208679/live_1590370_4064847.m3u8?cdn=cn-gotcha05&expires=1611705427&len=0&oi=147989512&pt=h5&qn=10000&trid=e94f53dddabc451a9f7f21452c982004&sigparams=cdn,expires,len,oi,pt,qn,trid&sign=e6dae3cd7bfb078eb4f459833a17f623&ptype=0&src=9&sl=1&order=1'
+jq -r .data.durl[0].url web.json > durl.txt
+declare -x dURL=`cat durl.txt`
+rm -f durl.txt
+#declare -x dURL='http://d1–cn-gotcha105.bilivideo.com/live-bvc/615423/live_1590370_4064847.m3u8?cdn=cn-gotcha05&expires=1611761632&len=0&oi=147989512&pt=h5&qn=10000&trid=595b2d0846d14be997a50c96cc0c97c8&sigparams=cdn,expires,len,oi,pt,qn,trid&sign=445241f0cb68c7407e7c2682d102f0c8&ptype=0&src=9&sl=1&order=1'
+
 declare -x mainURL=`echo ${dURL%live_*}`
+
 #extTIME=6
 
-
-
-
-results=`curl "${durl}" 2>&1|grep EXTM3U`
-
+results=`curl "${dURL}" 2>&1|grep EXTM3U`
 
 #链接检测
 if [[ "$results" != "" ]]
 then
 
-echo -e "\033[32mfound link \033[0m"
-
 wget -O live.m3u8 "$dURL" >> log.txt 2>&1
 
-extTIMES=`awk 'NR==5 {print $k}' live.m3u8`;
-
 #获取单ts时间长度
-let extTIMES=`echo "$extTIMES" | tr -cd "[0-9]"`/1000
+
+extTIMES=`cat live.m3u8 | grep EXTINF > live1.m3u8 ; awk 'NR==1 {print $k}' live1.m3u8 | tr -cd "[0-9]";rm -f live1.m3u8`
+
+extTIMES=`echo "scale=4;${extTIMES}/1000" | bc`
+
 
 #获取ts个数
 extCOUNTS=`grep -o ts live.m3u8 | sort |uniq -c | tr -cd "[0-9]"`
 
 #设定循环获取请求周期
-let extTIME="$extTIMES"*"$extCOUNTS"
+extTIME=`echo "scale=4;${extTIMES}*${extCOUNTS}" | bc`
 
 echo -e "\033[32mcycle time:${extTIME}\033[0m"
 
-rm -f live.m3u8
 
 touch run.txt
 
@@ -58,12 +62,10 @@ while [ -f "run.txt" ]
 echo "catching.."
 
 
-results=`wget --spider "$dURL"  2>&1|grep 200`
-
-result=$(echo "$results" | grep "200")
+results=`curl "${dURL}" 2>&1|grep EXTM3U`
 
 #链接检测
-if [[ "$result" == "" ]]
+if [[ "$results" == "" ]]
 then
 #url无效，结束程序
 echo "found stop"
@@ -82,7 +84,7 @@ fi
 if [ -n "$catchTime" ]; then 
 sleep "$catchTime"
 else
-sleep 10
+sleep 60
 fi
 
 rm -f run.txt

@@ -3,8 +3,6 @@
 declare -x catch_id="$$"
 cd ${bchPATH}/
 
-touch live.m3u8
-
 #下载主文件
 wget  --wait=5 -O live.m3u8 --tries=24 "$dURL" -N >> log.txt 2>&1
 
@@ -14,9 +12,13 @@ sed -n '/ts/w live1.m3u8' live.m3u8
 
 #给主文件添加前缀
 
-awk '{print "$mainURL"$0 > "live1.m3u8"}' live1.m3u8
+awk '{print "'"$mainURL"'"$0 > "live1.m3u8"}' live1.m3u8
+
 
 wget -i live1.m3u8  --unlink -P video/ >> log.txt 2>&1
+
+
+rename 's/\.*/\.ts/' *
 
 
 list_name=`ls video/*.ts`
