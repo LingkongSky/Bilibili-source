@@ -15,13 +15,19 @@ sed -n '/ts/w live1.m3u8' live.m3u8
 awk '{print "'"$mainURL"'"$0 > "live1.m3u8"}' live1.m3u8
 
 
-wget -i live1.m3u8  --unlink -P video/ >> log.txt 2>&1
+wget -i live1.m3u8  --unlink -P ts/ >> log.txt 2>&1
 
+str=`find ts/ -name \*.*`
+for i in $str
+do
+mv $i ${i%.*}.ts
+done
 
-rename 's/\.*/\.ts/' *
-
+mv ts/* video/
+rm -rf ts
 
 list_name=`ls video/*.ts`
+
 
 if [[ ! "$list_name" =~ "ts" ]];then
 put_path=$(cd `dirname $0`; pwd)
