@@ -6,7 +6,7 @@ case "$1" in
 ##########
 "-v")
  
-echo -e "\033[32mBilibili-Catch Version 0.2.9 @Lingkongsky\033[0m"
+echo -e "\033[32mBilibili-Catch Version 0.2.95 @Lingkongsky\033[0m"
 
 ;;
  
@@ -125,6 +125,14 @@ echo "[ -v | -t | -path | -url | -stop | -anu | -data | -anc | -help ]"
 
 ;;
 
+
+########
+"-bg")
+
+echo -e "start the BiliBili-Source-Catch "
+nohup sh bstart.sh>>log.txt 2>&1 &
+
+;;
 ########
 "-stop")
 
@@ -139,8 +147,9 @@ exit 0
 else
 
 rm -f ${bchPATH}/run.txt
-kill "$shid"
-
+rm -f ${bchPATH}*.m3u8
+#kill -9 "$shid"
+sh ${bchPATH}/bend.sh
 echo -e "\033[32malready killed\033[0m"
 exit 0
 fi 
@@ -148,7 +157,7 @@ fi
 
 *)
  
-echo "use it by [ -v | -t | -path | -url | -stop | -anu | -data | -anc | -help ]"
+echo "use it by [ -v | -t | -path | -url | -stop | -anu | -data | -anc | -help | bg]"
  
 ;;
  

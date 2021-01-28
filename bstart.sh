@@ -21,7 +21,7 @@ declare -x mainURL=`echo ${dURL%live_*}`
 results=`curl "${dURL}" 2>&1|grep EXTM3U`
 
 #链接检测
-if [[ "$results" != "" ]]
+if [[ "$results" != "" ]] 
 then
 
 wget -O live.m3u8 "$dURL" >> log.txt 2>&1
@@ -64,8 +64,10 @@ echo "catching.."
 
 results=`curl "${dURL}" 2>&1|grep EXTM3U`
 
+size=`du -h -d0 video/ | tr -cd "[0-9]"`
+
 #链接检测
-if [[ "$results" == "" ]]
+if [[ "$results" == "" ]] || [[  "$size" > 4096 ]]
 then
 #url无效，结束程序
 echo "found stop"
@@ -74,6 +76,9 @@ wait
 echo "result saved"
 exit 0
 fi
+
+
+
       sh catch.sh 
       #休眠时间
       sleep "$extTIME"
