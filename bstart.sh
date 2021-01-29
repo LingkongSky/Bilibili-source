@@ -1,7 +1,7 @@
 #!/bin/bash
 cd ${bchPATH}
-
 mkdir video
+declare -x bstart_id="$$"
 #目标链接
 #declare -x dURL='https://cn-jxnc-cmcc-live-01.bilivideo.com/live-bvc/730840/live_1590370_4064847_1500.m3u8'
 curl -G -s 'http://api.live.bilibili.com/room/v1/Room/playUrl' \
@@ -65,7 +65,6 @@ echo "catching.."
 results=`curl "${dURL}" 2>&1|grep EXTM3U`
 
 
-
 ###抓取文件尺寸上限设定
 
 sizeG=`du -h -d0 video/ | grep "M"`
@@ -73,13 +72,10 @@ sizeX=`du -h -d0 video/ | grep [.]`
 
 if [[ "$sizeX" != "" ]]
 then
-echo "yes"
 let size=`du -h -d0 video/ | tr -cd "[0-9]"`/10
 else
 size=`du -h -d0 video/ | tr -cd "[0-9]"`
 fi
-
-
 
 if [[ "$sizeG" != "" ]] && [[ "$size" -gt "10" ]]
 then
@@ -90,14 +86,11 @@ sh bend.sh
 wait
 echo "result saved"
 rm -f run.txt
-kill  "$catch_id" >>log.txt 2>&1
-kill  $$ >>log.txt 2>&1
-#exit 0
+kill -s 9 "$catch_id" >> log.txt 2>&1
+kill -s 9 $$ 
 fi
 
 #######
-
-
 
 #链接检测
 if [[ "$results" == "" ]]
@@ -108,11 +101,9 @@ sh bend.sh
 wait
 echo "result saved"
 rm -f run.txt
-kill  $catch_id >> log.txt 2>&1
-kill  $$ >> log.txt 2>&1
-#exit 0
+kill -9 "$catch_id" >> log.txt 2>&1
+kill -s 9 $$
 fi
-
 
 
       sh catch.sh 
@@ -121,21 +112,18 @@ fi
 
    done &
 
-
 if [ -n "$catchTime" ]; then 
 sleep "$catchTime"
 else
-sleep 60
+sleep 100
 fi
 
 rm -f run.txt
-
 if [ -n "$catch_id" ]; then
 wait "$catch_id"
 fi 
 
 sh bend.sh
-
 
 if [ -n "$bend_id" ]; then
 wait "$bend_id"
@@ -145,7 +133,6 @@ rm -rf video
 cd ../
 
 unset catchTime
-
 
 
 exit 0

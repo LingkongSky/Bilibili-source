@@ -3,6 +3,12 @@
 declare -x catch_id="$$"
 cd ${bchPATH}/
 
+
+if [ ! -f "run.txt" ]
+then 
+exit 0
+fi
+
 #下载主文件
 wget  --wait=5 -O live.m3u8 --tries=24 "$dURL" -N >> log.txt 2>&1
 
