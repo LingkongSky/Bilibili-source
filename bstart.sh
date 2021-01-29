@@ -64,17 +64,53 @@ echo "catching.."
 
 results=`curl "${dURL}" 2>&1|grep EXTM3U`
 
+
+
+###抓取文件尺寸上限设定
+
+sizeG=`du -h -d0 video/ | grep "M"`
+sizeX=`du -h -d0 video/ | grep [.]`
+
+if [[ "$sizeX" != "" ]]
+then
+echo "yes"
+let size=`du -h -d0 video/ | tr -cd "[0-9]"`/10
+else
 size=`du -h -d0 video/ | tr -cd "[0-9]"`
+fi
+
+
+
+if [[ "$sizeG" != "" ]] && [[ "$size" -gt "10" ]]
+then
+echo "$size""   a   ""$sizeX""   a   ""$sizeG"
+du -h -d0 video/ 
+echo "touch max size"
+sh bend.sh
+wait
+echo "result saved"
+rm -f run.txt
+kill  "$catch_id" >>log.txt 2>&1
+kill  $$ >>log.txt 2>&1
+#exit 0
+fi
+
+#######
+
+
 
 #链接检测
-if [[ "$results" == "" ]] || [[  "$size" > 4096 ]]
+if [[ "$results" == "" ]]
 then
 #url无效，结束程序
 echo "found stop"
 sh bend.sh
 wait
 echo "result saved"
-exit 0
+rm -f run.txt
+kill  $catch_id >> log.txt 2>&1
+kill  $$ >> log.txt 2>&1
+#exit 0
 fi
 
 
