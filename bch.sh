@@ -130,7 +130,7 @@ echo "[ -v | -t | -path | -url | -stop | -anu | -data | -anc | -help ]"
 "-bg")
 
 echo -e "start the BiliBili-Source-Catch "
-nohup sh bstart.sh>>log.txt 2>&1 &
+nohup sh ${bchPATH}/bstart.sh >> log.txt 2>&1 &
 
 ;;
 ########

@@ -30,9 +30,9 @@ awk '{print $0"'"$perfix1"'"}' list.txt
 cd ../
 
 
-ffmpeg -f concat -i video/list.txt -c copy results/"$timenow".mp4
+ffmpeg -f concat -safe 0 -i video/list.txt -c copy results/"$timenow".mp4
 
-rm video/*.* -f
+wait
 
 
 put_path=$(cd `dirname $0`; pwd)
@@ -44,7 +44,7 @@ rm -f run.txt
 rm -f *.m3u8
 rm -rf video
 rm -f web.json
-
+mv video/*.* /root/trash
 cd ../
 
 unset bend_id

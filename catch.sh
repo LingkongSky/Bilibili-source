@@ -42,7 +42,7 @@ exit 0
 fi
 
 
-for file in video/*.ts; do F="$(echo $file |sed 's/ts$/mp4/g')"; ffmpeg -i $file $F; done >> log.txt 2>&1
+for file in video/*.ts; do F="$(echo $file |sed 's/ts$/mp4/g')"; ffmpeg -i $file -c copy -map 0:v -map 0:a -bsf:a aac_adtstoasc $F; done >> log.txt 2>&1
 
 rm video/*.ts -f 
 
