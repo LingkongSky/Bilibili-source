@@ -2,7 +2,7 @@
 
 declare -x catch_id="$$"
 cd ${bchPATH}/
-
+source ${bchPATH}/setting
 
 if [ ! -f "run.txt" ]
 then 
@@ -10,7 +10,7 @@ exit 0
 fi
 
 #下载主文件
-wget  --wait=5 -O live.m3u8 --tries=24 "$dURL" -N >> log.txt 2>&1
+wget  --wait=5 -O live.m3u8 --tries=24 "$dURL" -N 
 
 #提取下载文件内容输入主文件
 
@@ -21,7 +21,7 @@ sed -n '/ts/w live1.m3u8' live.m3u8
 awk '{print "'"$mainURL"'"$0 > "live1.m3u8"}' live1.m3u8
 
 
-wget -i live1.m3u8  --unlink -P ts/ >> log.txt 2>&1
+wget --limit-rate="${catch_speed}"K -c -i live1.m3u8  --unlink -P ts/ 
 
 str=`find ts/ -name \*.*`
 for i in $str

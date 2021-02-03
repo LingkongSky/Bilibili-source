@@ -1,142 +1,88 @@
 #!/bin/bash
- 
-# case语句使用场景
+local_version="1.0.0"
+
+cid=`cat ${bchPATH}/target`
+cd ${bchPATH}/
 case "$1" in
- 
 ##########
 "-v")
- 
-echo -e "\033[32mBilibili-Catch Version 0.2.99 @Lingkongsky\033[0m"
+
+echo -e "\033[32mBilibili-Catch Version ${local_version} @Lingkongsky\033[0m"
+
+wget https://raw.githubusercontent.com/LingkongSky/Bilibili-source/main/version -O version >> log.txt 2>&1
+version=`cat version`
+
+rm -f version
+
+L1=`echo ${local_version:0:1}`
+M1=`echo ${local_version:2:1}`
+S1=`echo ${local_version:4:1}`
+L2=`echo ${version:0:1}`
+M2=`echo ${version:2:1}`
+S2=`echo ${version:4:1}`
+
+if [[ "$L1" -lt "$L2" ]] || [[ "$M1" -lt "$M2" ]] || [[ "$S1" -lt "$S2" ]];then
+#检测到新版本
+echo -e "\033[32mThe Last New Version: ${version}\nHave new version could update\033[0m"
+echo "please enter bch -update to update"
+else
+echo -e "\033[32mThis is already the newst version\033[0m"
+fi
+
+
+echo "Program adress:"
+echo -e "\033[34mhttps://github.com/LingkongSky/Bilibili-source.git\033[0m"
 
 ;;
- 
-#######
-"-t")
- 
-if [ -z "$(echo $2 | sed 's#[0-9]##g')" ] && [ "$2" != "" ]; then
 
-declare -x catchTime="$2"  
-sh ${bchPATH}/bstart.sh &
 
-else
-echo "bch -t [time:s]"
+#########
+"-start")
+
+shid=`ps -ef | grep ${bchPATH}/bstart.sh | grep -v grep`
+
+if [[ "$shid" != "" ]]; then
+echo "process already had"
 exit 0
 fi
- 
-;;
- 
- 
-########
-"-path")
 
-echo "${bchPATH}"
- 
-;;
+wget "http://api.live.bilibili.com/room/v1/Room/playUrl?cid=${cid}&qn=10000&platform=h5" -O web.json >> log.txt 2>&1
+durl=`jq -r .data.durl[0].url web.json`
+rm -rf web.json
+results=`curl "${durl}" 2>&1|grep EXTM3U`
 
-########
-"-url")
-
-if [ ! -n "$2" ]; then
-#参数2为空
-echo "bch -url [url]"
+if [[ "$results" == "" ]]
+then
+echo -e "\033[31mLive can't found\033[0m"
 exit 0
 fi 
- 
-results=`wget --spider "$2"  2>&1|grep 200`
 
-result=$(echo "$results" | grep "200")
-
-#链接检测
-if [[ "$result" == "" ]]
-then
-#url无效，结束程序
-echo -e "can not link to the URL. \nPlease check your URL"
-exit 0
-
-fi
-
-
-if [ "$3" == "-t" ] && [ -z "$(echo $4 | sed 's#[0-9]##g')" ] && [ "$4" != "" ]; then
-
-declare -x catchTime="$4"   
-sh ${bchPATH}/bstart.sh
-
-elif [[ "$3" == "-t" ]]; then
-echo "bch -t [time:s]"
-exit 0
-fi
-
-declare -x catchTime="20"   
-sh ${bchPATH}/bstart.sh
-
-;;
-
-########
-"-anu")
-
-if [ -z "$(echo $2 | sed 's#[0-9]##g')" ] && [ "$2" != "" ]; then
-
-declare -x uid="$2"
-declare -x anmode="uid"
-sh ${bchPATH}/ana.sh
-
-else
-echo "bch -anu [uid]"
-exit 0
-fi
-
-
-;;
-
-
-########
-"-anc")
-
-
-if [ -z "$(echo $2 | sed 's#[0-9]##g')" ] && [ "$2" != "" ]; then
-
-declare -x cid="$2"
-declare -x anmode="cid"
-sh ${bchPATH}/ana.sh
-
-else
-echo "bch -anc [cid]"
-exit 0
-fi
-
-;;
-
-
-########
-"-data")
-
-sh ${bchPATH}/data.sh
-
-;;
-
-
-########
-"-help")
-echo -e "Welcome to use the BiliBili-Source-Catch "
-echo "make sure you have installed the bch and use it by the command:"
-
-echo "[ -v | -t | -path | -url | -stop | -anu | -data | -anc | -help ]"
-
-
-;;
-
-
-########
-"-bg")
-
+bch -target
 echo -e "start the BiliBili-Source-Catch "
-nohup sh ${bchPATH}/bstart.sh >> log.txt 2>&1 &
+start_time=`date +%m-%d-%H:%M`
+echo -e "\033[32m${start_time}\033[0m"
+
+#清除上一次的抓取记录
+sed -i '/bst_time/d' /etc/profile
+source /etc/profile
+
+bst="export bst_time='${start_time}'"
+
+echo -e "\n${bst}" >> /etc/profile
+
+source /etc/profile
+
+wait
+
+nohup sh bstart.sh >> /dev/null 2>&1 &
 
 ;;
+
+
 ########
 "-stop")
 
-shid=`ps -ef | grep ${bchPATH}/bstart.sh`
+shid=`ps -ef | grep bstart.sh | grep -v grep`
 
 
 if [ ! -n "$shid" ]; then
@@ -146,19 +92,278 @@ echo "process not found"
 exit 0
 else
 
-rm -f ${bchPATH}/run.txt
-rm -f ${bchPATH}*.m3u8
-#kill -9 "$shid"
-sh ${bchPATH}/bend.sh
-echo -e "\033[32malready killed\033[0m"
-exit 0
+rm -f run.txt
+rm -f *.m3u8
+sh bend.sh
 fi 
  ;;
 
+
+#######
+"-t")
+
+if [ -z "$(echo $2 | sed 's#[0-9]##g')" ] && [ "$2" != "" ]; then
+
+
+shid=`ps -ef | grep bstart.sh | grep -v grep`
+
+if [[ "$shid" != "" ]]; then
+echo "process already had"
+exit 0
+fi
+
+wget "http://api.live.bilibili.com/room/v1/Room/playUrl?cid=${cid}&qn=10000&platform=h5" -O web.json >> log.txt 2>&1
+durl=`jq -r .data.durl[0].url web.json`
+rm -rf web.json
+results=`curl "${durl}" 2>&1|grep EXTM3U`
+
+if [[ "$results" == "" ]]
+then
+echo -e "\033[31mm3u8Link can't found\033[0m"
+exit 0
+fi 
+
+
+bch -target
+start_time=`date +%m-%d-%H:%M`
+echo -e "\033[32m${start_time}\ntime:${2}\033[0m"
+
+sed -i '/bst_time/d' /etc/profile
+source /etc/profile
+
+bst="export bst_time='${start_time}'"
+
+echo -e "\n${bst}" >> /etc/profile
+
+source /etc/profile
+
+wait
+
+declare -x catchTime="$2"  
+nohup sh bstart.sh >> /dev/null 2>&1
+
+else
+echo "bch -t [time:s]"
+exit 0
+fi
+ 
+;;
+ 
+########定时执行
+"-settime")
+rm -f btask
+sed -i '/btask/d' /var/spool/cron/root
+
+service crond start >> log.txt 2>&1
+
+date=`echo "$2" | grep [0-1][0-9]"-"[0-3][0-9]"-"[0-2][0-9]`
+
+if [[ "$date" == "" ]]; then
+echo "bch -settime [MM-DD-HH]"
+exit 0
+fi
+
+MM=`echo ${date:0:2}`
+DD=`echo ${date:3:2}`
+HH=`echo ${date:6:2}`
+
+
+#创建任务
+echo -e "* ${HH} ${DD} ${MM} * root source /etc/profile;${bchPATH}/btask" >> /var/spool/cron/root
+
+echo "#!/bin/bash" >> btask
+echo "#${date}" >> btask
+echo "bch -cid ${cid}" >> btask
+
+echo "wget 'http://api.live.bilibili.com/room/v1/Room/playUrl?cid=${cid}&qn=10000&platform=h5' -O web.json >> log.txt 2>&1" >> btask
+
+echo 'durl=`jq -r .data.durl[0].url web.json`;rm -rf web.json;results=`curl ${durl} 2>&1|grep EXTM3U`' >> btask
+
+echo 'if [[ "$results" == "" ]];then' >> btask
+echo 'exit 0;fi' >> btask
+
+
+echo "bch -start" >> btask
+echo "sed -i '/btask/d' /etc/crontab" >> btask
+echo "rm -f ${bchPATH}/btask" >> btask
+chmod 755 btask
+echo "book task : ${date}"
+
+;;
+
+
+########
+"-task")
+
+if [ ! -e "btask" ]
+then
+echo "haven't any task"
+exit 0
+fi
+task=`cat btask | grep "#"[0-9][0-9]`
+echo -e "\033[32m${task}\033[0m"
+
+;;
+
+
+
+########
+"-path")
+
+echo "${bchPATH}"
+ 
+;;
+
+
+########
+"-now")
+
+shid=`ps -ef | grep ${bchPATH}/bstart.sh | grep -v grep`
+
+if [[ "$shid" == "" ]]; then
+#参数2为空
+echo "process not found"
+exit 0
+
+fi
+source /etc/profile
+echo -e "\033[32mhave process | ${bst_time}\033[0m"
+
+
+;;
+
+
+########
+"-anu")
+
+if [ -z "$(echo $2 | sed 's#[0-9]##g')" ] && [ "$2" != "" ]; then
+
+declare -x uid="$2"
+declare -x anmode="uid"
+sh ana.sh
+
+else
+echo "bch -anu [uid]"
+exit 0
+fi
+
+
+;;
+
+########
+"-anc")
+
+
+if [ -z "$(echo $2 | sed 's#[0-9]##g')" ] && [ "$2" != "" ]; then
+
+declare -x cid="$2"
+declare -x anmode="cid"
+sh ana.sh
+
+else
+echo "bch -anc [cid]"
+exit 0
+fi
+
+;;
+
+########
+"-cid")
+if [ -z "$(echo $2 | sed 's#[0-9]##g')" ] && [ "$2" != "" ]; then
+
+results=`wget -q -O- "http://api.live.bilibili.com/room/v1/Room/room_init?id=$2" | grep "ok"`
+
+#链接检测
+if [[ "$results" == "" ]]
+then
+#url无效，结束程序
+echo "invalid cid"
+exit 0
+fi
+
+
+curl -G -s 'http://api.live.bilibili.com/room/v1/Room/room_init' \
+--data-urlencode "id=$2"  > info
+uid=`jq -r .data.uid info`
+curl -G -s 'http://api.bilibili.com/x/space/acc/info' \
+--data-urlencode "mid=${uid}"  > info
+name=`jq -r  .data.name info`
+title=`jq -r  .data.live_room.title info`
+rm -f info
+
+echo "$2" > target
+echo -e "\033[32mname:${name} \ntitle:${title} \ntarget locked\033[0m"
+
+
+
+
+else
+echo "bch -cid [cid]"
+exit 0
+fi
+
+;;
+
+########
+"-target")
+cid=`cat target`
+
+curl -G -s 'http://api.live.bilibili.com/room/v1/Room/room_init' \
+--data-urlencode "id=${cid}"  > info
+uid=`jq -r .data.uid info`
+curl -G -s 'http://api.bilibili.com/x/space/acc/info' \
+--data-urlencode "mid=${uid}"  > info
+name=`jq -r  .data.name info`
+title=`jq -r  .data.live_room.title info`
+rm -f info
+
+echo -e "\033[32mtarget name:${name} \ntitle:${title}\033[0m"
+
+
+;;
+
+
+########
+"-data")
+jq  . user_data
+
+;;
+
+"-setting")
+echo -e "\033[32mPATH:${bchPATH}/setting\033[0m"
+cat setting
+;;
+
+"-update")
+wget https://raw.githubusercontent.com/LingkongSky/Bilibili-source/main/bstart.sh -O bstart.sh
+wget https://raw.githubusercontent.com/LingkongSky/Bilibili-source/main/bend.sh -O bend.sh
+wget https://raw.githubusercontent.com/LingkongSky/Bilibili-source/main/catch.sh -O catch.sh
+wget https://raw.githubusercontent.com/LingkongSky/Bilibili-source/main/ana.sh -O ana.sh
+wget https://raw.githubusercontent.com/LingkongSky/Bilibili-source/main/install.sh -O install.sh
+wget https://raw.githubusercontent.com/LingkongSky/Bilibili-source/main/bch.sh -O bch.sh
+
+
+sh install.sh
+;;
+
+
+########
+"-help")
+echo -e "Welcome to use the BiliBili-Source-Catch"
+echo "use it by the command:"
+
+echo -e "bch [-option]\n-start [需在bch -cid指定目标后使用]\n-stop [停止已有的抓取进程并保存]\n-t [time:S] [指定时间长度抓取，大小为S]\n-settime [MM-DD-HH] [通过输入月份-日期-小时来设置定时抓取任务]\n-task [查看是否有定时抓取任务存在]\n-path [查看当前的工作目录]\n-now [查看正在进行的抓取进程信息]\n-anu [uid] [通过用户uid收集信息并收录进user_data]\n-anc [cid] [通过用户cid收集信息并收录进user_data]\n-cid [cid] [指定抓取目标cid]\n-data [查看已抓取的信息]\n-setting [查看配置文件]\n-update [升级BCH]\n-help [查看指令帮助]"
+
+
+;;
+
+
 *)
  
-echo "use it by [ -v | -t | -path | -url | -stop | -anu | -data | -anc | -help | bg]"
+echo "input -help to get the use way or enter [ -v | -start | -stop | -t | -settime | -task | -path | -now | -anu | -anc | -cid | | -target | -data | -setting | -update | -help ]"
  
 ;;
  
 esac
+
+cd ../

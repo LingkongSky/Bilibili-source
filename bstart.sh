@@ -1,13 +1,26 @@
 #!/bin/bash
 cd ${bchPATH}
+
+source ${bchPATH}/setting
+
 mkdir video >> log.txt 2>&1
 declare -x bstart_id="$$"
-#目标链接
-#declare -x dURL='https://cn-jxnc-cmcc-live-01.bilivideo.com/live-bvc/730840/live_1590370_4064847_1500.m3u8'
 
+cid=`cat target`
+
+results=`wget -q -O- "http://api.live.bilibili.com/room/v1/Room/room_init?id=${cid}" | grep "ok"`
+
+#链接检测
+if [[ "$results" == "" ]]
+then
+#url无效，结束程序
+echo "invalid cid: ${cid}"
+
+exit 0
+fi
 
 curl -G -s 'http://api.live.bilibili.com/room/v1/Room/playUrl' \
---data-urlencode "cid=66840" \
+--data-urlencode "cid=${cid}" \
 --data-urlencode 'qn=10000' \
 --data-urlencode 'platform=h5' > web.json 
 
@@ -68,6 +81,8 @@ results=`curl "${dURL}" 2>&1|grep EXTM3U`
 ###抓取文件尺寸上限设定
 
 sizeG=`du -h -d0 video/ | grep "G"`
+sizeM=`du -h -d0 video/ | grep "M"`
+
 sizeX=`du -h -d0 video/ | grep [.]`
 
 if [[ "$sizeX" != "" ]]
@@ -76,6 +91,7 @@ let size=`du -h -d0 video/ | tr -cd "[0-9]"`/10
 else
 size=`du -h -d0 video/ | tr -cd "[0-9]"`
 fi
+
 
 if [[ "$sizeG" != "" ]] && [[ "$size" -gt "10" ]]
 then
@@ -90,6 +106,26 @@ kill -s 9 "$catch_id" >> log.txt 2>&1
 kill -s 9 $$ 
 fi
 
+:<<EOF
+if [[ "$sizeM" != "" ]] && [[ "$size" -gt "1024" ]]
+then
+echo "$size""   a   ""$sizeX""   a   ""$sizeM"
+du -h -d0 video/ 
+echo "touch max size"
+sh bend.sh
+wait
+echo "result saved"
+rm -f run.txt
+kill -s 9 "$catch_id" >> log.txt 2>&1
+kill -s 9 $$ 
+fi
+EOF
+
+
+
+
+
+
 #######
 
 #链接检测
@@ -97,7 +133,7 @@ if [[ "$results" == "" ]]
 then
 ###中途换源
 curl -G -s 'http://api.live.bilibili.com/room/v1/Room/playUrl' \
---data-urlencode "cid=66840" \
+--data-urlencode "cid=${cid}" \
 --data-urlencode 'qn=10000' \
 --data-urlencode 'platform=h5' > web.json 
 
@@ -126,6 +162,8 @@ kill -s 9 $$
 
 fi
 
+
+
 wget -O live.m3u8 "$dURL" >> log.txt 2>&1
 
 #获取单ts时间长度
@@ -133,7 +171,6 @@ wget -O live.m3u8 "$dURL" >> log.txt 2>&1
 extTIMES=`cat live.m3u8 | grep EXTINF > live1.m3u8 ; awk 'NR==1 {print $k}' live1.m3u8 | tr -cd "[0-9]";rm -f live1.m3u8`
 
 extTIMES=`echo "scale=4;${extTIMES}/1000" | bc`
-
 
 #获取ts个数
 extCOUNTS=`grep -o ts live.m3u8 | sort |uniq -c | tr -cd "[0-9]"`
@@ -144,20 +181,41 @@ extTIME=`echo "scale=4;${extTIMES}*${extCOUNTS}" | bc`
 fi
 
 
+
       sh catch.sh 
       #休眠时间
-      sleep "$extTIME"
-
-
+ctimes="0"
+while [ "$ctimes" -lt "$extTIME" ]
+do
+let ctimes+=1
+sleep 1
+done
 
 
    done &
 
+
+
+times="0"
 if [ -n "$catchTime" ]; then 
-sleep "$catchTime"
+MaxTimes="$catchTime"
 else
-sleep 1000000
+MaxTimes="$MaxTime"
 fi
+
+while [ "$times" -lt "$MaxTimes" ]
+do
+
+if [ ! -f "run.txt" ]
+then
+exit 0
+fi
+
+let times+=1
+sleep 1
+
+done
+
 
 rm -f run.txt
 if [ -n "$catch_id" ]; then

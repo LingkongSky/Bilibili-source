@@ -20,18 +20,10 @@ EOF
 
 
 
-cid=8434843448
+cid=350372
 uid=11191432
 name=1
 title=1
 roomurl=1
 durl=1
 
-str=`find video/ -name \*.*`
-
-for i in $str
-
-do
-mv $i ${i%.*}.ts
-
-done

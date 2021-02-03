@@ -1,4 +1,4 @@
-
+#!/bin/bash
 mainURL='https://cn-jxnc-cmcc-live-01.bilivideo.com/live-bvc'
 cd ${bchPATH}
 
@@ -75,9 +75,8 @@ results=`curl "${durl}" 2>&1|grep EXTM3U`
 if [[ "$results" == "" ]]
 then
 #url无效，结束程序
-remove
+durl="Not Found"
 echo -e "\033[31mm3u8Link can't found\033[0m"
-exit 0
 fi 
 
 if [[ "${liveStatus}" == "1" ]]; then
