@@ -36,18 +36,18 @@ uid，cid，房间名与直播间地址并会被收录进user_data。
 你可以移除旧目录，并在git clone后更改install.sh中的工作目录指向来更改工作目录。
 
 # 指令说明
-bch [-option]
-`-start` [需在bch -cid指定目标后使用]
-`-stop` [停止已有的抓取进程并保存]
-`-t [time:S]` [指定时间长度抓取，大小为S]
-`-settime [MM-DD-HH]` [定时执行抓取任务]
-`-task` [查看是否有定时抓取任务存在]
-`-path` [查看当前的工作目录]
-`-now` [查看正在进行的抓取进程信息]
-`-anu [uid]` [通过用户uid收集信息并收录进user_data]
-`-anc [cid]` [通过用户cid收集信息并收录进user_data]
-`-cid [cid]` [指定抓取目标cid]
-`-data` [查看已抓取的信息]
-`-target` [查看指定目标]
-`-setting` [查看配置文件]
+bch [-option]<br>
+`-start` [需在bch -cid指定目标后使用]<br>
+`-stop` [停止已有的抓取进程并保存]<br>
+`-t [time:S]` [指定时间长度抓取，大小为S]<br>
+`-settime [MM-DD-HH]` [定时执行抓取任务]<br>
+`-task` [查看是否有定时抓取任务存在]<br>
+`-path` [查看当前的工作目录]<br>
+`-now` [查看正在进行的抓取进程信息]<br>
+`-anu [uid]` [通过用户uid收集信息并收录进user_data]<br>
+`-anc [cid]` [通过用户cid收集信息并收录进user_data]<br>
+`-cid [cid]` [指定抓取目标cid]<br>
+`-data` [查看已抓取的信息]<br>
+`-target` [查看指定目标]<br>
+`-setting` [查看配置文件]<br>
 `-help` [查看指令帮助]
