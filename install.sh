@@ -7,7 +7,7 @@ chmod +x ./jq
 cp jq /usr/bin
 fi
 
-ls /bin | grep ffmpeg
+ls /bin | grep ffmpeg >> /dev/null
 
 if [[ "${test_jq}" == ""  ]]; then
 echo "please make sure you are already install the ffmpeg"
@@ -18,40 +18,47 @@ fi
 bashrcS=`grep "bch" /root/.bashrc`
 
 #profileF=`cat /etc/profile`
-profileS=`grep "bch" /etc/profile`
+profileS=`grep "bchPATH" /etc/profile`
 
-#添加自定义指令
-if [ -n "$bashrcS" ]; then
-echo "bch already installed"
-else
-comm="alias bch='${bchPATH}/bch.sh'"
-echo -e "\n${comm}" >> /root/.bashrc
-source ~/.bashrc
-echo "update finished"
-fi
+
 
 #添加项目工作路径
-if [ ! -n "$profileS" ]; then
-axx="export bchPATH='/root/lingkong'"
+axx="export bchPATH='/root/Bilibili-source'"
 #单引号内为工作路径
 
-echo -e "\n${axx}" >> /etc/profile
-source /etc/profile
+if [ ! -n "$profileS" ]; then
 
+echo -e "\n${axx}" >> /etc/profile
 echo "install finished"
+
+else
+
+sed -i '/bchPATH/d' /etc/profile
+echo -e "\n${axx}" >> /etc/profile
 fi
 
+source /etc/profile
+
+
+#添加自定义指令
+comm="alias bch='${bchPATH}/bch.sh'"
+
+if [ ! -n "$bashrcS" ]; then
+echo -e "\n${comm}" >> /root/.bashrc
+echo "update finished"
+
+else
+
+sed -i '/bchPATH/d' /root/.bashrc
+echo -e "\n${comm}" >> /root/.bashrc
+
+fi
+
+source ~/.bashrc
 
 #创建userdata
 if [ ! -e user_data ]; then
 echo -e "{\n\n}" > user_data
-fi
-
-
-#在crontab中调用环境变量
-sour=`cat /etc/crontab | grep source`
-if [[ "$sour" == "" ]]; then
-echo -e "\nsource /etc/profile" >> /etc/crontab
 fi
 
 #将bch在bin中定义

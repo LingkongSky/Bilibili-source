@@ -2283,3 +2283,177 @@ Saving to: ‘version’
 
 2021-02-03 21:45:27 (582 KB/s) - ‘version’ saved [5/5]
 
+--2021-02-03 22:30:52--  https://raw.githubusercontent.com/LingkongSky/Bilibili-source/main/version
+Resolving raw.githubusercontent.com (raw.githubusercontent.com)... 151.101.76.133
+Connecting to raw.githubusercontent.com (raw.githubusercontent.com)|151.101.76.133|:443... connected.
+HTTP request sent, awaiting response... 404 Not Found
+2021-02-03 22:30:53 ERROR 404: Not Found.
+
+--2021-02-03 22:32:20--  https://raw.githubusercontent.com/LingkongSky/Bilibili-source/main/version
+Resolving raw.githubusercontent.com (raw.githubusercontent.com)... 151.101.76.133
+Connecting to raw.githubusercontent.com (raw.githubusercontent.com)|151.101.76.133|:443... connected.
+HTTP request sent, awaiting response... 404 Not Found
+2021-02-03 22:32:20 ERROR 404: Not Found.
+
+--2021-02-03 22:35:41--  https://raw.githubusercontent.com/LingkongSky/Bilibili-source/main/version
+Resolving raw.githubusercontent.com (raw.githubusercontent.com)... 151.101.76.133
+Connecting to raw.githubusercontent.com (raw.githubusercontent.com)|151.101.76.133|:443... connected.
+HTTP request sent, awaiting response... 404 Not Found
+2021-02-03 22:35:41 ERROR 404: Not Found.
+
+--2021-02-03 22:36:10--  https://raw.githubusercontent.com/LingkongSky/Bilibili-source/main/version
+Resolving raw.githubusercontent.com (raw.githubusercontent.com)... 151.101.76.133
+Connecting to raw.githubusercontent.com (raw.githubusercontent.com)|151.101.76.133|:443... connected.
+HTTP request sent, awaiting response... 404 Not Found
+2021-02-03 22:36:10 ERROR 404: Not Found.
+
+--2021-02-03 22:39:35--  https://raw.githubusercontent.com/LingkongSky/Bilibili-source/main/version
+Resolving raw.githubusercontent.com (raw.githubusercontent.com)... 151.101.76.133
+Connecting to raw.githubusercontent.com (raw.githubusercontent.com)|151.101.76.133|:443... connected.
+HTTP request sent, awaiting response... 404 Not Found
+2021-02-03 22:39:35 ERROR 404: Not Found.
+
+--2021-02-03 22:39:50--  https://raw.githubusercontent.com/LingkongSky/Bilibili-source/main/version
+Resolving raw.githubusercontent.com (raw.githubusercontent.com)... 151.101.76.133
+Connecting to raw.githubusercontent.com (raw.githubusercontent.com)|151.101.76.133|:443... connected.
+HTTP request sent, awaiting response... 404 Not Found
+2021-02-03 22:39:50 ERROR 404: Not Found.
+
+--2021-02-03 22:40:32--  http://api.live.bilibili.com/room/v1/Room/playUrl?cid=10112&qn=10000&platform=h5
+Resolving api.live.bilibili.com (api.live.bilibili.com)... 128.1.62.201, 128.1.62.200, 45.43.32.234
+Connecting to api.live.bilibili.com (api.live.bilibili.com)|128.1.62.201|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 1901 (1.9K) [application/json]
+Saving to: ‘web.json’
+
+     0K .                                                     100% 68.6K=0.03s
+
+2021-02-03 22:40:32 (68.6 KB/s) - ‘web.json’ saved [1901/1901]
+
+--2021-02-03 22:40:34--  http://d1--cn-gotcha105.bilivideo.com/live-bvc/942534/live_1590370_4064847.m3u8?cdn=cn-gotcha05&expires=1612366833&len=0&oi=147989512&pt=h5&qn=10000&trid=2e9ba292909c4b6f997e2aa55a2e8e08&sigparams=cdn,expires,len,oi,pt,qn,trid&sign=ece18c329225ebd31a4307d6e5350251&ptype=0&src=9&sl=1&order=1
+Resolving d1--cn-gotcha105.bilivideo.com (d1--cn-gotcha105.bilivideo.com)... 163.171.198.109, 163.171.193.126
+Connecting to d1--cn-gotcha105.bilivideo.com (d1--cn-gotcha105.bilivideo.com)|163.171.198.109|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 240 [application/x-mpegurl]
+Saving to: ‘live.m3u8’
+
+     0K                                                       100% 27.9M=0s
+
+2021-02-03 22:40:34 (27.9 MB/s) - ‘live.m3u8’ saved [240/240]
+
+ffmpeg version N-100564-gf4bdedd Copyright (c) 2000-2021 the FFmpeg developers
+  built with gcc 4.8.5 (GCC) 20150623 (Red Hat 4.8.5-44)
+  configuration: 
+  libavutil      56. 63.100 / 56. 63.100
+  libavcodec     58.115.102 / 58.115.102
+  libavformat    58. 65.101 / 58. 65.101
+  libavdevice    58. 11.103 / 58. 11.103
+  libavfilter     7. 95.100 /  7. 95.100
+  libswscale      5.  8.100 /  5.  8.100
+  libswresample   3.  8.100 /  3.  8.100
+Input #0, mpegts, from 'video/1612363233.ts':
+  Duration: 00:00:04.02, start: 15074.976322, bitrate: 2083 kb/s
+  Program 1 
+    Stream #0:0[0x100]: Video: h264 (High) ([27][0][0][0] / 0x001B), yuv420p(tv, bt470bg/unknown/unknown, progressive), 1920x1080 [SAR 1:1 DAR 16:9], 30 fps, 30 tbr, 90k tbn, 60 tbc
+    Stream #0:1[0x101]: Audio: aac (LC) ([15][0][0][0] / 0x000F), 44100 Hz, stereo, fltp, 159 kb/s
+Output #0, mp4, to 'video/1612363233.mp4':
+  Metadata:
+    encoder         : Lavf58.65.101
+    Stream #0:0: Video: h264 (High) (avc1 / 0x31637661), yuv420p(tv, bt470bg/unknown/unknown, progressive), 1920x1080 [SAR 1:1 DAR 16:9], q=2-31, 30 fps, 30 tbr, 90k tbn, 90k tbc
+    Stream #0:1: Audio: aac (LC) (mp4a / 0x6134706D), 44100 Hz, stereo, fltp, 159 kb/s
+Stream mapping:
+  Stream #0:0 -> #0:0 (copy)
+  Stream #0:1 -> #0:1 (copy)
+Press [q] to stop, [?] for help
+frame=    0 fps=0.0 q=-1.0 size=       0kB time=00:00:00.00 bitrate=N/A speed=N/A    frame=  120 fps=0.0 q=-1.0 Lsize=     975kB time=00:00:03.97 bitrate=2011.8kbits/s speed= 953x    
+video:892kB audio:77kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 0.616392%
+ffmpeg version N-100564-gf4bdedd Copyright (c) 2000-2021 the FFmpeg developers
+  built with gcc 4.8.5 (GCC) 20150623 (Red Hat 4.8.5-44)
+  configuration: 
+  libavutil      56. 63.100 / 56. 63.100
+  libavcodec     58.115.102 / 58.115.102
+  libavformat    58. 65.101 / 58. 65.101
+  libavdevice    58. 11.103 / 58. 11.103
+  libavfilter     7. 95.100 /  7. 95.100
+  libswscale      5.  8.100 /  5.  8.100
+  libswresample   3.  8.100 /  3.  8.100
+Input #0, mpegts, from 'video/1612363234.ts':
+  Duration: 00:00:04.02, start: 15078.970156, bitrate: 2156 kb/s
+  Program 1 
+    Stream #0:0[0x100]: Video: h264 (High) ([27][0][0][0] / 0x001B), yuv420p(tv, bt470bg/unknown/unknown, progressive), 1920x1080 [SAR 1:1 DAR 16:9], 30 fps, 30 tbr, 90k tbn, 60 tbc
+    Stream #0:1[0x101]: Audio: aac (LC) ([15][0][0][0] / 0x000F), 44100 Hz, stereo, fltp, 157 kb/s
+Output #0, mp4, to 'video/1612363234.mp4':
+  Metadata:
+    encoder         : Lavf58.65.101
+    Stream #0:0: Video: h264 (High) (avc1 / 0x31637661), yuv420p(tv, bt470bg/unknown/unknown, progressive), 1920x1080 [SAR 1:1 DAR 16:9], q=2-31, 30 fps, 30 tbr, 90k tbn, 90k tbc
+    Stream #0:1: Audio: aac (LC) (mp4a / 0x6134706D), 44100 Hz, stereo, fltp, 157 kb/s
+Stream mapping:
+  Stream #0:0 -> #0:0 (copy)
+  Stream #0:1 -> #0:1 (copy)
+Press [q] to stop, [?] for help
+frame=    0 fps=0.0 q=-1.0 size=       0kB time=00:00:00.00 bitrate=N/A speed=N/A    frame=  120 fps=0.0 q=-1.0 Lsize=    1011kB time=00:00:03.97 bitrate=2085.4kbits/s speed=1.02e+03x    
+video:929kB audio:75kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 0.593335%
+ffmpeg version N-100564-gf4bdedd Copyright (c) 2000-2021 the FFmpeg developers
+  built with gcc 4.8.5 (GCC) 20150623 (Red Hat 4.8.5-44)
+  configuration: 
+  libavutil      56. 63.100 / 56. 63.100
+  libavcodec     58.115.102 / 58.115.102
+  libavformat    58. 65.101 / 58. 65.101
+  libavdevice    58. 11.103 / 58. 11.103
+  libavfilter     7. 95.100 /  7. 95.100
+  libswscale      5.  8.100 /  5.  8.100
+  libswresample   3.  8.100 /  3.  8.100
+Input #0, mpegts, from 'video/1612363233.ts':
+  Duration: 00:00:04.02, start: 15074.976322, bitrate: 2083 kb/s
+  Program 1 
+    Stream #0:0[0x100]: Video: h264 (High) ([27][0][0][0] / 0x001B), yuv420p(tv, bt470bg/unknown/unknown, progressive), 1920x1080 [SAR 1:1 DAR 16:9], 30 fps, 30 tbr, 90k tbn, 60 tbc
+    Stream #0:1[0x101]: Audio: aac (LC) ([15][0][0][0] / 0x000F), 44100 Hz, stereo, fltp, 159 kb/s
+File 'video/1612363233.mp4' already exists. Overwrite? [y/N] Not overwriting - exiting
+ffmpeg version N-100564-gf4bdedd Copyright (c) 2000-2021 the FFmpeg developers
+  built with gcc 4.8.5 (GCC) 20150623 (Red Hat 4.8.5-44)
+  configuration: 
+  libavutil      56. 63.100 / 56. 63.100
+  libavcodec     58.115.102 / 58.115.102
+  libavformat    58. 65.101 / 58. 65.101
+  libavdevice    58. 11.103 / 58. 11.103
+  libavfilter     7. 95.100 /  7. 95.100
+  libswscale      5.  8.100 /  5.  8.100
+  libswresample   3.  8.100 /  3.  8.100
+Input #0, mpegts, from 'video/1612363234.ts':
+  Duration: 00:00:04.02, start: 15078.970156, bitrate: 2156 kb/s
+  Program 1 
+    Stream #0:0[0x100]: Video: h264 (High) ([27][0][0][0] / 0x001B), yuv420p(tv, bt470bg/unknown/unknown, progressive), 1920x1080 [SAR 1:1 DAR 16:9], 30 fps, 30 tbr, 90k tbn, 60 tbc
+    Stream #0:1[0x101]: Audio: aac (LC) ([15][0][0][0] / 0x000F), 44100 Hz, stereo, fltp, 157 kb/s
+File 'video/1612363234.mp4' already exists. Overwrite? [y/N] Not overwriting - exiting
+ffmpeg version N-100564-gf4bdedd Copyright (c) 2000-2021 the FFmpeg developers
+  built with gcc 4.8.5 (GCC) 20150623 (Red Hat 4.8.5-44)
+  configuration: 
+  libavutil      56. 63.100 / 56. 63.100
+  libavcodec     58.115.102 / 58.115.102
+  libavformat    58. 65.101 / 58. 65.101
+  libavdevice    58. 11.103 / 58. 11.103
+  libavfilter     7. 95.100 /  7. 95.100
+  libswscale      5.  8.100 /  5.  8.100
+  libswresample   3.  8.100 /  3.  8.100
+Input #0, mpegts, from 'video/1612363233.ts':
+  Duration: 00:00:04.02, start: 15074.976322, bitrate: 2083 kb/s
+  Program 1 
+    Stream #0:0[0x100]: Video: h264 (High) ([27][0][0][0] / 0x001B), yuv420p(tv, bt470bg/unknown/unknown, progressive), 1920x1080 [SAR 1:1 DAR 16:9], 30 fps, 30 tbr, 90k tbn, 60 tbc
+    Stream #0:1[0x101]: Audio: aac (LC) ([15][0][0][0] / 0x000F), 44100 Hz, stereo, fltp, 159 kb/s
+File 'video/1612363233.mp4' already exists. Overwrite? [y/N] Not overwriting - exiting
+ffmpeg version N-100564-gf4bdedd Copyright (c) 2000-2021 the FFmpeg developers
+  built with gcc 4.8.5 (GCC) 20150623 (Red Hat 4.8.5-44)
+  configuration: 
+  libavutil      56. 63.100 / 56. 63.100
+  libavcodec     58.115.102 / 58.115.102
+  libavformat    58. 65.101 / 58. 65.101
+  libavdevice    58. 11.103 / 58. 11.103
+  libavfilter     7. 95.100 /  7. 95.100
+  libswscale      5.  8.100 /  5.  8.100
+  libswresample   3.  8.100 /  3.  8.100
+Input #0, mpegts, from 'video/1612363234.ts':
+  Duration: 00:00:04.02, start: 15078.970156, bitrate: 2156 kb/s
+  Program 1 
+    Stream #0:0[0x100]: Video: h264 (High) ([27][0][0][0] / 0x001B), yuv420p(tv, bt470bg/unknown/unknown, progressive), 1920x1080 [SAR 1:1 DAR 16:9], 30 fps, 30 tbr, 90k tbn, 60 tbc
+    Stream #0:1[0x101]: Audio: aac (LC) ([15][0][0][0] / 0x000F), 44100 Hz, stereo, fltp, 157 kb/s
+File 'video/1612363234.mp4' already exists. Overwrite? [y/N] Not overwriting - exiting
