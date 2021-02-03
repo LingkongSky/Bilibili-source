@@ -14,7 +14,10 @@ cd进该文件夹<br>
 输入bch -v弹出版本信息即为安装成功<br>
 
 * 快捷命令:<br>
-`git clone https://github.com/LingkongSky/Bilibili-source.git<br>cd Bilibili-source<br>sh install.sh<br>`
+`git clone https://github.com/LingkongSky/Bilibili-source.git`<br>
+`cd Bilibili-source`<br>
+`sh install.sh`
+
 # 使用说明:
 通过`bch -cid [cid]`来锁定对象<br>
 !!!无论是-start或-t和-settime，其目标都以执行命令时锁定的目标为主。<br>
