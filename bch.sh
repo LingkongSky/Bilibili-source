@@ -1,7 +1,9 @@
 #!/bin/bash
 local_version="1.1.0"
 source /etc/profile
+if [ -e target ];then
 cid=`cat ${bchPATH}/target`
+fi
 cd ${bchPATH}/
 
 
@@ -305,7 +307,6 @@ fi
 
 ########
 "-target")
-cid=`cat target`
 
 curl -G -s 'http://api.live.bilibili.com/room/v1/Room/room_init' \
 --data-urlencode "id=${cid}"  > info
@@ -325,7 +326,6 @@ echo -e "\033[32mtarget name:${name} \ntitle:${title}\033[0m"
 ########
 "-data")
 jq  . user_data
-
 ;;
 
 "-setting")

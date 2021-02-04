@@ -7,6 +7,7 @@ source ${bchPATH}/setting
 timenow=`date +%m-%d_%H-%M`
 declare -x bend_id="$$"
 #输出文件列表
+mkdir ${results_path}
 
 list_name=`ls video/*.ts`
 
