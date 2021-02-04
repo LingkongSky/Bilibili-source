@@ -1,5 +1,5 @@
 #!/bin/bash
-local_version="1.1.0"
+local_version="1.1.1"
 source /etc/profile
 if [ -e target ];then
 cid=`cat ${bchPATH}/target`

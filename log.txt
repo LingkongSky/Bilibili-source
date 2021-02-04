@@ -92,3 +92,20 @@ Saving to: ‘version’
 
 2021-02-04 21:54:48 (726 KB/s) - ‘version’ saved [6/6]
 
+--2021-02-04 22:00:37--  https://raw.githubusercontent.com/LingkongSky/Bilibili-source/main/version
+Resolving raw.githubusercontent.com (raw.githubusercontent.com)... 151.101.76.133
+Connecting to raw.githubusercontent.com (raw.githubusercontent.com)|151.101.76.133|:443... connected.
+HTTP request sent, awaiting response... 404 Not Found
+2021-02-04 22:00:37 ERROR 404: Not Found.
+
+--2021-02-04 22:00:44--  http://api.live.bilibili.com/room/v1/Room/playUrl?cid=10112&qn=10000&platform=h5
+Resolving api.live.bilibili.com (api.live.bilibili.com)... 128.1.62.201, 45.43.32.234, 128.1.62.200
+Connecting to api.live.bilibili.com (api.live.bilibili.com)|128.1.62.201|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 1901 (1.9K) [application/json]
+Saving to: ‘web.json’
+
+     0K .                                                     100% 67.5M=0s
+
+2021-02-04 22:00:44 (67.5 MB/s) - ‘web.json’ saved [1901/1901]
+
