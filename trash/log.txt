@@ -1,2 +1,0 @@
-Redirecting to /bin/systemctl start crond.service
-Redirecting to /bin/systemctl start crond.service
