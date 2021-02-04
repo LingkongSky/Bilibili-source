@@ -7,9 +7,9 @@ chmod +x ./jq
 cp jq /usr/bin
 fi
 
-ls /bin | grep ffmpeg >> /dev/null
+test_ffmpeg=`ls /bin | grep ffmpeg` 
 
-if [[ "${test_jq}" == ""  ]]; then
+if [[ "${test_ffmpeg}" == ""  ]]; then
 echo "please make sure you are already install the ffmpeg"
 exit 0
 fi
@@ -23,7 +23,8 @@ profileS=`grep "bchPATH" /etc/profile`
 
 
 #添加项目工作路径
-axx="export bchPATH='/root/Bilibili-source'"
+bpath=`pwd`
+axx="export bchPATH='${bpath}'"
 #单引号内为工作路径
 
 if [ ! -n "$profileS" ]; then

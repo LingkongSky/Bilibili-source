@@ -62,7 +62,6 @@ results=`curl "${dURL}" 2>&1|grep EXTM3U`
 ###抓取文件尺寸上限设定
 
 sizeG=`du -h -d0 video/ | grep "G"`
-sizeM=`du -h -d0 video/ | grep "M"`
 
 sizeX=`du -h -d0 video/ | grep [.]`
 
@@ -121,8 +120,6 @@ kill -s 9 $$
 fi
 
 fi
-
-
 
       sh catch.sh 
       #休眠时间

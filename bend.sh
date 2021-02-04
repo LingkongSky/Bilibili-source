@@ -7,13 +7,17 @@ source ${bchPATH}/setting
 timenow=`date +%m-%d_%H-%M`
 declare -x bend_id="$$"
 #输出文件列表
+
+if [[ ! -d "${results_path}" ]]; then
 mkdir ${results_path}
+fi
+
 
 list_name=`ls video/*.ts`
 
 if [[ ! "$list_name" =~ "ts" ]];then
 put_path=$(cd `dirname $0`; pwd)
-echo -e "\033[31mWithout found the target mp4 ts in $put_path/video\033[0m"
+echo -e "\033[31mWithout found the target ts in $put_path/video\033[0m"
 exit 0
 fi
 cd video/

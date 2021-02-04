@@ -59,3 +59,36 @@ Saving to: ‘web.json’
 
 2021-02-04 21:14:02 (188 MB/s) - ‘web.json’ saved [1901/1901]
 
+--2021-02-04 21:54:29--  https://raw.githubusercontent.com/LingkongSky/Bilibili-source/main/version
+Resolving raw.githubusercontent.com (raw.githubusercontent.com)... 151.101.76.133
+Connecting to raw.githubusercontent.com (raw.githubusercontent.com)|151.101.76.133|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 6 [text/plain]
+Saving to: ‘version’
+
+     0K                                                       100%  469K=0s
+
+2021-02-04 21:54:30 (469 KB/s) - ‘version’ saved [6/6]
+
+--2021-02-04 21:54:40--  https://raw.githubusercontent.com/LingkongSky/Bilibili-source/main/version
+Resolving raw.githubusercontent.com (raw.githubusercontent.com)... 151.101.76.133
+Connecting to raw.githubusercontent.com (raw.githubusercontent.com)|151.101.76.133|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 6 [text/plain]
+Saving to: ‘version’
+
+     0K                                                       100%  709K=0s
+
+2021-02-04 21:54:40 (709 KB/s) - ‘version’ saved [6/6]
+
+--2021-02-04 21:54:48--  https://raw.githubusercontent.com/LingkongSky/Bilibili-source/main/version
+Resolving raw.githubusercontent.com (raw.githubusercontent.com)... 151.101.76.133
+Connecting to raw.githubusercontent.com (raw.githubusercontent.com)|151.101.76.133|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 6 [text/plain]
+Saving to: ‘version’
+
+     0K                                                       100%  726K=0s
+
+2021-02-04 21:54:48 (726 KB/s) - ‘version’ saved [6/6]
+
