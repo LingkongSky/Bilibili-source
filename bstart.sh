@@ -1,6 +1,5 @@
 #!/bin/bash
 cd ${bchPATH}
-
 source ${bchPATH}/setting
 
 mkdir video >> log.txt 2>&1
