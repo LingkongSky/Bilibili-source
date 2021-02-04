@@ -36,24 +36,6 @@ results=`curl "${dURL}" 2>&1|grep EXTM3U`
 if [[ "$results" != "" ]] 
 then
 
-wget -O live.m3u8 "$dURL" >> log.txt 2>&1
-
-#获取单ts时间长度
-
-extTIMES=`cat live.m3u8 | grep EXTINF > live1.m3u8 ; awk 'NR==1 {print $k}' live1.m3u8 | tr -cd "[0-9]";rm -f live1.m3u8`
-
-extTIMES=`echo "scale=4;${extTIMES}/1000" | bc`
-
-
-#获取ts个数
-extCOUNTS=`grep -o ts live.m3u8 | sort |uniq -c | tr -cd "[0-9]"`
-
-#设定循环获取请求周期
-extTIME=`echo "scale=4;${extTIMES}*${extCOUNTS}" | bc`
-
-echo -e "\033[32mcycle time:${extTIME}\033[0m"
-
-
 touch run.txt
 
 else
@@ -106,27 +88,6 @@ kill -s 9 "$catch_id" >> log.txt 2>&1
 kill -s 9 $$ 
 fi
 
-:<<EOF
-if [[ "$sizeM" != "" ]] && [[ "$size" -gt "1024" ]]
-then
-echo "$size""   a   ""$sizeX""   a   ""$sizeM"
-du -h -d0 video/ 
-echo "touch max size"
-sh bend.sh
-wait
-echo "result saved"
-rm -f run.txt
-kill -s 9 "$catch_id" >> log.txt 2>&1
-kill -s 9 $$ 
-fi
-EOF
-
-
-
-
-
-
-#######
 
 #链接检测
 if [[ "$results" == "" ]]
@@ -145,8 +106,6 @@ declare -x mainURL=`echo ${dURL%live_*}`
 
 results=`curl "${dURL}" 2>&1|grep EXTM3U`
 
-
-
 #链接检测
 if [[ "$results" == "" ]] 
 then
@@ -162,35 +121,14 @@ kill -s 9 $$
 
 fi
 
-
-
-wget -O live.m3u8 "$dURL" >> log.txt 2>&1
-
-#获取单ts时间长度
-
-extTIMES=`cat live.m3u8 | grep EXTINF > live1.m3u8 ; awk 'NR==1 {print $k}' live1.m3u8 | tr -cd "[0-9]";rm -f live1.m3u8`
-
-extTIMES=`echo "scale=4;${extTIMES}/1000" | bc`
-
-#获取ts个数
-extCOUNTS=`grep -o ts live.m3u8 | sort |uniq -c | tr -cd "[0-9]"`
-
-#设定循环获取请求周期
-extTIME=`echo "scale=4;${extTIMES}*${extCOUNTS}" | bc`
-
 fi
 
 
 
       sh catch.sh 
       #休眠时间
-ctimes="0"
-while [ "$ctimes" -lt "$extTIME" ]
-do
-let ctimes+=1
-sleep 1
-done
 
+sleep 1
 
    done &
 

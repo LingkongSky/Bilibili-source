@@ -10,7 +10,7 @@ exit 0
 fi
 
 #下载主文件
-wget  --wait=5 -O live.m3u8 --tries=24 "$dURL" -N 
+wget  --wait=1 -O live.m3u8 --tries=60 "$dURL" -N 
 
 #提取下载文件内容输入主文件
 
@@ -41,13 +41,6 @@ echo -e "\033[31mWithout found the target ts in $put_path/video\033[0m"
 exit 0
 fi
 
-
-for file in video/*.ts; do F="$(echo $file |sed 's/ts$/mp4/g')"; ffmpeg -i $file -c copy -map 0:v -map 0:a -bsf:a aac_adtstoasc $F; done >> log.txt 2>&1
-
-rm video/*.ts -f 
-
-#node lookfor.js
-
 #文件移除
 rm live1.m3u8 -f 
 rm live.m3u8 -f 
@@ -59,6 +52,4 @@ echo -e "\033[32mnew ts: \n${list_name}\033[0m"
 echo -e "\033[32mCatch successful\033[0m"
 
 
-
-#echo "$extract"
 unset catch_id

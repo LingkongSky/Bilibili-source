@@ -1,8 +1,10 @@
 #!/bin/bash
-local_version="1.0.0"
-
+local_version="1.1.0"
+source /etc/profile
 cid=`cat ${bchPATH}/target`
 cd ${bchPATH}/
+
+
 case "$1" in
 ##########
 "-v")
@@ -72,7 +74,6 @@ echo -e "\n${bst}" >> /etc/profile
 
 source /etc/profile
 
-wait
 
 nohup sh bstart.sh >> /dev/null 2>&1 &
 
@@ -85,7 +86,7 @@ nohup sh bstart.sh >> /dev/null 2>&1 &
 shid=`ps -ef | grep bstart.sh | grep -v grep`
 
 
-if [ ! -n "$shid" ]; then
+if [[ "$shid" == "" ]]; then
 #参数2为空
 echo "process not found"
 
@@ -137,10 +138,8 @@ echo -e "\n${bst}" >> /etc/profile
 
 source /etc/profile
 
-wait
-
 declare -x catchTime="$2"  
-nohup sh bstart.sh >> /dev/null 2>&1
+nohup sh bstart.sh >> /dev/null 2>&1 &
 
 else
 echo "bch -t [time:s]"
@@ -218,7 +217,7 @@ echo "${bchPATH}"
 ########
 "-now")
 
-shid=`ps -ef | grep ${bchPATH}/bstart.sh | grep -v grep`
+shid=`ps -ef | grep bstart.sh | grep -v grep`
 
 if [[ "$shid" == "" ]]; then
 #参数2为空
@@ -226,7 +225,7 @@ echo "process not found"
 exit 0
 
 fi
-source /etc/profile
+
 echo -e "\033[32mhave process | ${bst_time}\033[0m"
 
 

@@ -8,19 +8,18 @@ timenow=`date +%m-%d_%H-%M`
 declare -x bend_id="$$"
 #输出文件列表
 
+list_name=`ls video/*.ts`
 
-list_name=`ls video/*.mp4`
-
-if [[ ! "$list_name" =~ "mp4" ]];then
+if [[ ! "$list_name" =~ "ts" ]];then
 put_path=$(cd `dirname $0`; pwd)
 echo -e "\033[31mWithout found the target mp4 ts in $put_path/video\033[0m"
 exit 0
 fi
-
 cd video/
-ls  *.mp4 > list.txt
+ls  *.ts > list.txt
 
-#删除最后一行
+
+
 
 #添加前缀
 prefix="file '"
@@ -32,12 +31,10 @@ awk '{print $0"'"$perfix1"'"}' list1.txt > list.txt
 
 rm -f list1.txt
 
-#sed -i '$d' list.txt
-
 cd ../
 
+ffmpeg -y -f concat -safe 0 -i video/list.txt -c copy "${results_path}"/"$timenow"."${Vtype}"
 
-ffmpeg -f concat -safe 0 -i video/list.txt -c copy "${results_path}"/"$timenow"."${Vtype}"
 
 wait
 
