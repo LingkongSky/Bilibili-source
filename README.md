@@ -16,7 +16,8 @@ cd进该文件夹<br>
 * 快捷命令:<br>
 `git clone https://github.com/LingkongSky/Bilibili-source.git`<br>
 `cd Bilibili-source`<br>
-`sh install.sh`
+`sh install.sh`<br>
+`source etc/profile`
 
 # 使用说明:
 通过`bch -cid [cid]`来锁定对象<br>
