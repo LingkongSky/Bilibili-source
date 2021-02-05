@@ -12,7 +12,7 @@ case "$1" in
 
 echo -e "\033[32mBilibili-Catch Version ${local_version} @Lingkongsky\033[0m"
 
-wget https://raw.githubusercontent.com/LingkongSky/Bilibili-source/main/version -O version >> log.txt 2>&1
+wget https://raw.githubusercontent.com/LingkongSky/Bilibili-source/main/version -O version >> /dev/null 2>&1
 version=`cat version`
 
 rm -f version
