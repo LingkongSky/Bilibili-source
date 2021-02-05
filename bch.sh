@@ -363,7 +363,7 @@ echo -e "bch [-option]\n-start [需在bch -cid指定目标后使用]\n-stop [停
 
 *)
  
-echo "input -help to get the use way or enter [ -v | -start | -stop | -t | -settime | -task | -path | -now | -anu | -anc | -cid | | -target | -data | -setting | -set | -update | -help ]"
+echo "input -help to get the use way or enter [ -v | -start | -stop | -t | -settime | -task | -path | -now | -anu | -anc | -cid | -target | -data | -setting | -set | -update | -help ]"
  
 ;;
  
