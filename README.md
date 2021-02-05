@@ -22,7 +22,7 @@ cd进该文件夹<br>
 `wget https://github.com/LingkongSky/Bilibili-source/releases/download/BCH/Bilibili-Source-1.1.2.zip -O Bilibili-Source`<br>
 `unzip Bilibili-Source`<br>
 `cd Bilibili-Source`<br>
-`sudo sh install.sh`
+`sudo sh install.sh`<br>
 来下载并安装最新版本
 # 使用说明:
 通过`bch -cid [cid]`来锁定对象<br>
