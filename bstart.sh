@@ -1,4 +1,5 @@
 #!/bin/bash
+
 cd ${bchPATH}
 source ${bchPATH}/setting
 
