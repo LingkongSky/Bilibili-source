@@ -109,3 +109,36 @@ Saving to: ‘web.json’
 
 2021-02-04 22:00:44 (67.5 MB/s) - ‘web.json’ saved [1901/1901]
 
+--2021-02-04 22:05:38--  http://api.live.bilibili.com/room/v1/Room/playUrl?cid=10112&qn=10000&platform=h5
+Resolving api.live.bilibili.com (api.live.bilibili.com)... 128.1.62.200, 45.43.32.234, 128.1.62.201
+Connecting to api.live.bilibili.com (api.live.bilibili.com)|128.1.62.200|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 1901 (1.9K) [application/json]
+Saving to: ‘web.json’
+
+     0K .                                                     100% 2.25M=0.001s
+
+2021-02-04 22:05:38 (2.25 MB/s) - ‘web.json’ saved [1901/1901]
+
+--2021-02-05 06:35:57--  http://api.live.bilibili.com/room/v1/Room/playUrl?cid=&qn=10000&platform=h5
+Resolving api.live.bilibili.com (api.live.bilibili.com)... 128.1.62.200, 45.43.32.234, 128.1.62.201
+Connecting to api.live.bilibili.com (api.live.bilibili.com)|128.1.62.200|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 117 [application/json]
+Saving to: ‘web.json’
+
+     0K                                                       100% 18.1M=0s
+
+2021-02-05 06:35:57 (18.1 MB/s) - ‘web.json’ saved [117/117]
+
+--2021-02-05 06:43:59--  http://api.live.bilibili.com/room/v1/Room/playUrl?cid=10112&qn=10000&platform=h5
+Resolving api.live.bilibili.com (api.live.bilibili.com)... 128.1.62.200, 45.43.32.234, 128.1.62.201
+Connecting to api.live.bilibili.com (api.live.bilibili.com)|128.1.62.200|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 1901 (1.9K) [application/json]
+Saving to: ‘web.json’
+
+     0K .                                                     100% 69.8K=0.03s
+
+2021-02-05 06:43:59 (69.8 KB/s) - ‘web.json’ saved [1901/1901]
+

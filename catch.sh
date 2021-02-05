@@ -23,13 +23,15 @@ awk '{print "'"$mainURL"'"$0 > "live1.m3u8"}' live1.m3u8
 
 wget --limit-rate="${catch_speed}"K -c -i live1.m3u8  --unlink -P ts/ 
 
+
 str=`find ts/ -name \*.*`
 for i in $str
 do
 mv $i ${i%.*}.ts
 done
 
-mv ts/* video/
+
+mv ts/*.ts video/
 rm -rf ts
 
 list_name=`ls video/*.ts`

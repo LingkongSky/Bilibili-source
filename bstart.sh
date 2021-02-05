@@ -62,16 +62,13 @@ results=`curl "${dURL}" 2>&1|grep EXTM3U`
 ###抓取文件尺寸上限设定
 
 sizeG=`du -h -d0 video/ | grep "G"`
-
 sizeX=`du -h -d0 video/ | grep [.]`
-
 if [[ "$sizeX" != "" ]]
 then
 let size=`du -h -d0 video/ | tr -cd "[0-9]"`/10
 else
 size=`du -h -d0 video/ | tr -cd "[0-9]"`
 fi
-
 
 if [[ "$sizeG" != "" ]] && [[ "$size" -gt "10" ]]
 then
@@ -85,6 +82,7 @@ rm -f run.txt
 kill -s 9 "$catch_id" >> log.txt 2>&1
 kill -s 9 $$ 
 fi
+
 
 
 #链接检测
@@ -121,7 +119,7 @@ fi
 
 fi
 
-      sh catch.sh 
+      sh catch.sh &
       #休眠时间
 
 sleep 1
@@ -162,11 +160,10 @@ if [ -n "$bend_id" ]; then
 wait "$bend_id"
 fi 
 
-rm -rf video
+
 cd ../
 
 unset catchTime
-
 
 exit 0
 

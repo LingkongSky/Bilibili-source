@@ -1,11 +1,10 @@
 #!/bin/bash
-local_version="1.1.1"
+local_version="1.1.2"
 source /etc/profile
-if [ -e target ];then
+cd ${bchPATH}/
+if [[ -f target ]];then
 cid=`cat ${bchPATH}/target`
 fi
-cd ${bchPATH}/
-
 
 case "$1" in
 ##########
