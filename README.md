@@ -1,4 +1,4 @@
-# Bilibili-source@1.1.2
+# Bilibili-source@1.1.3
 BillBill live source catch (以下简称bch)哔哩哔哩直播源抓取<br>
 
 BCH是一款专用于抓取哔哩哔哩生放送直播源的插件，可以通过uid及cid来进行对目标直播源的抓取。
@@ -10,20 +10,27 @@ BCH是一款专用于抓取哔哩哔哩生放送直播源的插件，可以通�
 git clone本项目到工作目录后<br>
 cd进该文件夹<br>
 并输入sh install.sh进行安装<br>
-再输入source /etc/profile使环境变量生效即可<br>
+再输入source /etc/profile与source ~/.bashrc使环境变量生效即可<br>
 输入bch -v弹出版本信息即为安装成功<br>
 
 * 快捷命令:<br>
 `git clone https://github.com/LingkongSky/Bilibili-source.git`<br>
 `cd Bilibili-source`<br>
 `sudo sh install.sh`<br>
-`source etc/profile`<br>
+`source /etc/profile`<br>
+`source ~/.bashrc`<br>
 或者通过:
-`wget https://github.com/LingkongSky/Bilibili-source/releases/download/BCH/Bilibili-Source-1.1.2.zip -O Bilibili-Source`<br>
+`wget https://github.com/LingkongSky/Bilibili-source/releases/download/BCH1.1.3/Bilibili-Source-1.1.3.zip -O Bilibili-Source`<br>
 `unzip Bilibili-Source`<br>
-`cd Bilibili-Source`<br>
+`cd Bilibili-Source-1.1.3`<br>
 `sudo sh install.sh`<br>
+`source /etc/profile`<br>
+`source ~/.bashrc`<br>
 来下载并安装最新版本
+
+# 更新方法:
+当你的主机可直连至github时，可以使用bch -update来进行自动更新。<br>
+在主机无法直连至github时 可以通过下载最新的release包来进行覆盖更新。<br>
 # 使用说明:
 通过`bch -cid [cid]`来锁定对象<br>
 !!!无论是-start或-t和-settime，其目标都以执行命令时锁定的目标为主。<br>
@@ -41,6 +48,7 @@ bch的基础设置为无损原画抓取。<br>
 
 保存文件以时间格式命名。如`02-02_06-47`，且会保存到默认地址{工作地点}/results目录下。<br>
 你可以通过bch -setting来查看bch配置文件并进行更改。<br>
+输入bch -set以编辑配置文件，对最大下载时间，文件大小，保存路径，下载速度进行设定与更改。<br>
 输入`bch -path`以获取工作目录。<br>
 你可以移除旧目录，并在git clone后更改install.sh中的工作目录指向来更改工作目录。<br>
 
@@ -59,4 +67,6 @@ bch [-option]<br>
 `-data` [查看已抓取的信息]<br>
 `-target` [查看指定目标]<br>
 `-setting` [查看配置文件]<br>
+`-set` [编辑配置文件]<br>
+`-update` [自动更新至最新版本]<br>
 `-help` [查看指令帮助]

@@ -1,5 +1,5 @@
 #!/bin/bash
-local_version="1.1.2"
+local_version="1.1.3"
 source /etc/profile
 cd ${bchPATH}/
 if [[ -f target ]];then
@@ -332,6 +332,11 @@ echo -e "\033[32mPATH:${bchPATH}/setting\033[0m"
 cat setting
 ;;
 
+
+"-set")
+vi setting
+;;
+
 "-update")
 wget https://raw.githubusercontent.com/LingkongSky/Bilibili-source/main/bstart.sh -O bstart.sh
 wget https://raw.githubusercontent.com/LingkongSky/Bilibili-source/main/bend.sh -O bend.sh
@@ -350,7 +355,7 @@ sh install.sh
 echo -e "Welcome to use the BiliBili-Source-Catch"
 echo "use it by the command:"
 
-echo -e "bch [-option]\n-start [需在bch -cid指定目标后使用]\n-stop [停止已有的抓取进程并保存]\n-t [time:S] [指定时间长度抓取，大小为S]\n-settime [MM-DD-HH] [通过输入月份-日期-小时来设置定时抓取任务]\n-task [查看是否有定时抓取任务存在]\n-path [查看当前的工作目录]\n-now [查看正在进行的抓取进程信息]\n-anu [uid] [通过用户uid收集信息并收录进user_data]\n-anc [cid] [通过用户cid收集信息并收录进user_data]\n-cid [cid] [指定抓取目标cid]\n-data [查看已抓取的信息]\n-setting [查看配置文件]\n-update [升级BCH]\n-help [查看指令帮助]"
+echo -e "bch [-option]\n-start [需在bch -cid指定目标后使用]\n-stop [停止已有的抓取进程并保存]\n-t [time:S] [指定时间长度抓取，大小为S]\n-settime [MM-DD-HH] [通过输入月份-日期-小时来设置定时抓取任务]\n-task [查看是否有定时抓取任务存在]\n-path [查看当前的工作目录]\n-now [查看正在进行的抓取进程信息]\n-anu [uid] [通过用户uid收集信息并收录进user_data]\n-anc [cid] [通过用户cid收集信息并收录进user_data]\n-cid [cid] [指定抓取目标cid]\n-data [查看已抓取的信息]\n-setting [查看配置文件]\n-set [编辑配置文件]\n-update [升级BCH]\n-help [查看指令帮助]"
 
 
 ;;
@@ -358,7 +363,7 @@ echo -e "bch [-option]\n-start [需在bch -cid指定目标后使用]\n-stop [停
 
 *)
  
-echo "input -help to get the use way or enter [ -v | -start | -stop | -t | -settime | -task | -path | -now | -anu | -anc | -cid | | -target | -data | -setting | -update | -help ]"
+echo "input -help to get the use way or enter [ -v | -start | -stop | -t | -settime | -task | -path | -now | -anu | -anc | -cid | | -target | -data | -setting | -set | -update | -help ]"
  
 ;;
  

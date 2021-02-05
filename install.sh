@@ -49,7 +49,7 @@ axx="export bchPATH='${bpath}'"
 
 progress=50
 Progress
-if [ ! -n "$profileS" ]; then
+if [[ "$profileS" == "" ]]; then
 
 echo -e "\n${axx}" >> /etc/profile
 echo "install finished"
@@ -71,13 +71,13 @@ comm="alias bch='${bchPATH}/bch.sh'"
 progress=70
 Progress
 
-if [ ! -n "$bashrcS" ]; then
+if [[ "$bashrcS" == "" ]]; then
 echo -e "\n${comm}" >> /root/.bashrc
 echo "update finished"
 
 else
 
-sed -i '/bchPATH/d' /root/.bashrc
+sed -i '/bch/d' /root/.bashrc
 echo -e "\n${comm}" >> /root/.bashrc
 
 fi
@@ -96,6 +96,7 @@ fi
 progress=90
 Progress
 #将bch在bin中定义
+rm -f /bin/bch
 cp ${bchPATH}/bch.sh /bin/bch
 chmod 755 /bin/bch
 chmod 755 ${bchPATH}/bch.sh
