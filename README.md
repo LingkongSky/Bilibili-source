@@ -16,8 +16,14 @@ cd进该文件夹<br>
 * 快捷命令:<br>
 `git clone https://github.com/LingkongSky/Bilibili-source.git`<br>
 `cd Bilibili-source`<br>
-`sh install.sh`
-
+`sudo sh install.sh`<br>
+`source etc/profile`<br>
+或者通过:
+`wget https://github.com/LingkongSky/Bilibili-source/releases/download/BCH/Bilibili-Source-1.1.2.zip -O Bilibili-Source`<br>
+`unzip Bilibili-Source`<br>
+`cd Bilibili-Source`<br>
+`sudo sh install.sh`
+来下载并安装最新版本
 # 使用说明:
 通过`bch -cid [cid]`来锁定对象<br>
 !!!无论是-start或-t和-settime，其目标都以执行命令时锁定的目标为主。<br>

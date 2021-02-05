@@ -142,3 +142,51 @@ Saving to: ‘web.json’
 
 2021-02-05 06:43:59 (69.8 KB/s) - ‘web.json’ saved [1901/1901]
 
+--2021-02-05 08:30:17--  https://raw.githubusercontent.com/LingkongSky/Bilibili-source/main/version
+Resolving raw.githubusercontent.com (raw.githubusercontent.com)... 151.101.76.133
+Connecting to raw.githubusercontent.com (raw.githubusercontent.com)|151.101.76.133|:443... connected.
+HTTP request sent, awaiting response... 404 Not Found
+2021-02-05 08:30:17 ERROR 404: Not Found.
+
+--2021-02-05 08:30:45--  https://raw.githubusercontent.com/LingkongSky/Bilibili-source/main/version
+Resolving raw.githubusercontent.com (raw.githubusercontent.com)... 151.101.76.133
+Connecting to raw.githubusercontent.com (raw.githubusercontent.com)|151.101.76.133|:443... connected.
+HTTP request sent, awaiting response... 404 Not Found
+2021-02-05 08:30:45 ERROR 404: Not Found.
+
+--2021-02-05 08:31:17--  https://raw.githubusercontent.com/LingkongSky/Bilibili-source/main/version
+Resolving raw.githubusercontent.com (raw.githubusercontent.com)... 151.101.76.133
+Connecting to raw.githubusercontent.com (raw.githubusercontent.com)|151.101.76.133|:443... connected.
+HTTP request sent, awaiting response... 404 Not Found
+2021-02-05 08:31:17 ERROR 404: Not Found.
+
+--2021-02-05 08:31:19--  https://raw.githubusercontent.com/LingkongSky/Bilibili-source/main/version
+Resolving raw.githubusercontent.com (raw.githubusercontent.com)... 151.101.76.133
+Connecting to raw.githubusercontent.com (raw.githubusercontent.com)|151.101.76.133|:443... connected.
+HTTP request sent, awaiting response... 404 Not Found
+2021-02-05 08:31:19 ERROR 404: Not Found.
+
+--2021-02-05 08:31:22--  https://raw.githubusercontent.com/LingkongSky/Bilibili-source/main/version
+Resolving raw.githubusercontent.com (raw.githubusercontent.com)... 151.101.76.133
+Connecting to raw.githubusercontent.com (raw.githubusercontent.com)|151.101.76.133|:443... connected.
+HTTP request sent, awaiting response... 404 Not Found
+2021-02-05 08:31:22 ERROR 404: Not Found.
+
+--2021-02-05 08:31:40--  https://raw.githubusercontent.com/LingkongSky/Bilibili-source/main/version
+Resolving raw.githubusercontent.com (raw.githubusercontent.com)... 151.101.76.133
+Connecting to raw.githubusercontent.com (raw.githubusercontent.com)|151.101.76.133|:443... connected.
+HTTP request sent, awaiting response... 404 Not Found
+2021-02-05 08:31:40 ERROR 404: Not Found.
+
+--2021-02-05 08:32:24--  https://raw.githubusercontent.com/LingkongSky/Bilibili-source/main/version
+Resolving raw.githubusercontent.com (raw.githubusercontent.com)... 151.101.76.133
+Connecting to raw.githubusercontent.com (raw.githubusercontent.com)|151.101.76.133|:443... connected.
+HTTP request sent, awaiting response... 404 Not Found
+2021-02-05 08:32:24 ERROR 404: Not Found.
+
+--2021-02-05 08:33:21--  https://raw.githubusercontent.com/LingkongSky/Bilibili-source/main/version
+Resolving raw.githubusercontent.com (raw.githubusercontent.com)... 151.101.76.133
+Connecting to raw.githubusercontent.com (raw.githubusercontent.com)|151.101.76.133|:443... connected.
+HTTP request sent, awaiting response... 404 Not Found
+2021-02-05 08:33:21 ERROR 404: Not Found.
+
