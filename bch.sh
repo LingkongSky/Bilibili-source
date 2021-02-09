@@ -1,5 +1,5 @@
 #!/bin/bash
-local_version="1.1.3"
+local_version="1.1.4"
 source /etc/profile
 cd ${bchPATH}/
 if [[ -f target ]];then
@@ -12,10 +12,23 @@ case "$1" in
 
 echo -e "\033[32mBilibili-Catch Version ${local_version} @Lingkongsky\033[0m"
 
-wget https://raw.githubusercontent.com/LingkongSky/Bilibili-source/main/version -O version >> /dev/null 2>&1
-version=`cat version`
 
-rm -f version
+test=`wget --spider https://raw.githubusercontent.com/LingkongSky/Bilibili-source/main/bch.sh > version1 2>&1`
+test=`cat version1 | grep "404"`
+rm -f version1
+
+if [[ "$test" != "" ]];then
+
+wget https://smallpipe.xyz/bch/version -O version >> /dev/null 2>&1
+
+else
+
+wget https://raw.githubusercontent.com/LingkongSky/Bilibili-source/main/version -O version >> /dev/null 2>&1
+
+fi
+
+version=`cat version1`
+rm -f version1
 
 L1=`echo ${local_version:0:1}`
 M1=`echo ${local_version:2:1}`
@@ -338,15 +351,93 @@ vi setting
 ;;
 
 "-update")
+
+function Progress(){
+printf "update:[%-20s]%d%%\r" $b $progress
+b=##$b
+}
+progress=0
+Progress
+
+
+test=`wget --spider https://raw.githubusercontent.com/LingkongSky/Bilibili-source/main/bch.sh > version1 2>&1`
+test=`cat version1 | grep "404"`
+rm -f version1
+
+progress=10
+Progress
+
+if [[ "$test" != "" ]];then
+
+wget https://smallpipe.xyz/bch/bstart.sh -O bstart.sh
+
+progress=20
+Progress
+
+wget https://smallpipe.xyz/bch/bend.sh -O bend.sh
+
+progress=35
+Progress
+
+wget https://smallpipe.xyz/bch/catch.sh -O catch.sh
+
+progress=50
+Progress
+
+wget https://smallpipe.xyz/bch/ana.sh -O ana.sh
+
+progress=65
+Progress
+
+wget https://smallpipe.xyz/bch/install.sh -O install.sh
+
+progress=80
+Progress
+
+wget https://smallpipe.xyz/bch/bch.sh -O bch.sh
+
+progress=95
+Progress
+
+else
+
 wget https://raw.githubusercontent.com/LingkongSky/Bilibili-source/main/bstart.sh -O bstart.sh
+
+progress=20
+Progress
+
 wget https://raw.githubusercontent.com/LingkongSky/Bilibili-source/main/bend.sh -O bend.sh
+
+progress=35
+Progress
+
 wget https://raw.githubusercontent.com/LingkongSky/Bilibili-source/main/catch.sh -O catch.sh
+
+progress=50
+Progress
+
 wget https://raw.githubusercontent.com/LingkongSky/Bilibili-source/main/ana.sh -O ana.sh
+
+progress=65
+Progress
+
 wget https://raw.githubusercontent.com/LingkongSky/Bilibili-source/main/install.sh -O install.sh
+
+progress=80
+Progress
+
 wget https://raw.githubusercontent.com/LingkongSky/Bilibili-source/main/bch.sh -O bch.sh
 
+progress=95
+Progress
 
+fi
+
+progress=100
+Progress
+echo
 sh install.sh
+
 ;;
 
 

@@ -1,6 +1,6 @@
 #!/bin/bash
 function Progress(){
-printf "[%-20s]%d%%\r" $b $progress
+printf "install:[%-20s]%d%%\r" $b $progress
 b=##$b
 }
 progress=0

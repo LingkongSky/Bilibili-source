@@ -1,4 +1,4 @@
-# Bilibili-source@1.1.3
+# Bilibili-source@1.1.4
 BillBill live source catch (以下简称bch)哔哩哔哩直播源抓取<br>
 
 BCH是一款专用于抓取哔哩哔哩生放送直播源的插件，可以通过uid及cid来进行对目标直播源的抓取。
@@ -20,17 +20,17 @@ cd进该文件夹<br>
 `source /etc/profile`<br>
 `source ~/.bashrc`<br>
 或者通过:
-`wget https://github.com/LingkongSky/Bilibili-source/releases/download/BCH1.1.3/Bilibili-Source-1.1.3.zip -O Bilibili-Source`<br>
+`wget https://github.com/LingkongSky/Bilibili-source/releases/download/BCH1.1.4/Bilibili-Source-1.1.4.zip -O Bilibili-Source`<br>
 `unzip Bilibili-Source`<br>
-`cd Bilibili-Source-1.1.3`<br>
+`cd Bilibili-Source-1.1.4`<br>
 `sudo sh install.sh`<br>
 `source /etc/profile`<br>
 `source ~/.bashrc`<br>
 来下载并安装最新版本
 
 # 更新方法:
-当你的主机可直连至github时，可以使用bch -update来进行自动更新。<br>
-在主机无法直连至github时 可以通过下载最新的release包来进行覆盖更新。<br>
+当你的主机可直连至github时，可以使用bch -update来进行自动更新。当你的主机无法连接至github时，bch将会自动切换到备用线路:`www.smallpipe.xyz/bch/`<br>
+你也可以通过下载最新的release包来进行覆盖更新。<br>
 # 使用说明:
 通过`bch -cid [cid]`来锁定对象<br>
 !!!无论是-start或-t和-settime，其目标都以执行命令时锁定的目标为主。<br>
