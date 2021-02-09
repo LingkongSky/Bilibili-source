@@ -1,4 +1,7 @@
 #!/bin/bash
+
+echo -e "\033[32mBCH install start\033[0m"
+
 function Progress(){
 printf "install:[%-20s]%d%%\r" $b $progress
 b=##$b
