@@ -6,7 +6,10 @@ if [[ -f target ]];then
 cid=`cat ${bchPATH}/target`
 fi
 
+
+
 case "$1" in
+
 ##########
 "-v")
 
