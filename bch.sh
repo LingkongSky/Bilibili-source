@@ -437,8 +437,10 @@ Progress
 sleep 0.5
 
 echo
+
 sh install.sh
 
+exit 0
 ;;
 
 
