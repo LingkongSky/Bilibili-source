@@ -14,16 +14,18 @@ echo -e "\033[32mBilibili-Catch Version ${local_version} @Lingkongsky\033[0m"
 
 
 test=`wget --spider https://raw.githubusercontent.com/LingkongSky/Bilibili-source/main/bch.sh > version1 2>&1`
-test=`cat version1 | grep "404"`
+
+test=`cat version1 | grep 404`
+
 rm -f version1
 
 if [[ "$test" != "" ]];then
 
-wget https://smallpipe.xyz/bch/version -O version >> /dev/null 2>&1
+wget https://smallpipe.xyz/bch/version -O version1 >> /dev/null 2>&1
 
 else
 
-wget https://raw.githubusercontent.com/LingkongSky/Bilibili-source/main/version -O version >> /dev/null 2>&1
+wget https://raw.githubusercontent.com/LingkongSky/Bilibili-source/main/version -O version1 >> /dev/null 2>&1
 
 fi
 
@@ -361,7 +363,9 @@ Progress
 
 
 test=`wget --spider https://raw.githubusercontent.com/LingkongSky/Bilibili-source/main/bch.sh > version1 2>&1`
-test=`cat version1 | grep "404"`
+
+test=`cat version1 | grep 404`
+
 rm -f version1
 
 progress=10
@@ -369,64 +373,64 @@ Progress
 
 if [[ "$test" != "" ]];then
 
-wget https://smallpipe.xyz/bch/bstart.sh -O bstart.sh
+wget https://smallpipe.xyz/bch/bstart.sh -O bstart.sh > /dev/null 2>&1
 
 progress=20
 Progress
 
-wget https://smallpipe.xyz/bch/bend.sh -O bend.sh
+wget https://smallpipe.xyz/bch/bend.sh -O bend.sh > /dev/null 2>&1
 
 progress=35
 Progress
 
-wget https://smallpipe.xyz/bch/catch.sh -O catch.sh
+wget https://smallpipe.xyz/bch/catch.sh -O catch.sh > /dev/null 2>&1
 
 progress=50
 Progress
 
-wget https://smallpipe.xyz/bch/ana.sh -O ana.sh
+wget https://smallpipe.xyz/bch/ana.sh -O ana.sh > /dev/null 2>&1
 
 progress=65
 Progress
 
-wget https://smallpipe.xyz/bch/install.sh -O install.sh
+wget https://smallpipe.xyz/bch/install.sh -O install.sh > /dev/null 2>&1
 
 progress=80
 Progress
 
-wget https://smallpipe.xyz/bch/bch.sh -O bch.sh
+wget https://smallpipe.xyz/bch/bch.sh -O bch.sh > /dev/null 2>&1
 
 progress=95
 Progress
 
 else
 
-wget https://raw.githubusercontent.com/LingkongSky/Bilibili-source/main/bstart.sh -O bstart.sh
+wget https://raw.githubusercontent.com/LingkongSky/Bilibili-source/main/bstart.sh -O bstart.sh > /dev/null 2>&1
 
 progress=20
 Progress
 
-wget https://raw.githubusercontent.com/LingkongSky/Bilibili-source/main/bend.sh -O bend.sh
+wget https://raw.githubusercontent.com/LingkongSky/Bilibili-source/main/bend.sh -O bend.sh > /dev/null 2>&1
 
 progress=35
 Progress
 
-wget https://raw.githubusercontent.com/LingkongSky/Bilibili-source/main/catch.sh -O catch.sh
+wget https://raw.githubusercontent.com/LingkongSky/Bilibili-source/main/catch.sh -O catch.sh > /dev/null 2>&1
 
 progress=50
 Progress
 
-wget https://raw.githubusercontent.com/LingkongSky/Bilibili-source/main/ana.sh -O ana.sh
+wget https://raw.githubusercontent.com/LingkongSky/Bilibili-source/main/ana.sh -O ana.sh > /dev/null 2>&1
 
 progress=65
 Progress
 
-wget https://raw.githubusercontent.com/LingkongSky/Bilibili-source/main/install.sh -O install.sh
+wget https://raw.githubusercontent.com/LingkongSky/Bilibili-source/main/install.sh -O install.sh > /dev/null 2>&1
 
 progress=80
 Progress
 
-wget https://raw.githubusercontent.com/LingkongSky/Bilibili-source/main/bch.sh -O bch.sh
+wget https://raw.githubusercontent.com/LingkongSky/Bilibili-source/main/bch.sh -O bch.sh > /dev/null 2>&1
 
 progress=95
 Progress
