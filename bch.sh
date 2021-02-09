@@ -356,7 +356,7 @@ vi setting
 "-update")
 
 function Progress(){
-printf "update:[%-20s]%d%%\r" $b $progress
+printf "update:[%-14s]%d%%\r" $b $progress
 b=##$b
 }
 progress=0
@@ -401,9 +401,6 @@ Progress
 
 wget https://smallpipe.xyz/bch/bch.sh -O bch.sh > /dev/null 2>&1
 
-progress=95
-Progress
-
 else
 
 wget https://raw.githubusercontent.com/LingkongSky/Bilibili-source/main/bstart.sh -O bstart.sh > /dev/null 2>&1
@@ -433,13 +430,12 @@ Progress
 
 wget https://raw.githubusercontent.com/LingkongSky/Bilibili-source/main/bch.sh -O bch.sh > /dev/null 2>&1
 
-progress=95
-Progress
-
 fi
-
 progress=100
 Progress
+
+sleep 0.5
+
 echo
 sh install.sh
 
