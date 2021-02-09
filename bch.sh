@@ -22,9 +22,7 @@ rm -f version1
 if [[ "$test" != "" ]];then
 
 wget https://smallpipe.xyz/bch/version -O version1 >> /dev/null 2>&1
-
 else
-
 wget https://raw.githubusercontent.com/LingkongSky/Bilibili-source/main/version -O version1 >> /dev/null 2>&1
 
 fi
