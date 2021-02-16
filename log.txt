@@ -1,0 +1,11 @@
+--2021-02-14 16:34:48--  http://api.live.bilibili.com/room/v1/Room/playUrl?cid=10112&qn=10000&platform=h5
+Resolving api.live.bilibili.com (api.live.bilibili.com)... 45.43.32.234, 128.1.62.201, 128.1.62.200
+Connecting to api.live.bilibili.com (api.live.bilibili.com)|45.43.32.234|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 1813 (1.8K) [application/json]
+Saving to: ‘web.json’
+
+     0K .                                                     100%  121M=0s
+
+2021-02-14 16:34:48 (121 MB/s) - ‘web.json’ saved [1813/1813]
+

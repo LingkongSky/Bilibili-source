@@ -21,7 +21,7 @@ sed -n '/ts/w live1.m3u8' live.m3u8
 awk '{print "'"$mainURL"'"$0 > "live1.m3u8"}' live1.m3u8
 
 
-wget --limit-rate="${catch_speed}"K -c -i live1.m3u8  --unlink -P ts/ 
+wget --limit-rate="${catch_speed}"K -c -i live1.m3u8  -P ts/ 
 
 
 str=`find ts/ -name \*.*`

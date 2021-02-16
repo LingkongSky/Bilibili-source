@@ -1,6 +1,7 @@
 # Bilibili-source@1.1.4
 BillBill live source catch (以下简称bch)哔哩哔哩直播源抓取<br>
 
+本项目遵循 `CC-BY-NC-SA 4.0`协议
 BCH是一款专用于抓取哔哩哔哩生放送直播源的插件，可以通过uid及cid来进行对目标直播源的抓取。
 
 !!单线程警告!!
