@@ -1,4 +1,4 @@
-# Bilibili-source@1.1.4
+# Bilibili-source@1.2.0
 BillBill live source catch (以下简称bch)哔哩哔哩直播源抓取<br>
 
 本项目遵循 `CC-BY-NC-SA 4.0`协议
@@ -21,9 +21,9 @@ cd进该文件夹<br>
 `source /etc/profile`<br>
 `source ~/.bashrc`<br>
 或者通过:
-`wget https://github.com/LingkongSky/Bilibili-source/releases/download/BCH1.1.4/Bilibili-Source-1.1.4.zip -O Bilibili-Source`<br>
+`wget https://github.com/LingkongSky/Bilibili-source/releases/download/BCH1.2.0/Bilibili-Source-1.2.0.zip -O Bilibili-Source`<br>
 `unzip Bilibili-Source`<br>
-`cd Bilibili-Source-1.1.4`<br>
+`cd Bilibili-Source-1.2.0`<br>
 `sudo sh install.sh`<br>
 `source /etc/profile`<br>
 `source ~/.bashrc`<br>
@@ -55,6 +55,7 @@ bch的基础设置为无损原画抓取。<br>
 
 # 指令说明
 bch [-option]<br>
+`-cid [cid]` [指定抓取目标cid]<br>
 `-start` [需在bch -cid指定目标后使用]<br>
 `-stop` [停止已有的抓取进程并保存]<br>
 `-t [time:S]` [指定时间长度抓取，大小为S]<br>
@@ -64,7 +65,6 @@ bch [-option]<br>
 `-now` [查看正在进行的抓取进程信息]<br>
 `-anu [uid]` [通过用户uid收集信息并收录进user_data]<br>
 `-anc [cid]` [通过用户cid收集信息并收录进user_data]<br>
-`-cid [cid]` [指定抓取目标cid]<br>
 `-data` [查看已抓取的信息]<br>
 `-target` [查看指定目标]<br>
 `-setting` [查看配置文件]<br>

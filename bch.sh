@@ -2,11 +2,30 @@
 local_version="1.1.4"
 source /etc/profile
 cd ${bchPATH}/
+
 if [[ -f target ]];then
+
 cid=`cat ${bchPATH}/target`
+
+
+curl -G -s 'http://api.live.bilibili.com/room/v1/Room/room_init' \
+--data-urlencode "id=${cid}"  > info
+declare -x uid=`jq -r .data.uid info`
+rm -f info
 fi
 
+function test_live(){
 
+curl -G -s 'http://api.bilibili.com/x/space/acc/info' \
+--data-urlencode "mid=${uid}"  > info
+declare -x liveStatus=`jq -r  .data.live_room.liveStatus info`
+if [[ "${liveStatus}" == "1" ]]; then
+echo "live opening"
+else 
+echo "live is closed"
+exit 0
+fi
+    }
 
 case "$1" in
 
@@ -58,23 +77,14 @@ echo -e "\033[34mhttps://github.com/LingkongSky/Bilibili-source.git\033[0m"
 #########
 "-start")
 
-shid=`ps -ef | grep ${bchPATH}/bstart.sh | grep -v grep`
+shid=`ps -ef | grep ${bchPATH}/bstartx.sh | grep -v grep`
 
 if [[ "$shid" != "" ]]; then
 echo "process already had"
 exit 0
 fi
 
-wget "http://api.live.bilibili.com/room/v1/Room/playUrl?cid=${cid}&qn=10000&platform=h5" -O web.json >> log.txt 2>&1
-durl=`jq -r .data.durl[0].url web.json`
-rm -rf web.json
-results=`curl "${durl}" 2>&1|grep EXTM3U`
-
-if [[ "$results" == "" ]]
-then
-echo -e "\033[31mLive can't found\033[0m"
-exit 0
-fi 
+test_live
 
 bch -target
 echo -e "start the BiliBili-Source-Catch "
@@ -92,15 +102,16 @@ echo -e "\n${bst}" >> /etc/profile
 source /etc/profile
 
 
-nohup sh bstart.sh >> /dev/null 2>&1 &
+#nohup sh bstart.sh >> /dev/null 2>&1 &
 
+nohup sh bstartx.sh >> /dev/null 2>&1 &
 ;;
 
 
 ########
 "-stop")
 
-shid=`ps -ef | grep bstart.sh | grep -v grep`
+shid=`ps -ef | grep bstartx.sh | grep -v grep`
 
 
 if [[ "$shid" == "" ]]; then
@@ -111,8 +122,8 @@ exit 0
 else
 
 rm -f run.txt
-rm -f *.m3u8
-sh bend.sh
+#rm -f *.m3u8
+#sh bend.sh
 fi 
  ;;
 
@@ -120,28 +131,16 @@ fi
 #######
 "-t")
 
-if [ -z "$(echo $2 | sed 's#[0-9]##g')" ] && [ "$2" != "" ]; then
+if [[ -z "$(echo $2 | sed 's#[0-9]##g')" ]] && [[ "$2" != "" ]]; then
 
-
-shid=`ps -ef | grep bstart.sh | grep -v grep`
+shid=`ps -ef | grep bstartx.sh | grep -v grep`
 
 if [[ "$shid" != "" ]]; then
 echo "process already had"
 exit 0
 fi
 
-wget "http://api.live.bilibili.com/room/v1/Room/playUrl?cid=${cid}&qn=10000&platform=h5" -O web.json >> log.txt 2>&1
-durl=`jq -r .data.durl[0].url web.json`
-rm -rf web.json
-results=`curl "${durl}" 2>&1|grep EXTM3U`
-
-if [[ "$results" == "" ]]
-then
-echo -e "\033[31mm3u8Link can't found\033[0m"
-exit 0
-fi 
-
-
+test_live
 bch -target
 start_time=`date +%m-%d-%H:%M`
 echo -e "\033[32m${start_time}\ntime:${2}\033[0m"
@@ -156,13 +155,14 @@ echo -e "\n${bst}" >> /etc/profile
 source /etc/profile
 
 declare -x catchTime="$2"  
-nohup sh bstart.sh >> /dev/null 2>&1 &
+#nohup sh bstart.sh >> /dev/null 2>&1 &
+nohup sh bstartx.sh >> /dev/null 2>&1 &
 
 else
 echo "bch -t [time:s]"
 exit 0
 fi
- 
+
 ;;
  
 ########定时执行
@@ -309,7 +309,7 @@ rm -f info
 
 echo "$2" > target
 echo -e "\033[32mname:${name} \ntitle:${title} \ntarget locked\033[0m"
-
+test_live
 
 
 
@@ -332,8 +332,8 @@ name=`jq -r  .data.name info`
 title=`jq -r  .data.live_room.title info`
 rm -f info
 
-echo -e "\033[32mtarget name:${name} \ntitle:${title}\033[0m"
-
+echo -e "\033[32mtarget_name:${name} \ncid: ${cid}\ntitle: ${title}\033[0m"
+test_live
 
 ;;
 
@@ -374,17 +374,17 @@ Progress
 
 if [[ "$test" != "" ]];then
 
-wget https://smallpipe.xyz/bch/bstart.sh -O bstart.sh > /dev/null 2>&1
+wget https://smallpipe.xyz/bch/bstart.sh -O bstartx.sh > /dev/null 2>&1
 
 progress=20
 Progress
 
-wget https://smallpipe.xyz/bch/bend.sh -O bend.sh > /dev/null 2>&1
+#wget https://smallpipe.xyz/bch/bend.sh -O bend.sh > /dev/null 2>&1
 
 progress=35
 Progress
 
-wget https://smallpipe.xyz/bch/catch.sh -O catch.sh > /dev/null 2>&1
+#wget https://smallpipe.xyz/bch/catch.sh -O catch.sh > /dev/null 2>&1
 
 progress=50
 Progress
@@ -403,17 +403,17 @@ wget https://smallpipe.xyz/bch/bch.sh -O bch.sh > /dev/null 2>&1
 
 else
 
-wget https://raw.githubusercontent.com/LingkongSky/Bilibili-source/main/bstart.sh -O bstart.sh > /dev/null 2>&1
+wget https://raw.githubusercontent.com/LingkongSky/Bilibili-source/main/bstart.sh -O bstartx.sh > /dev/null 2>&1
 
 progress=20
 Progress
 
-wget https://raw.githubusercontent.com/LingkongSky/Bilibili-source/main/bend.sh -O bend.sh > /dev/null 2>&1
+#wget https://raw.githubusercontent.com/LingkongSky/Bilibili-source/main/bend.sh -O bend.sh > /dev/null 2>&1
 
 progress=35
 Progress
 
-wget https://raw.githubusercontent.com/LingkongSky/Bilibili-source/main/catch.sh -O catch.sh > /dev/null 2>&1
+#wget https://raw.githubusercontent.com/LingkongSky/Bilibili-source/main/catch.sh -O catch.sh > /dev/null 2>&1
 
 progress=50
 Progress
