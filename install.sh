@@ -9,7 +9,6 @@ b=##$b
 progress=0
 Progress
 
-
 test_jq=`ls /bin | grep jq`
 
 progress=10

@@ -7,7 +7,6 @@ if [[ -f target ]];then
 
 cid=`cat ${bchPATH}/target`
 
-
 curl -G -s 'http://api.live.bilibili.com/room/v1/Room/room_init' \
 --data-urlencode "id=${cid}"  > info
 declare -x uid=`jq -r .data.uid info`

@@ -18,7 +18,6 @@ mv "${results_path}"/"$bname1" "${results_path}"/"$bname2"
 exit 0
 }
 
-
 cid=`cat target`
 
 curl -G -s 'http://api.live.bilibili.com/room/v1/Room/playUrl' \
