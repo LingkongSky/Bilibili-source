@@ -29,6 +29,26 @@ Progress
 test_ffmpeg=`ls /bin | grep ffmpeg` 
 
 if [[ "${test_ffmpeg}" == ""  ]]; then
+
+test_ffmpeg1=`ls /usr/local/bin/ | grep ffmpeg` 
+if [[ "${test_ffmpeg1}" == ""  ]];
+then
+
+wget https://johnvansickle.com/ffmpeg/builds/ffmpeg-git-amd64-static.tar.xz
+
+tar xvf ffmpeg-git-amd64-static.tar.xz
+
+ ./ffmpeg-git-20210127-amd64-static/ffmpeg
+
+mv ffmpeg-git-20210127-amd64-static/ffmpeg ffmpeg-git-20210127-amd64-static/ffprobe /usr/local/bin/
+
+fi
+fi
+
+test_ffmpeg=`ls /usr/local/bin/ | grep ffmpeg` 
+
+if [[ "${test_ffmpeg}" == ""  ]]; then
+
 echo "please make sure you are already install the ffmpeg"
 exit 0
 fi

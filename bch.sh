@@ -1,5 +1,5 @@
 #!/bin/bash
-local_version="1.1.4"
+local_version="1.2.1"
 source /etc/profile
 cd ${bchPATH}/
 
@@ -34,12 +34,15 @@ case "$1" in
 
 echo -e "\033[32mBilibili-Catch Version ${local_version} @Lingkongsky\033[0m"
 
-
 test=`wget --spider https://raw.githubusercontent.com/LingkongSky/Bilibili-source/main/bch.sh > version1 2>&1`
 
 test=`cat version1 | grep 404`
 
 rm -f version1
+
+
+echo -e "\033[32m \n最大抓取时间: ${MaxTime}s \n抓取文件大小: ${MaxSize}mb \n抓取结果保存路径:  ${results_path}/ \n文件保存格式: ${Vtype} \033[0m"
+
 
 if [[ "$test" != "" ]];then
 
@@ -67,8 +70,7 @@ else
 echo -e "\033[32mThis is already the newst version\033[0m"
 fi
 
-
-echo "Program adress:"
+echo "Program adress:" 
 echo -e "\033[34mhttps://github.com/LingkongSky/Bilibili-source.git\033[0m"
 
 ;;
