@@ -1,6 +1,7 @@
 #!/bin/bash
 local_version="1.2.1"
 source /etc/profile
+source ${bchPATH}/setting
 cd ${bchPATH}/
 
 if [[ -f target ]];then
