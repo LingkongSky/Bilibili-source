@@ -13,7 +13,6 @@ cd ../
 }
 
 
-
 if [[ "$anmode" == "cid" ]]
 then
 

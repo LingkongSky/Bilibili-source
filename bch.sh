@@ -8,6 +8,7 @@ if [[ -f target ]];then
 
 cid=`cat ${bchPATH}/target`
 
+
 curl -G -s 'http://api.live.bilibili.com/room/v1/Room/room_init' \
 --data-urlencode "id=${cid}"  > info
 declare -x uid=`jq -r .data.uid info`
@@ -70,7 +71,7 @@ else
 echo -e "\033[32mThis is already the newst version\033[0m"
 fi
 
-echo "Program adress:" 
+echo "Program adress:"
 echo -e "\033[34mhttps://github.com/LingkongSky/Bilibili-source.git\033[0m"
 
 ;;
