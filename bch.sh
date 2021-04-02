@@ -1,5 +1,5 @@
 #!/bin/bash
-local_version="1.2.1"
+local_version="1.2.2"
 source /etc/profile
 source ${bchPATH}/setting
 cd ${bchPATH}/
@@ -107,7 +107,7 @@ source /etc/profile
 
 #nohup sh bstart.sh >> /dev/null 2>&1 &
 
-nohup sh bstartx.sh >> /dev/null 2>&1 &
+nohup sh bstartx.sh >> log.txt 2>&1 &
 ;;
 
 
@@ -116,18 +116,20 @@ nohup sh bstartx.sh >> /dev/null 2>&1 &
 
 shid=`ps -ef | grep bstartx.sh | grep -v grep`
 
-
 if [[ "$shid" == "" ]]; then
 #参数2为空
 echo "process not found"
 
-exit 0
-else
-
-rm -f run.txt
 #rm -f *.m3u8
 #sh bend.sh
+else
+
+echo "stopped"
+
 fi 
+
+rm -f run.txt
+
  ;;
 
 
@@ -159,7 +161,7 @@ source /etc/profile
 
 declare -x catchTime="$2"  
 #nohup sh bstart.sh >> /dev/null 2>&1 &
-nohup sh bstartx.sh >> /dev/null 2>&1 &
+nohup sh bstartx.sh >> log.txt 2>&1 &
 
 else
 echo "bch -t [time:s]"
@@ -237,7 +239,7 @@ echo "${bchPATH}"
 ########
 "-now")
 
-shid=`ps -ef | grep bstart.sh | grep -v grep`
+shid=`ps -ef | grep bstartx.sh | grep -v grep`
 
 if [[ "$shid" == "" ]]; then
 #参数2为空
@@ -377,7 +379,7 @@ Progress
 
 if [[ "$test" != "" ]];then
 
-wget https://smallpipe.xyz/bch/bstart.sh -O bstartx.sh > /dev/null 2>&1
+wget https://smallpipe.xyz/bch/bstartx.sh -O bstartx.sh > /dev/null 2>&1
 
 progress=20
 Progress
@@ -406,7 +408,7 @@ wget https://smallpipe.xyz/bch/bch.sh -O bch.sh > /dev/null 2>&1
 
 else
 
-wget https://raw.githubusercontent.com/LingkongSky/Bilibili-source/main/bstart.sh -O bstartx.sh > /dev/null 2>&1
+wget https://raw.githubusercontent.com/LingkongSky/Bilibili-source/main/bstartx.sh -O bstartx.sh > /dev/null 2>&1
 
 progress=20
 Progress

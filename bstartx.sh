@@ -39,7 +39,7 @@ declare -x bname1="$timenow1"."${Vtype}"
 echo -e "\033[32mstart \n$timenow1 \033[0m"
 
 
-ffmpeg -i $dURL -vcodec copy -acodec copy "${results_path}"/"$bname1" &
+ffmpeg -i $dURL -vcodec copy -acodec copy "${results_path}"/"$bname1" >> log.txt 2>&1 &
 
 ffpid=`ps -ef | grep ffmpeg | grep -v grep`
 
@@ -52,13 +52,13 @@ else
 MaxTimes="$MaxTime"
 fi
 
-
 #计时器
 while [ "$times" -lt "$MaxTimes" ]
 do
 
 if [ ! -f "run.txt" ]
 then
+echo "Time over" >> log.txt 2>&1
 ffover
 fi
 
@@ -73,7 +73,7 @@ size=`echo ${size%%/*}`
 
 if [[ "$size" -gt "$MaxSize" ]]
 then
-echo "touch max size"
+echo "touch max size" >> log.txt 2>&1
 echo "result saved"
 rm -f run.txt
 ffover

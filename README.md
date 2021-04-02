@@ -1,4 +1,4 @@
-# Bilibili-source@1.2.1
+# Bilibili-source@1.2.2
 BillBill live source catch (以下简称bch)哔哩哔哩直播源抓取<br>
 
 本项目遵循 `CC-BY-NC-SA 4.0`协议
@@ -21,9 +21,9 @@ cd进该文件夹<br>
 `source /etc/profile`<br>
 `source ~/.bashrc`<br>
 或者通过:
-`wget https://github.com/LingkongSky/Bilibili-source/releases/download/BCH1.2.1/Bilibili-Source-1.2.1.zip -O Bilibili-Source`<br>
+`wget https://github.com/LingkongSky/Bilibili-source/releases/download/BCH1.2.2/Bilibili-Source-1.2.2.zip -O Bilibili-Source`<br>
 `unzip Bilibili-Source`<br>
-`cd Bilibili-Source-1.2.1`<br>
+`cd Bilibili-Source-1.2.2`<br>
 `sudo sh install.sh`<br>
 `source /etc/profile`<br>
 `source ~/.bashrc`<br>
